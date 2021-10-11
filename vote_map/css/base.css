@@ -1,0 +1,31 @@
+﻿@import url(https://font.imbc.com/nanumgothic/nanumgothic.css);
+@import url(https://font.imbc.com/noto/noto.css);
+
+/* reset */
+* {margin: 0; padding: 0;}
+img {vertical-align: top; border: 0;}
+a {text-decoration: none;}
+dl, ul, ol, li {list-style: none;}
+hr, caption {display: none;}
+fieldset {border: 0;}
+table {border-collapse: collapse; border-spacing: 0; border: 0;}
+th, td {vertical-align: middle;}
+em, cite, address, dfn, var {font-style: normal;}
+body {font-size: 75%; font-family: "돋움", dotum, sans-serif; color: #555; line-height: 1;}
+a, abbr, acronym, address, big, blockquote, body, button, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, input, ins, kbd, label, legend, li, object, ol, p, pre, q, samp, select, small, span, strike, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var {letter-spacing: -1px; font-family: 'Nanum Gothic'; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+a {text-decoration: none;}
+button {border: 0 none; background-color: transparent; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); letter-spacing: -1px;}
+
+/* global */
+.clear:after {content: "."; display: block; height: 0; font-size: 0; clear: both; visibility: hidden;}
+.clear {clear: both; min-height: 1px; *height: 1px;;}
+.show {display: block;}
+.hide {display: none;}
+.ir-wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;}
+.blind {display: block; overflow: hidden; position: absolute; left: -9999px; width: 1px; height: 1px; font-size: 0; line-height: 0; text-indent: -9999px;}
+.txt-blind {overflow: hidden; font-size: 0; line-height: 100px;}
+
+/* accessibility */
+#accessibility {position: absolute; top: 0; left: 0; z-index: 9999; width: 100%; text-align: left;}
+#accessibility a {display: block; position: absolute; top: -1000px; left: 0; z-index: 500; width: 100%; text-align: center;}
+#accessibility a:focus, #accessibility a:active {position: absolute; top: 0; z-index: 1000; height: 40px; background: #efefef; font: bold 12px dotum; color: #000; line-height: 40px;}

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/open.map.css">
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="css/vote.ani.css">
+    <script src="https://www.imbc.com/commons/libs/jquery-1.12.3.min.js"></script>
+    <script src="https://vote2018.imbc.com/js/libs/raphael.min.js"></script>
+</head>
+
+<body>
+    <div class="vote-body-result">
+        <div class="result-cont wrap-open">
+            <div class="now-all">
+                <div class="now-map">
+                    <div class="now-count-time">
+                        <h3>전구/지역별 개표현황</h3>
+                        <span>PM 1:30 기준</span>
+                    </div>
+                    <div class="now-area-map">
+                        <div class="vote-map">
+                            <div class="vote-area-map" id="vote-area-map"></div>
+                            <div class="vote-area"></div>
+                            <div class="vote-area-gu"></div>
+                            <div class="vote-area-dong"></div>
+                            <div class="party-color">
+                                <ul>
+                                    <li>
+                                        <span class="square party_thumin"></span>더불어민주당
+                                    </li>
+                                    <li>
+                                        <span class="square party_liberty"></span>국민의힘
+                                    </li>
+                                    <li>
+                                        <span class="square party_justice"></span>정의당
+                                    </li>
+                                    <li>
+                                        <span class="square party_peace"></span>국민의당
+                                    </li>
+                                    <li>
+                                        <span class="square party_etc"></span>기타당
+                                    </li>
+                                    <li>
+                                        <span class="square party_no"></span>무소속
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="select-district">
+                            <p class="data-place"><a href="https://vote2018.imbc.com/api/GetGePyoRateList?type=g&sido=0" data-nav="0" class="btn-default area">전국<span>&#62;</span></a></p>
+                            <div class="select-city">
+                                <ul class="select-list-bx">
+                                    <li class="select-bx select-do-bx">
+                                        <ul class="select-do">
+                                            <li class="select-top">시·도 ▼<span>&#62;</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="select-bx select-gu-bx">
+                                        <ul class="select-gu">
+                                            <li class="select-top">구·시·군 ▼<span>&#62;</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="select-bx select-dong-bx">
+                                        <ul class="select-dong">
+                                            <li class="select-top">읍·면·동 ▼</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="select-button">조회</button>
+                        </div>
+                        <div class="vote-select">
+                            <div class="select-place">
+                                <span class="data-place" id="DATAPLACE">전국</span>
+                                <span class="data-rate" id="DATARATE"></span>
+                            </div>
+                            <div class="candidate-search-filter">
+                                <div class="candidate-search-filter-item">
+                                    <div class="header">선거구분</div>
+                                    <div class="dropdown sg">
+                                        <button type="button" class="button button-choose" aria-haspopup="true">선택</button>
+                                        <div class="list" aria-hidden="true">
+                                            <ul id="sgList"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="button button-search-w">조회</button>
+                                <div class="popup popup-area-of-interest" aria-hidden="true">
+                                    <div class="popup-body">
+                                        <p class="my-location">내 관심지역</p>
+                                        <ul class="list-area-of-interest"></ul>
+                                        <div class="guide">※ 최대 5개까지 지정 가능합니다.</div>
+                                    </div>
+                                    <button type="button" class="button button-close">닫기</button>
+                                </div>
+                            </div>
+                            <div class="candidate-hubolist" id="LOCALOPENHUBOLIST">
+                                <div class="wrap-rank-tit">
+                                    <div class="cont-none">
+                                        <span class="purple">개표 시작 전</span>입니다. <br>잠시 후 개표현황이 업데이트 됩니다
+                                    </div>
+                                    <div class="cont-none">
+                                        1.<span class="purple">
+                                            좌측지도</span>에서 확인하고자 하는
+                                        <span class="purple">지역을 선택</span>해주세요.
+                                        <br>2. 상단의
+                                        <span class="purple">선택박스</span>에서
+                                        <span class="purple">선거구분을 선택</span>한 후,
+                                        <br><span class="purple">조회 버튼</span>을 클릭해주세요.
+                                    </div>
+                                    <p class="sort">교육감 (강원도교육감)</p>
+                                    <p class="place">강원도<span>(후보 2 명)</span><span class="place-rate">개표율 12.4 %</span></p>
+                                </div>
+                                <div class="wrap-rank">
+                                    <div class="rank-cont">
+                                        <div class="rank-inner">
+                                            <ul>
+                                                <li>
+                                                    <div class="candidate-rival">
+                                                        <div class="rival-l">
+                                                            <span class="badge winner">당선</span>
+                                                            <p class="img"><img src="https://vote2018.imbc.com/images/thumbnail-candi.jpg" alt=""><span class="jd party_thumin"></span></p>
+                                                            <div class="wrap-rate">
+                                                                <span class="candi-name">홍길동</span>
+                                                                <span class="candi-num">기호 1</span>
+                                                                <p class="data-rate">64.6</p>
+                                                                <p class="data-number">득표수&nbsp;<span>367,203표</span></p>
+                                                            </div>
+                                                            <div class="graph">
+                                                                <ul class="vert">
+                                                                    <li><span class="bar h-30 party_thumin"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="rival-r">
+                                                            <span class="badge">2위</span>
+                                                            <p class="img"><img src="https://vote2018.imbc.com/images/thumbnail-candi.jpg" alt=""><span class="jd party_peace"></span></p>
+                                                            <div class="wrap-rate">
+                                                                <span class="candi-name">홍길동</span>
+                                                                <span class="candi-num">기호 1</span>
+                                                                <p class="data-rate">64.6</p>
+                                                                <p class="data-number">득표수&nbsp;<span>367,203표</span></p>
+                                                            </div>
+                                                            <div class="graph">
+                                                                <ul class="vert">
+                                                                    <li><span class="bar h-50 party_peace"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="else">
+                                                            <div class="else-left">
+                                                                <span class="jd">아무당</span>&nbsp;<span class="candi-name">홍길동</span> (<span class="candi-num">기호 0번</span>)
+                                                            </div>
+                                                            <div class="else-center">11.2%</div>
+                                                            <div class="else-right">
+                                                                (득표수 21,333표)
+                                                            </div>
+                                                        </div>
+                                                        <div class="else">
+                                                            <div class="else-left">
+                                                                <span class="jd">바른미래당</span>&nbsp;<span class="candi-name">홍길동</span> (<span class="candi-num">기호 0번</span>)
+                                                            </div>
+                                                            <div class="else-center">4.2%</div>
+                                                            <div class="else-right">
+                                                                (득표수 21,333표)
+                                                            </div>
+                                                        </div>
+                                                        <div class="else">
+                                                            <div class="else-left">
+                                                                <span class="jd">자유한국당</span>&nbsp;<span class="candi-name">홍길동</span> (<span class="candi-num">기호 0번</span>)
+                                                            </div>
+                                                            <div class="else-center">4.2%</div>
+                                                            <div class="else-right">
+                                                                (득표수 21,333표)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="gap">
+                                                        <span>1위와의 표차</span> <br>207,203표
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/dropdown.jquery.js"></script>
+    <script src="js/vote.map.data.js"></script>
+    <script src="js/vote.open.shell2.js"></script>
+    <script>
+        var isLoc = true;
+
+        // 관심지역 레이아웃
+        $('.button-tooltip').click(function() {
+            $('.popup-area-of-interest').show();
+        });
+        $('.popup-area-of-interest .button-close').click(function() {
+            $('.popup-area-of-interest').hide();
+        });
+
+        // 이 시 1위 - 후보 3명인 경우 ui // class type2 추가 -- test용
+        $('.hubo .vs').each(function() {
+            if ($(this).find('.rivals').length == 3) {
+                $(this).addClass('type2');
+            }
+        });
+
+        // 선거별 순위 tab toggle
+        $('.tabs li').click(function() {
+            $('.tabs li').removeClass('active');
+            $(this).addClass('active');
+            getOpenHuboList($(this).attr("data-set"));
+        });
+
+        // 적중2018 레이어
+        var layerHeight = $(document).height() - 190;
+        $('.wrap-layer').css('height', layerHeight);
+        $('.wrap-layer .popup-close').click(function() {
+            $('.wrap-layer').hide();
+        });
+
+        // 리플레쉬
+        $('.btn-refresh').click(function() {
+            $('.tabs li').each(function() {
+                if ($(this).hasClass('active')) {
+                    getOpenHuboList($(this).attr("data-set"));
+                }
+            });
+        });
+        $('.button-search-w').click(function() {
+            getLocalOpenHuboList();
+        });
+        /*$('#chk2018').click(function() {
+            var today = new Date();
+            today.setDate(today.getDate() + 1);
+            setCookie("notToday", "Y", today, "/", "imbc.com")
+            $(".wrap-layer").hide();
+        });*/
+        /*$(document).ready(function() { // 레이아웃-적중2018
+            if (getCookie("notToday") == "Y") {
+                $(".wrap-layer").hide();
+            } else {
+                if ("N" == "Y") {
+                    $(".wrap-layer").show();
+                } else {
+                    $(".wrap-layer").hide();
+                }
+            }
+        });*/
+
+        function onloadPageInfo() {
+            step = {
+                type: 4,
+                value: ["sido", "gu", "action", "none"]
+            };
+            // 관심지역리스트
+            getMyAreaList();
+            // 전국개표율
+            getAllGePyoRate();
+            // 이 시각 1, 2, 3위(광역 교육감 국회의원 - 지역 연동 없음)
+            getOpenHuboList($(this).attr("data-set"));
+            if (isLoc) {
+                nowLocation = myElectArea.pull(0);
+            } else {
+                nowLocation = "::";
+            }
+        }
+
+        function getMyAreaList() {
+            $.post('/MyArea/PartialPackage', function(response) {
+                $(".list-area-of-interest").html('');
+                $(".list-area-of-interest").append(response);
+            });
+        }
+
+        function FncReset(location) {
+            myElectArea.push(location);
+            // onloadPageInfo();
+            var data = myElectArea.pull(0).split(':');
+            $sidoList = $('.vote-area-list');
+            $sidoItems = $sidoList.children('.vote-area-items');
+            $sidoArea = $sidoItems.find('.area');
+            $sidoArea.each(function() {
+                if ($(this).attr('data-nav') == 0) {
+                    $(this).trigger('click');
+                }
+            });
+            setTimeout(function() {
+                $sidoArea.each(function() {
+                    if ($(this).attr('data-nav-nm') == data[0]) {
+                        $(this).trigger('click');
+                        setTimeout(function() {
+                            $guItems = $('.area-gu-items');
+                            $guArea = $guItems.find('.area-gu');
+                            $guArea.each(function() {
+                                if ($(this).attr('data-nav-nm') == data[1]) {
+                                    $(this).trigger('click');
+                                    setTimeout(function() {
+                                        $dongItems = $('.area-dong-body .btn-default')
+                                        $dongItems.each(function() {
+                                            if ($(this).attr('data-nav-nm') == data[2]) {
+                                                $(this).trigger('click');
+                                            }
+                                        });
+                                    }, 200);
+                                }
+                            });
+                        }, 200);
+                    }
+                });
+            }, 200);
+            $('.popup-area-of-interest').hide();
+        }
+
+        function getOpenHuboList(type) {
+            $.post('/Open/_PartialOpenHuboList', {
+                sgtype: type
+            }, function(response) {
+                $("#OPENHUBOLIST").html('');
+                $("#OPENHUBOLIST").append(response);
+                $('.carousel').unbind().removeData();
+                $('.carousel').Carousel();
+            });
+        }
+
+        function getAllGePyoRate() {
+            $.ajax({
+                type: "get",
+                url: "../api/GetGePyoRateList",
+                data: {
+                    type: 'A',
+                    sido: 0,
+                    wiwid: 0
+                },
+                dataType: "jsonp",
+                jsonp: "callback",
+                success: function(data) {
+                    var result = data[0];
+                    var d = new Date();
+                    var realTime = leadingZeros(d.getHours(), 2) + ':' + leadingZeros(d.getMinutes(), 2);
+                    var time = convert12H(realTime, {
+                        ampmLabel: ['AM', 'PM']
+                    });
+                    $('#BTNREFRESH').html('');
+                    $('#BTNREFRESH').html(time + ' 기준');
+                    $('#NOWTIME').html('');
+                    $('#NOWTIME').html(time + ' 기준');
+                    $('#NOWTIME2').html('');
+                    $('#NOWTIME2').html(time + ' 기준');
+                    $('#NUMNOW').html('');
+                    $('#NUMNOW').html(set_comma(result.TUPYO) + "명");
+                    $('#NUMALL').html('');
+                    $('#NUMALL').html(set_comma(result.UGWON) + "명");
+                    $('#PERCENT').html('');
+                    $('#PERCENT').html('100');
+                    $('#DATAPLACE').html('');
+                    $('#DATAPLACE').html("전국");
+                    setNowLocatioInfoAndGePyoRate('전국', result.GEPYO_RATE);
+                }
+            });
+        }
+        var controlStep = [{
+                type: "2",
+                value: ["sido", "gu", "dong", "action"]
+            },
+            {
+                type: "3",
+                value: ["sido", "action", "none", "none"]
+            },
+            {
+                type: "4",
+                value: ["sido", "gu", "action", "none"]
+            },
+            {
+                type: "5",
+                value: ["sido", "gu", "dong", "action"]
+            }, {
+                type: "6",
+                value: ["sido", "gu", "dong", "action"]
+            }, {
+                type: "8",
+                value: ["sido", "jd", "action", "action"]
+            }, {
+                type: "9",
+                value: ["sido", "gu", "jd", "action"]
+            }, {
+                type: "10",
+                value: ["sido", "gu", "dong", "action"]
+            }, {
+                type: "11",
+                value: ["sido", "action", "none", "none"]
+            }
+        ];
+        var param = {
+            sgtype: 0,
+            sido: 0,
+            wiwid: 0,
+            emdid: 0,
+            jdcode: 0
+        };
+
+        function setParam(id, value) {
+            switch (id) {
+                case "sgtype":
+                    param.sgtype = value;
+                    break;
+                case "sido":
+                    param.sido = value;
+                    break;
+                case "gu":
+                    param.wiwid = value;
+                    break;
+                case "dong":
+                    param.wiwid = 0;
+                    param.emdid = value;
+                    break;
+                case "jd":
+                    param.jdcode = value;
+                    break;
+            }
+        }
+
+        function cleanParam() {
+            param.sgtype = 0;
+            param.sido = 0;
+            param.wiwid = 0;
+            param.emdid = 0;
+            param.jdcode = 0;
+        }
+
+        function getSgTypeData(sgtype) {
+            var step = controlStep.filter(function(item) {
+                return item.type === sgtype;
+            });
+            return step;
+        }
+
+        function getLocalOpenHuboList() {
+            var sgtype = objMake('sg').text() == "선택" ?
+                0 :
+                objMake('sg').attr('data-set');
+            if (sgtype == 0) {
+                alert("선거 구분을 선택해주세요.");
+            } else {
+                cleanParam();
+                setParam("sgtype", parseInt(sgtype));
+                var sel_param_data = getSgTypeData(sgtype)[0];
+                for (var i = 0; i < sel_param_data.value.length; i++) {
+                    var obj = sel_param_data.value[i];
+                    switch (obj) {
+                        case "sido":
+                            setParam("sido", parseInt(paramOpen.sido.id));
+                            break;
+                        case "gu":
+                            setParam("gu", parseInt(paramOpen.gu.id));
+                            break;
+                        case "dong":
+                            setParam("dong", parseInt(paramOpen.dong.id));
+                            break;
+                    }
+                }
+                $.post('/Open/_PartialLocalOpenHuboList', param, function(response) {
+                    $("#LOCALOPENHUBOLIST").html('');
+                    $("#LOCALOPENHUBOLIST").append(response);
+                });
+            }
+        }
+
+        function setNowLocatioInfoAndGePyoRate(location, rate) {
+            $('#DATAPLACE').html('');
+            $('#DATAPLACE').append(location);
+        }
+
+        function objMake(id) {
+            return $("#" + id + "List").parent().prevAll('.button-choose');
+        }
+
+    </script>
+</body>
+
+</html>
