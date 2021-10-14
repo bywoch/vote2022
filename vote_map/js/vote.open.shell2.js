@@ -156,12 +156,47 @@ function cleanOpenParam(type) {
                         current = $index;
                         /* ↓ 대선추가 ↓ */
                         var selectDo = $(this).text();
-                        $('.select-do > li').text(selectDo);
+                        $('.select-do .select-top').text(selectDo + ' ▼').append('<span>&#62;</span>');
                         var returnGu = '구·시·군 ▼<span>&#62;</span>'
-                        $('.select-gu > li').empty().append(returnGu);
+                        $('.select-gu .select-top').empty().append(returnGu);
                         var returnDong = '읍·면·동 ▼'
-                        $('.select-dong > li').empty().append(returnDong);
+                        $('.select-dong .select-top').empty().append(returnDong);
                         /* ↑ 대선추가 ↑ */
+                        //전국 클릭시
+                        if ($index == 0) {
+                            voteUIMap.map(); //그림만 그려줌
+                            $('.vote-area .vote-area-items-body').show();
+                            sidotitle = '';
+                            sidotitle += '<strong class="border">시·도</strong><span>(시·도를 선택해주세요)</span>';
+                            $('.now-map-h4').html(sidotitle);
+                            $mapIcon.hide();
+                            $('.area-gu-list').remove();
+                            $('.area-dong-body').remove();
+                            cleanOpenParam("sido");
+                            cleanOpenParam("gu");
+                            cleanOpenParam("dong");
+                            /* ※ ↓ 투개표 진행시 주석해제 ↓ ※ */
+                            /*//voteUIMap.setOpenCleanSelBoxSetting('sg');
+                            getAllGePyoRate();var initHTML = '<div class="wrap-rank-tit">' + 
+                                '<div class="cont-none">' +
+                                '1.<span class="purple"> 좌측지도</span>에서 확인하고자 하는 <span class="purple">지역을 선택</span>해주세요.' +
+                                '<br>2. 상단의 <span class="purple">선택박스</span>에서 <span class="purple">선거구분을 선택</span>한 후,' +
+                                '<br><span class="purple">조회 버튼</span>을 클릭해주세요.' +
+                                '</div>' +
+                                '</div>';
+                            $("#LOCALOPENHUBOLIST").html(initHTML);*/
+                            $('span.data-place').text('전국');
+
+                            /* ↓ 대선추가 ↓ */
+                            var returnDo = '시·도 ▼<span>&#62;</span>'
+                            $('.select-do .select-top').empty().append(returnDo);
+                            var returnGu = '구·시·군 ▼<span>&#62;</span>'
+                            $('.select-gu .select-top').empty().append(returnGu);
+                            var returnDong = '읍·면·동 ▼'
+                            $('.select-dong .select-top').empty().append(returnDong);
+                            /* ↑ 대선추가 ↑ */
+                            return false;
+                        }
                         voteUIMap.setGu($apiUrl, $index);
                         /*voteUIMap.setSgTypeSelBox();*/ //지방선거 선거구분
                         setNowLocatioInfoAndGePyoRate(paramOpen.sido.name, $(this).attr('data-nav-rate'));
@@ -180,20 +215,28 @@ function cleanOpenParam(type) {
                         //$('.vote-area-list').remove();
                         $('.area-gu-list').remove();
                         $('.area-dong-body').remove();
+                        $('.select-bx .vote-area-list').hide();
 
                         var returnDo = '시·도 ▼<span>&#62;</span>'
-                        $('.select-do > li').empty().append(returnDo);
+                        $('.select-do .select-top').empty().append(returnDo);
                         var returnGu = '구·시·군 ▼<span>&#62;</span>'
-                        $('.select-gu > li').empty().append(returnGu);
+                        $('.select-gu .select-top').empty().append(returnGu);
                         var returnDong = '읍·면·동 ▼'
-                        $('.select-dong > li').empty().append(returnDong);
+                        $('.select-dong .select-top').empty().append(returnDong);
 
                     });
+                    $('.select-do .select-top').on('mouseover focus', function () {
+                        $('.select-dong .area-dong-body').hide();
+                        $('.select-gu .area-gu-list').hide();
+                    });
+                    $('.select-district .data-place a').on('mouseover focus', function () {
+                        $('.select-do .vote-area-list').hide();
+                    });
                     $('.select-do .vote-area-list').hide();
-                    $('.select-do .select-top').mouseenter(function () {
+                    $('.select-do .select-top').on('mouseover focus', function () {
                         $('.select-do .vote-area-list').show();
                     });
-                    $('.select-do').mouseleave(function () {
+                    $('.select-do').on('mouseleave', function () {
                         $(this).children('.vote-area-list').hide();
                     });
                     /* ↑ 대선추가 ↑ */
@@ -269,9 +312,9 @@ function cleanOpenParam(type) {
                         $('.area-dong-body').remove();
                         /* ↓ 대선추가 ↓ */
                         var selectGu = $(this).text();
-                        $('.select-gu > li').text(selectGu);
+                        $('.select-gu .select-top').text(selectGu + ' ▼').append('<span>&#62;</span>');
                         var returnDong = '읍·면·동 ▼'
-                        $('.select-dong > li').empty().append(returnDong);
+                        $('.select-dong .select-top').empty().append(returnDong);
                         /* ↑ 대선추가 ↑ */
                         /*voteUIMap.setSgTypeSelBox();*/ //지방선거 선거구분
                         setNowLocatioInfoAndGePyoRate(paramOpen.sido.name + "&nbsp;>&nbsp;" + paramOpen.gu.name, $(this).attr('data-nav-rate'));
@@ -281,11 +324,15 @@ function cleanOpenParam(type) {
                         e.preventDefault();
                     });
                     $('.select-gu .area-gu-list').hide();
-                    $('.select-gu .select-top').mouseenter(function () {
+                    $('.select-gu .select-top').on('mouseover focus', function () {
                         $('.select-gu .area-gu-list').show();
                     });
-                    $('.select-gu').mouseleave(function () {
+                    $('.select-gu').on('mouseleave', function () {
                         $(this).children('.area-gu-list').hide();
+                    });
+                    $('.select-gu .select-top').on('mouseover focus', function () {
+                        $('.select-do .vote-area-list').hide();
+                        $('.select-dong .area-dong-body').hide();
                     });
                     /* ↑ 대선추가 ↑ */
                     voteUIMap.drawMap(data, index);
@@ -325,7 +372,7 @@ function cleanOpenParam(type) {
                         current = $index;
                         /* ↓ 대선추가 ↓ */
                         var selectDong = $(this).text();
-                        $('.select-dong > li').text(selectDong);
+                        $('.select-dong .select-top').text(selectDong + ' ▼').append('<span>&#62;</span>');
                         /* ↑ 대선추가 ↑ */
                         /*voteUIMap.setSgTypeSelBox();*/ //지방선거 선거구분
                         setNowLocatioInfoAndGePyoRate(paramOpen.sido.name + "&nbsp;>&nbsp;" + paramOpen.gu.name + "&nbsp;>&nbsp;" + paramOpen.dong.name, -1);
@@ -335,11 +382,15 @@ function cleanOpenParam(type) {
                         e.preventDefault();
                     });
                     $('.select-dong .area-dong-body').hide();
-                    $('.select-dong .select-top').mouseenter(function () {
+                    $('.select-dong .select-top').on('mouseover focus', function () {
                         $('.select-dong .area-dong-body').show();
                     });
-                    $('.select-dong').mouseleave(function () {
+                    $('.select-dong').on('mouseleave', function () {
                         $(this).children('.area-dong-body').hide();
+                    });
+                    $('.select-dong .select-top').on('mouseover focus', function () {
+                        $('.select-do .vote-area-list').hide();
+                        $('.select-gu .area-gu-list').hide();
                     });
                     /* ↑ 대선추가 ↑ */
                 }

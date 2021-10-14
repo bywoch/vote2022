@@ -11,16 +11,18 @@
 
 /*개표현황 - 지도*/
 .vote-body-result .wrap-open .now-map .vote-map {width: 586px; float: left; margin-top: 20px; padding-left: 2px; position: relative;}
-.vote-area, .vote-area-gu {position: absolute; top: -80px; left: -27px; width: 520px}
+.vote-area, .vote-area-gu {position: absolute; top: -80px; left: -23px; width: 520px}
 .vote-body-result .wrap-open .vote-area-items {font-size: 11px; color: #000; font-family: "Nanum Gothic Bold";}
-.vote-body-result .wrap-open .vote-area-items .btn-default {display: inline-block;line-height: 20px;color: #000;font-size: 14px;}
+.vote-body-result .wrap-open .now-map .vote-area-items-all a {display: block; width: 70px; height: 70px; background: url(https://vote2018.imbc.com/images/map-korea.png) no-repeat; position: absolute; top: 140px; left: 26px; text-indent: -9999px; overflow: hidden; z-index: 100;}
+.vote-body-result .wrap-open .now-map .vote-map .party-color {width: 440px; overflow: hidden; margin-top: 20px;}
+.vote-body-result .wrap-open .now-map .vote-map .party-color li {width: 110px; float: left; line-height: 18px; margin-bottom: 12px; font-size: 14px;}
+.vote-body-result .wrap-open .now-map .vote-map .party-color .square {width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;}
+.vote-body-result .wrap-open .vote-area-items-all .vote-area-items-body {display: none;}
+.vote-body-result .wrap-open .vote-area-items .btn-default {display: inline-block;line-height: 20px;color: #000;font-size: 11px; font-weight: bold;}
 .vote-body-result .wrap-open .vote-area-items .btn-default:hover {text-align: center; background: #6a2fb2; color: #fff; font-weight: normal;}
 .vote-body-result .wrap-open .vote-area-items-all .btn-default:hover {background: url(https://vote2018.imbc.com/images/map-korea.png) no-repeat;}
 .vote-body-result .wrap-open .area-gu-items .area-gu {display: inline-block; padding: 0 3px; line-height: 18px;}
 .vote-body-result .wrap-open .area-gu-items .area-gu:hover {text-align: center; background: #6a2fb2; color: #fff; font-weight: normal;}
-.vote-body-result .wrap-open .now-map .vote-map .party-color {width: 440px; overflow: hidden; margin-top: 20px;}
-.vote-body-result .wrap-open .now-map .vote-map .party-color li {width: 110px; float: left; line-height: 18px; margin-bottom: 12px; font-size: 14px;}
-.vote-body-result .wrap-open .now-map .vote-map .party-color .square {width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;}
 
 /*개표현황 - select / graph */
 .vote-body-result .wrap-open .now-map .vote-select {width: 562px; float: right;font-size: 20px;}
@@ -28,38 +30,37 @@
 /*대통령 선거 건 지도, 우측 상단 셀렉트 관련 부분 추가 Area Start*/
 .now-count-time {text-align: center; position: absolute; top: 25px; left: 25px;}
 .select-district {float: right;margin-bottom: 10px;font-size: 14px;}
-.select-district .data-place {display: inline-block; font-weight: bold; color: #555; width: 80px; height: 24px; line-height: 24px; text-align: center;}
+.select-district .data-place {display: inline-block; font-weight: bold; color: #555; width: 120px; height: 24px; line-height: 24px; text-align: center;}
 .select-district .data-place a {display: block; color: #555; position: relative;}
 .select-district .data-place a span {position: absolute; top: 0; right: 0;}
-.select-district .select-city ul.select-list-bx {display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;}
-.select-district .select-city ul.select-list-bx li {cursor:default; text-align: center;}
-.select-district .select-city ul.select-list-bx li.select-bx {float: left; position: relative; width: 80px; height: 24px; line-height: 24px; z-index: 999; background: #fff;}
-.select-district .select-city ul.select-list-bx li.select-bx .vote-area-list li {text-align: center;}
-.select-district .select-city ul.select-list-bx li.select-bx .select-top {font-weight: bold; position: relative; cursor: pointer;}
-.select-district .select-city ul.select-list-bx li.select-bx .select-top > span {position: absolute; top: 0; right: 0;}
+.select-district .select-city .select-list-bx {display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;}
+.select-district .select-city .select-list-bx li {cursor:default; text-align: center;}
+.select-district .select-city .select-list-bx .select-bx {float: left; position: relative; width: 120px; height: 24px; line-height: 24px; z-index: 999; background: #fff;}
+.select-district .select-city .select-list-bx .select-bx .vote-area-list li {text-align: center;}
+.select-district .select-city .select-list-bx .select-bx .select-top {font-weight: bold; position: relative; cursor: pointer; width: 120px; height: 24px; line-height: 24px; color: #555;}
+.select-district .select-city .select-list-bx .select-bx .select-top > span {position: absolute; top: 0; right: 0;}
 .select-district .select-button {width: 50px; color: #555; font-weight: bold; text-align: center; border: 1px solid #555; padding: 4px 0;}
 .select-district .data-place, .select-district .select-city, .select-district .select-button {float: left;}
 
 /* 우측 셀럭터 시·도 */
-.vote-body-result .wrap-open .vote-area-items .btn-default:hover {color: #000; background: none;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items {position: static;}
-.vote-body-result .wrap-open ul.select-list-bx li.select-bx .vote-area-items:hover {background: #f00;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items:hover a {color: #fff; background: #f00;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items .btn-default {font-family: 'Nanum Gothic'; display: block;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items .btn-default:hover {color: #fff; background: #f00; font-weight: normal;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items-all .vote-area-items-body {display: block;}
-.vote-body-result .wrap-open li.select-bx .vote-area-items-all .vote-area-items-body a {display: inline; background: none; position: static; overflow: unset; width: inherit; height: inherit;}
+.vote-body-result .wrap-open .select-bx .vote-area-items {position: static; font-size: 11px; color: #000; font-family: "Nanum Gothic Bold";}
+.vote-body-result .wrap-open .select-bx .vote-area-items:hover a {color: #fff; background: #f00;}
+.vote-body-result .wrap-open .select-list-bx .select-bx .vote-area-items:hover {background: #f00;}
+.vote-body-result .wrap-open .select-bx .vote-area-items .btn-default {font-family: 'Nanum Gothic'; display: block; font-weight: normal; line-height: 20px; color: #000; font-size: 11px;}
+.vote-body-result .wrap-open .select-bx .vote-area-items .btn-default:hover a {color: #000; background: none;}
+.vote-body-result .wrap-open .select-bx .vote-area-items-all .vote-area-items-body {display: block;}
+.vote-body-result .wrap-open .select-bx .vote-area-items-all .vote-area-items-body a {display: inline; background: none; position: static; overflow: unset; width: inherit; height: inherit;}
 
 /* 우측 셀럭터 구·시·군 */
 .vote-body-result .wrap-open .area-gu-items .area-gu:hover {color: #000; background: none; font-weight: bold;}
-.vote-body-result .wrap-open li.select-bx .area-gu-list .area-gu-items {position: static; background: #fff; font-weight: normal;}
-.vote-body-result .wrap-open li.select-bx .area-gu-list .area-gu-items:hover {background: #f00;}
-.vote-body-result .wrap-open li.select-bx .area-gu-list .area-gu-items:hover a {color: #fff}
-.vote-body-result .wrap-open li.select-bx .area-gu-list .area-gu-items .area-gu:hover {color: #fff; font-weight: normal; background: none; display: block;}
-.vote-body-result .wrap-open li.select-bx .area-gu-list .area-gu-items a {font-weight: normal; display: block;}
+.vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items {position: static; background: #fff; font-weight: normal;}
+.vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items:hover {background: #f00;}
+.vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items:hover a {color: #fff}
+.vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items .area-gu:hover {color: #fff; font-weight: normal; background: none; display: block;}
+.vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items a {font-weight: normal; display: block;}
 
 /* 우측 셀럭터 읍·면·동 */
-.vote-body-result .wrap-open .select-dong .area-dong-body li button {float: unset; width: 80px; margin: unset; border: none; font-family: "Nanum Gothic"; display: inline-block; padding: 0; margin: 0; line-height: 18px; font-size: 11px;}
+.vote-body-result .wrap-open .select-dong .area-dong-body li button {float: unset; width: 120px; margin: unset; border: none; font-family: "Nanum Gothic"; display: inline-block; padding: 0; margin: 0; line-height: 18px; font-size: 11px;}
 .vote-body-result .wrap-open .select-dong .area-dong-body li button:hover {color: #fff; background: #f00;}
 
 .candidate-search-filter {border: 1px solid #9a9a9a; border-top: none; border-bottom: none;}
