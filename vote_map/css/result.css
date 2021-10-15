@@ -29,10 +29,14 @@
 
 /*대통령 선거 건 지도, 우측 상단 셀렉트 관련 부분 추가 Area Start*/
 .now-count-time {text-align: center; position: absolute; top: 25px; left: 25px;}
-.select-district {float: right;margin-bottom: 10px;font-size: 14px;}
-.select-district .data-place {display: inline-block; font-weight: bold; color: #555; width: 120px; height: 24px; line-height: 24px; text-align: center;}
-.select-district .data-place a {display: block; color: #555; position: relative;}
-.select-district .data-place a span {position: absolute; top: 0; right: 0;}
+.select-district {float: right;margin-bottom: 10px; font-size: 14px;}
+.select-district .data-place {display: inline-block; width: 120px; height: 24px; position: relative;}
+.select-district .data-place .data-place-txt {color: #555; font-weight: bold; display: block; width: 100%; height: 24px; line-height: 24px; text-align: center;}
+.select-district .data-place .data-place-txt span {position: absolute; top: 0; right: 0;}
+.select-district .data-place .vote-area-items {width: 120px; height: 24px; position: absolute; top: 0; left: 0; display: none;}
+.select-district .data-place .vote-area-items .vote-area-items-body {width: 100%; height: 100%;}
+.select-district .data-place .vote-area-items .vote-area-items-body a {width: 100%; height: 100%; display: block; line-height: 24px; position: unset; top: 0; left: 0; text-indent: unset; overflow: unset; z-index: unset; font-size: 14px; background: none;}
+.select-district .data-place .vote-area-items .vote-area-items-body a:hover {background: none;}
 .select-district .select-city .select-list-bx {display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;}
 .select-district .select-city .select-list-bx li {cursor:default; text-align: center;}
 .select-district .select-city .select-list-bx .select-bx {float: left; position: relative; width: 120px; height: 24px; line-height: 24px; z-index: 999; background: #fff;}
@@ -52,7 +56,6 @@
 .vote-body-result .wrap-open .select-bx .vote-area-items-all .vote-area-items-body a {display: inline; background: none; position: static; overflow: unset; width: inherit; height: inherit;}
 
 /* 우측 셀럭터 구·시·군 */
-.vote-body-result .wrap-open .area-gu-items .area-gu:hover {color: #000; background: none; font-weight: bold;}
 .vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items {position: static; background: #fff; font-weight: normal;}
 .vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items:hover {background: #f00;}
 .vote-body-result .wrap-open .select-bx .area-gu-list .area-gu-items:hover a {color: #fff}
@@ -65,4 +68,7 @@
 
 .candidate-search-filter {border: 1px solid #9a9a9a; border-top: none; border-bottom: none;}
 .candidate-hubolist {border: 1px solid #9a9a9a; border-top: none;}
+.select-do, .select-gu, .select-dong {background: #fff;}
+
+.select-do .vote-area-list, .select-gu .area-gu-list, .select-dong .area-dong-body {display: none;}
 /*대통령 선거 건 지도, 우측 상단 셀렉트 관련 부분 추가 Area End*/

@@ -50,7 +50,16 @@
                             </div>
                         </div>
                         <div class="select-district">
-                            <p class="data-place"><a href="https://vote2018.imbc.com/api/GetGePyoRateList?type=g&sido=0" data-nav="0" class="btn-default area">전국<span>&#62;</span></a></p>
+                            <div class="data-place">
+                                <p class="data-place-txt">전국<span>&#62;</span></p>
+                                <div class="vote-area-list">
+                                    <div class="vote-area-items vote-area-items vote-area-items-all vote-area-items-active">
+                                        <div class="vote-area-items-body">
+                                            <a href="https://vote2018.imbc.com/api/GetGePyoRateList?type=g&sido=0" data-nav="0" class="btn-default area"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="select-city">
                                 <div class="select-list-bx">
                                     <div class="select-bx select-do-bx">
@@ -87,7 +96,6 @@
     <script src="js/vote.map.data.js"></script>
     <script src="js/vote.open.shell2.js"></script>
     <script>
-
         function setNowLocatioInfoAndGePyoRate(location, rate) {
             $('#dataPlace').html('');
             $('#dataPlace').append(location);
