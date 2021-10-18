@@ -133,7 +133,9 @@ function cleanOpenParam(type) {
 
                     /* ~ ↓ 대선추가 ↓ ~ */
                     $('.select-do').append(mainHtml);
-                    $('.select-do .vote-area-items-all').remove();
+                    $('.select-do .vote-area-items-all').remove(); //전국 텍스트 숨김
+                    $('.vote-map .vote-area-items-all').hide(); // 지도 아이콘 삭제
+                    $('.vote-map .vote-area-items a').contents().unwrap().wrap('<span></span>'); // 지도 클릭 방지 처리
                     $('.select-do').on('mouseleave', function () {
                         $(this).children('.vote-area-list').hide();
                     });
@@ -142,7 +144,10 @@ function cleanOpenParam(type) {
                         $('.select-dong .area-dong-body').hide();
                         $('.select-gu .area-gu-list').hide();
                     });
-                    $('.select-district .data-place').on('mouseover focus', function () {
+                    $('.select-do').on('mouseleave', function () {
+                        $('.select-do .vote-area-list').hide();
+                    });
+                    $('.select-district .data-place .data-place-txt, .select-district .data-place .vote-area-items-body a').on('focus', function () {
                         $('.select-do .vote-area-list').hide();
                     });
                     /* ~ ↑ 대선추가 ↑ ~ */
@@ -151,7 +156,7 @@ function cleanOpenParam(type) {
                     $sidoList = $('.vote-area-list');
                     $sidoItems = $sidoList.children('.vote-area-items');
                     $sidoArea = $sidoItems.find('.area');
-                    $sidoArea.on('click keypress', function (e) {
+                    $sidoArea.on('click', function (e) {
                         e.preventDefault();
                         $('.vote-area .vote-area-items-body').hide(); //시도 숨기기
                         $mapIcon.show(); //전국 아이콘만 보이게
@@ -218,6 +223,7 @@ function cleanOpenParam(type) {
                         /*voteUIMap.setSgTypeSelBox();*/ //지방선거 선거구분
                         setNowLocatioInfoAndGePyoRate(paramOpen.sido.name, $(this).attr('data-nav-rate'));
                     });
+                    
                 }
             });
         },
@@ -271,18 +277,14 @@ function cleanOpenParam(type) {
 
                     /* ~ ↓ 대선추가 ↓ ~ */
                     $('.select-gu').append(mainHtml);
-                    $('.vote-map .area-gu-list').click(function (e) {
-                        e.preventDefault();
-                    });
+                    $('.vote-map .area-gu-items a').contents().unwrap().wrap('<span></span>'); // 지도 클릭 방지 처리
                     $('.select-gu .select-top').on('mouseover focus', function () {
                         $('.select-gu .area-gu-list').show();
+                        $('.select-do .vote-area-list').hide();
+                        $('.select-dong .area-dong-body').hide();
                     });
                     $('.select-gu').on('mouseleave', function () {
                         $(this).children('.area-gu-list').hide();
-                    });
-                    $('.select-gu .select-top').on('mouseover focus', function () {
-                        $('.select-do .vote-area-list').hide();
-                        $('.select-dong .area-dong-body').hide();
                     });
                     /* ~ ↑ 대선추가 ↑ ~ */
 
@@ -338,6 +340,7 @@ function cleanOpenParam(type) {
 
                     /* ~ ↓ 대선추가 ↓ ~ */
                     $('.select-dong').append(mainHtml);
+                    $('.vote-map .area-gu-items button').contents().unwrap().wrap('<span></span>'); // 지도 클릭 방지 처리
                     $('.select-dong .select-top').on('mouseover focus', function () {
                         $('.select-dong .area-dong-body').show();
                         $('.select-do .vote-area-list').hide();
