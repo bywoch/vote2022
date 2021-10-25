@@ -69,11 +69,12 @@
 .candy-map a.party_15 {border-color: #666666 !important;}
 #map-wrap {position: relative; width: 422px; height: 549px;}
 #map-wrap .color-chip {position: absolute; bottom: -45px; left: 0; width: 100%; text-align: right;}
-#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('http://vote2017.imbc.com/images/vote/map_bar.png') no-repeat 58px 105px;}
+/*#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('http://vote2017.imbc.com/images/vote/map_bar.png') no-repeat 58px 105px;}*/
+#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../../images/map_bar2.png') no-repeat 58px 105px;}
 #area-txt > span {display: inline-block; position: absolute; top: 0; left: 0; width: 75px; color: #333; *display: inline; *zoom: 1;}
 #area-txt em {display: inline-block; font-weight: bold; font-size: 14px; line-height: 18px; vertical-align: top; letter-spacing: -0.8px; *display: inline; *zoom: 1;}
 #area-txt strong {display: inline-block; margin-left: 5px; font-family: 'Roboto'; font-size: 16px; line-height: 18px; vertical-align: top; letter-spacing: -0.8px; *display: inline; *zoom: 1;}
-#area-txt .area_9, #area-txt .area_10, #area-txt .area_11, #area-txt .area_12, #area-txt .area_13, #area-txt .area_14, #area-txt .area_15, #area-txt .area_16, #area-txt .area_17 {width: 55px; text-align: center; color: #fff;}
+#area-txt .area_9, #area-txt .area_10, #area-txt .area_11, #area-txt .area_18, #area-txt .area_13, #area-txt .area_14, #area-txt .area_15, #area-txt .area_16, #area-txt .area_17 {width: 55px; text-align: center; color: #fff;}
 #area-txt .area_9.empty, #area-txt .area_10.empty, #area-txt .area_11.empty, #area-txt .area_12.empty, #area-txt .area_13.empty, #area-txt .area_14.empty, #area-txt .area_15.empty, #area-txt .area_16.empty, #area-txt .area_17.empty {color: #333;}
 #area-txt .area_9 strong, #area-txt .area_10 strong, #area-txt .area_11 strong, #area-txt .area_12 strong, #area-txt .area_13 strong, #area-txt .area_14 strong, #area-txt .area_15 strong, #area-txt .area_16 strong, #area-txt .area_17 strong {display: block; text-align: center; margin-left: 0;}
 #area-txt.party_4 .area_9, #area-txt.party_4 .area_10, #area-txt.party_4 .area_11, #area-txt.party_4 .area_12, #area-txt.party_4 .area_13, #area-txt.party_4 .area_14, #area-txt.party_4 .area_15, #area-txt.party_4 .area_16, #area-txt.party_4 .area_17 {color: #333;}
@@ -88,12 +89,13 @@
 #area-txt .area_9 {top: 150px; left: 138px;}
 #area-txt .area_10 {top: 80px; left: 225px;}
 #area-txt .area_11 {top: 188px; left: 183px;}
-#area-txt .area_12 {top: 196px; left: 106px;}
+#area-txt .area_12 {top: 186px; left: 15px;}
 #area-txt .area_13 {top: 294px; left: 137px;}
 #area-txt .area_14 {top: 393px; left: 106px;}
 #area-txt .area_15 {top: 225px; left: 255px;}
 #area-txt .area_16 {top: 334px; left: 220px;}
 #area-txt .area_17 {top: 501px; left: 98px;}
+#area-txt .area_18 {top: 200px; left: 120px;}
 #area-txt .area_17 em, #area-txt .area_17 strong {line-height: 15px;}
 #svg-wrap {width: 324px; margin-left: 55px;}
 .low-browser #map-wrap {background: url('http://vote2017.imbc.com/images/vote/bg_ie_map.gif') no-repeat 0 0;}
