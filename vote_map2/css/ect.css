@@ -1,0 +1,475 @@
+@charset "utf-8";
+
+.gnb .d-day {display: none;}
+#vote-container {position: relative; padding: 40px 0 0;}
+#vote-tab {position: absolute; top: 0; left: 0; width: 100%; height: 40px; overflow: hidden;}
+#vote-tab .tab-wrap {padding: 0;}
+#vote-tab li {height: 40px;}
+#vote-tab li:first-child {width: 33.4%;}
+#vote-tab li > a {line-height: 40px;}
+#vote-tab li > a.on {font-weight: bold;}
+#vote-tab.fixed {position: fixed; top: 0; left: 0; z-index: 50; background: #fff;}
+.clearfix:after {content: ''; clear: both; display: block;}
+.fl_left {float: left;}
+.fl_right {float: right;}
+.clr-mint {color: #04b7be;}
+.clr-pink {color: #ff5483;}
+.title-wrap {position: relative; padding: 25px 10px 0; margin-bottom: 10px; z-index: 70;}
+.title-wrap h3 {font-size: 20px; font-weight: bold; color: #333; line-height: 30px; letter-spacing: -1px; /* background:url('http://vote2017.imbc.com/images/m/ico_ribbon.png') no-repeat 0 50%;background-size:auto 17px; */;}
+.title-wrap .btn-wrap {position: absolute; top: 25px; right: 10px; width: 35px; height: 30px;}
+.title-wrap .btn-wrap a {display: block; float: left; width: 30px; height: 30px; margin-left: 5px; overflow: hidden; text-indent: -9999px; background: url('http://vote2017.imbc.com/images/m/vote/ico_title_sns.png') no-repeat 0 0; background-size: 105px auto;}
+.title-wrap .btn-wrap .update {position: relative; display: inline-block; width: 145px; height: 30px; float: left; margin-left: 0; padding-right: 35px; font-size: 0.929em; font-weight: bold; color: #333; text-indent: 0; line-height: 30px; text-align: right;}
+.title-wrap .btn-wrap .update a {display: block; position: absolute; top: 0; right: 0; width: 30px; height: 30px; border: 1px solid #cdcdcd; border-radius: 2px; text-align: center; background: url('http://vote2017.imbc.com/images/m/vote/ico_reset.gif') no-repeat 50% 50%; background-size: 30px 30px;}
+.title-wrap .btn-wrap a.btn-live {width: 70px;}
+.title-wrap .btn-wrap a.toggle-sns {background-position: -75px 0;}
+.title-wrap .sns-tooltip {display: none; position: absolute; top: 35px; right: 0; width: 105px; height: 35px;}
+.title-wrap .sns-tooltip:before {content: ''; position: absolute; top: -5px; right: 13px; width: 6px; height: 5px; background: url('http://vote2017.imbc.com/images/m/vote/ico_title_sns.png') no-repeat -87px -30px; background-size: 105px auto;}
+.title-wrap .sns-tooltip a {width: 35px; height: 35px; margin-left: 0;}
+.title-wrap .btn-wrap a.btn-fb {background-position: 0 -35px;}
+.title-wrap .btn-wrap a.btn-tw {background-position: -35px -35px;}
+.title-wrap .btn-wrap a.btn-tk {background-position: -70px -35px;}
+
+/* .cg-wrap .title-wrap .btn-wrap {width:110px;} */
+.bg-sec {background-color: #fafafa;}
+
+section {position: relative; padding: 38px 10px 35px;}
+
+section h4 {position: relative; padding-left: 30px; margin: 0 0 20px; font-size: 1.286em; line-height: 1.2em; font-weight: bold;}
+
+section h4:before {content: ''; position: absolute; top: 0; left: 0; width: 25px; height: 100%; background: url('http://vote2017.imbc.com/images/m/vote/ico_title.png') no-repeat 0 50%; background-size: auto 20px;}
+
+@media only screen and (max-width: 320px) {
+    .title-wrap .btn-wrap .update {    font-size: 0.857em;     line-height: 15px; }
+    .title-wrap .btn-wrap .update > em {    display: block; };
+}
+
+/* txt 정당공통 */
+.party_1 .clr_chg {color: #0C69B4 !important;}
+.party_2 .clr_chg {color: #C9171E !important;}
+.party_3 .clr_chg {color: #015F3F !important;}
+.party_4 .clr_chg {color: #1693d4 !important;}
+.party_5 .clr_chg {color: #ffcb05 !important;}
+.party_6 .clr_chg, .party_7 .clr_chg, .party_8 .clr_chg, .party_9 .clr_chg, .party_10 .clr_chg, .party_11 .clr_chg, .party_12 .clr_chg, .party_13 .clr_chg, .party_14 .clr_chg {color: #86725c !important;}
+.party_15 .clr_chg {color: #666 !important;}
+.bar:after {content: ''; position: absolute; top: 0; left: 0; background: #fff; opacity: 0.15;}
+
+/* bg 정당공통 */
+.top-rank .party_1 .bar, .candy-map .party_1:after, .pre-graph-wrap .party_1 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_1.gif') repeat-x 0 50%;}
+.top-rank .party_2 .bar, .candy-map .party_2:after, .pre-graph-wrap .party_2 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_2.gif') repeat-x 0 50%;}
+.top-rank .party_3 .bar, .candy-map .party_3:after, .pre-graph-wrap .party_3 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_3.gif') repeat-x 0 50%;}
+.top-rank .party_4 .bar, .candy-map .party_4:after, .pre-graph-wrap .party_4 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_4.gif') repeat-x 0 50%;}
+.top-rank .party_5 .bar, .candy-map .party_5:after, .pre-graph-wrap .party_5 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_5.gif') repeat-x 0 50%;}
+.top-rank .party_6 .bar, .candy-map .party_6:after, .pre-graph-wrap .party_6 .bar, .top-rank .party_7 .bar, .candy-map .party_7:after, .pre-graph-wrap .party_7 .bar, .top-rank .party_8 .bar, .candy-map .party_8:after, .pre-graph-wrap .party_8 .bar, .top-rank .party_9 .bar, .candy-map .party_9:after, .pre-graph-wrap .party_9 .bar, .top-rank .party_10 .bar, .candy-map .party_10:after, .pre-graph-wrap .party_10 .bar, .top-rank .party_11 .bar, .candy-map .party_11:after, .pre-graph-wrap .party_11 .bar, .top-rank .party_12 .bar, .candy-map .party_12:after, .pre-graph-wrap .party_12 .bar, .top-rank .party_13 .bar, .candy-map .party_13:after, .pre-graph-wrap .party_13 .bar, .top-rank .party_14 .bar, .candy-map .party_14:after, .pre-graph-wrap .party_14 .bar {background: #86725c;}
+.top-rank .party_15 .bar, .candy-map .party_15:after, .pre-graph-wrap .party_15 .bar {background: #666;}
+.bar-vertical .bar:after {width: 50%; height: 100%;}
+.bar-horizontal .bar:after {width: 100%; height: 50%;}
+.bx-wrapper {position: relative;}
+.bx-controls {position: absolute; bottom: 5px; left: 0; width: 100%;}
+
+/* 투표현황 */
+.tp-wrap {background: #fff;}
+#all-area {padding-top: 20px; border-top: 3px solid #555; background: #f1f1f1;}
+#all-area .all-vote {padding: 10px 0; margin: 0 10px; background: #fff;}
+#all-area .all-vote > div {width: 50%; height: 80px;}
+#all-area .all-vote .fl_left {text-align: center;}
+#all-area .all-vote .fl_left p {font-size: 1.286em; font-weight: bold; line-height: 30px;}
+#all-area .all-vote .fl_left p > span {display: inline-block; font-size: 3.214em; line-height: 50px; letter-spacing: -0.05em;}
+#all-area .all-vote .fl_left p > em {display: inline-block; margin-left: 3px; font-size: 1.286em;}
+#all-area .all-vote .fl_right {padding: 10px 0 10px 12px; text-align: left; border-left: 1px solid #e5e5e5;}
+#all-area .all-vote .fl_right p {font-size: 1.071em; color: #333; line-height: 30px; letter-spacing: -0.03em;}
+#all-area .all-vote .fl_right p strong {font-weight: bold;}
+#all-area .area-txt {position: relative; max-width: 375px; margin: 0 auto;}
+#all-area .area-txt > span {display: inline-block; position: absolute; font-size: 0.929em; font-weight: bold;}
+#all-area .area-txt > span em {display: inline-block; color: #333;}
+#all-area .area-txt > span strong {display: inline-block; margin-left: 2px; color: #0095a6;}
+#all-area .area-txt .area_9 strong, #all-area .area-txt .area_10 strong, #all-area .area-txt .area_11 strong, #all-area .area-txt .area_12 strong, #all-area .area-txt .area_13 strong, #all-area .area-txt .area_14 strong, #all-area .area-txt .area_15 strong, #all-area .area-txt .area_16 strong {display: block; text-align: center; margin-left: 0; line-height: 1em;}
+#all-area .area-txt .area_9 em, #all-area .area-txt .area_10 em, #all-area .area-txt .area_11 em, #all-area .area-txt .area_12 em, #all-area .area-txt .area_13 em, #all-area .area-txt .area_14 em, #all-area .area-txt .area_15 em, #all-area .area-txt .area_16 em {display: block; text-align: center; line-height: 1em;}
+#all-area .area-txt .area_1 {top: 23%; left: 3%;}
+#all-area .area-txt .area_2 {top: 63%; left: 80.5%;}
+#all-area .area-txt .area_3 {top: 50.2%; left: 80.5%;}
+#all-area .area-txt .area_4 {top: 18.7%; left: 3%;}
+#all-area .area-txt .area_5 {top: 68%; left: 3%;}
+#all-area .area-txt .area_6 {top: 40.8%; left: 3%;}
+#all-area .area-txt .area_7 {top: 55.5%; left: 80.5%;}
+#all-area .area-txt .area_9 {top: 15.1%; left: 33.2%;}
+#all-area .area-txt .area_10 {top: 17.6%; left: 50.8%;}
+#all-area .area-txt .area_11 {top: 34.3%; left: 42.4%;}
+#all-area .area-txt .area_12 {top: 35.3%; left: 27.2%;}
+#all-area .area-txt .area_13 {top: 51.1%; left: 32.8%;}
+#all-area .area-txt .area_14 {top: 68.4%; left: 28.7%;}
+#all-area .area-txt .area_15 {top: 40.4%; left: 57.6%;}
+#all-area .area-txt .area_16 {top: 58.4%; left: 49.5%;}
+#all-area .area-txt .area_17 {top: 85.4%; left: 27.3%;}
+#all-area .area-txt .best strong {color: #ff5483 !important;}
+
+@media only screen and (max-width: 320px) {#all-area .all-vote > div {    font-size: 12px; }
+
+    #all-area .all-vote .fl_right {    padding-left: 10px; }
+
+    #all-area .area-txt > span {    font-size: 0.8em; };}
+#vote-area select {position: absolute; top: 30px; right: 10px; width: 70px; height: 30px; border: 1px solid #666; line-height: 30px; padding: 0 7px; background: #fff;}
+#vote-area .bar-graph li {position: relative; height: 20px; margin: 5px 30px 10px 130px; border-radius: 0 10px 10px 0; background: #f1f1f1;}
+#vote-area .bar-graph li .txt {position: absolute; top: -5px; left: -130px; width: 130px; height: 30px; padding-right: 5px; font-size: 0.929em; line-height: 30px; color: #555; text-align: right; border-right: 1px solid #777;}
+#vote-area .bar-graph li .txt span {display: inline-block; width: 68px; line-height: 20px; vertical-align: top;}
+#vote-area .bar-graph li .txt .counter {width: auto; font-size: 1.308em; font-weight: bold; color: #04b7be; text-align: left;}
+#vote-area .bar-graph li .txt .txt-sm {font-size: 0.769em; line-height: 20px;}
+#vote-area .bar-graph li .txt .txt-sm em {display: inline-block; padding: 0 1px;}
+#vote-area .bar-graph li .bar {position: relative; display: block; width: 0; height: 20px; overflow: hidden; border-radius: 0 10px 10px 0; background: #04b7be; box-shadow: 0 3px 8px #bbb; width: 100%;}
+#vote-area .bar-graph li.best .counter {color: #ff5483;}
+#vote-area .bar-graph li.best .bar {background: #ff5483;}
+#vote-time h4:before {background-position: -25px 50% !important;}
+#vote-time .vote-rate {width: 100%; height: 230px; padding-left: 44px; background: url('http://vote2017.imbc.com/images/m/vote/bg_graph_left.gif') no-repeat 0 100%; background-size: 44px auto;}
+#vote-time .vote-rate .inner {position: relative; width: 100%; height: 240px; overflow-y: hidden; overflow-x: auto;}
+#vote-time .vote-rate .inner .desc-txt {position: absolute; left: 10px; top: 40px; font-size: 12px; color: #666; z-index: 100;}
+#vote-time .inner > ul {width: 540px; height: 203px; overflow: hidden;}
+#vote-time .inner > ul li {position: relative; float: left; width: 45px; height: 100%;}
+#vote-time .inner > ul li .bar {display: block; position: absolute; bottom: 0; left: 0; width: 20px; height: 175px; margin: 0 13px 0 12px;}
+#vote-time .inner > ul li .bar:after {display: none;}
+#vote-time .inner > ul li .bar em {display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; overflow: hidden; border-radius: 10px 10px 0 0;}
+#vote-time .inner > ul li .txt {display: block; position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;}
+#vote-time .inner .vote2012 {height: 230px; padding-bottom: 27px; overflow: hidden; background: url('http://vote2017.imbc.com/images/m/vote/bg_graph_btm.gif') no-repeat 0 100%; background-size: auto 27px;}
+#vote-time .inner .vote2012:after {content: ''; clear: both; display: block;}
+#vote-time .inner .vote2012 .txt {font-size: 0.786em; color: #555;}
+#vote-time .inner .vote2012 .bar em {background: #f1f1f1;}
+#vote-time .inner .vote2017 {position: absolute; top: 0; left: 0; z-index: 10;}
+#vote-time .inner .vote2017 .bar em {bottom: -100%;}
+#vote-time .inner .vote2017 .bar em:after {content: ''; position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: #fff; opacity: 0.15;}
+#vote-time .inner .vote2017 .txt {font-size: 0.929em; font-weight: bold; color: #333;}
+#vote-time .inner .vote2017 .time-1 .bar em {background: #cceced;}
+#vote-time .inner .vote2017 .time-2 .bar em {background: #b2e2e4;}
+#vote-time .inner .vote2017 .time-3 .bar em {background: #99d9db;}
+#vote-time .inner .vote2017 .time-4 .bar em {background: #7fcfd2;}
+#vote-time .inner .vote2017 .time-5 .bar em {background: #66c5c9;}
+#vote-time .inner .vote2017 .time-6 .bar em {background: #59c1c4;}
+#vote-time .inner .vote2017 .time-7 .bar em {background: #4cbcc0;}
+#vote-time .inner .vote2017 .time-8 .bar em {background: #33b2b7;}
+#vote-time .inner .vote2017 .time-9 .bar em, #vote-time .inner .vote2017 .time-10 .bar em, #vote-time .inner .vote2017 .time-11 .bar em, #vote-time .inner .vote2017 .time-12 .bar em {background: #19a8ae;}
+::-webkit-scrollbar {width: 2px; height: 2px; border-radius: 2px; background: #f1f1f1;}
+::-webkit-scrollbar-thumb {border-radius: 2px; background-color: #333; border: 2px solid #333;}
+#pre-vote h4:before {background-position: -50px 50% !important;}
+#main-news h4:before {background-position: -75px 50% !important;}
+.news-slide {position: relative;}
+.news-slide .board-list > li {margin: 0;}
+.news-slide .bx-controls {position: absolute; top: -35px; left: 0; width: 100%; height: 0;}
+.news-slide .bx-pager {width: 100%; text-align: right;}
+.news-slide .bx-pager-item a {text-align: center; background: #dcdcdc;}
+.banner {max-width: 750px; margin: 0 auto;}
+
+/* 출구조사 */
+.exit-top {position: relative; border-top: 3px solid #555;}
+.exit-top .top-rank {position: relative; height: 314px; margin: 0 10px;}
+.top-rank > div {position: absolute; top: 0; width: 100%; height: 100%;}
+.top-rank > div:after {content: ''; clear: both; display: block;}
+.top-rank .flag {display: block; position: absolute; top: 0; width: 74px; height: 74px; background-size: contain; background-repeat: no-repeat; z-index: 10;}
+.top-rank .flag span {display: block; width: 100%; padding: 3px 7px 0 7px; color: #fff; text-align: center;}
+.top-rank .flag span strong {font-size: 1.571em; font-weight: bold;}
+.cg-wrap .top-rank .flag.state1 {left: -10px; width: 63px; height: 63px; overflow: hidden; text-indent: -9999px; background: url('http://vote2017.imbc.com/images/m/vote/badge4.png') no-repeat 0 0; background-size: 63px auto;}
+.cg-wrap .top-rank .flag.state1 > span {display: none;}
+.top-rank .party_1 .flag {background-image: url('http://vote2017.imbc.com/images/m/vote/flag_party_1.png');}
+.top-rank .party_2 .flag {background-image: url('http://vote2017.imbc.com/images/m/vote/flag_party_2.png');}
+.top-rank .party_3 .flag {background-image: url('http://vote2017.imbc.com/images/m/vote/flag_party_3.png');}
+.top-rank .party_4 .flag {background-image: url('http://vote2017.imbc.com/images/m/vote/flag_party_4.png');}
+.top-rank .party_5 .flag {background-image: url('http://vote2017.imbc.com/images/m/vote/flag_party_5.png');}
+.top-rank .img {display: block; position: absolute; top: 10px; width: 140px; height: 140px; margin: 0 25px;}
+.top-rank .info {position: relative; width: 50%; height: 140px; margin-top: 185px; color: #333; z-index: 1;}
+.top-rank .info .party-img {position: absolute; top: 2px; width: 40px; height: 40px;}
+.top-rank .info .party {line-height: 1.286em;}
+.top-rank .info .txt {font-size: 0.929em;}
+.top-rank .info .name {font-size: 1.429em; font-weight: bold; line-height: 1.429em;}
+.top-rank .info .clr_chg {font-size: 1.429em;}
+.top-rank .info .clr_chg .num {font-size: 1.500em; font-weight: bold;}
+.top-rank .bar {display: block; position: absolute; top: 150px; width: 0px; ; height: 20px; overflow: hidden; z-index: 10;}
+.top-rank .win1 {left: 0;}
+.top-rank .win1 .flag {left: -17px;}
+.top-rank .win1 .img {left: 0;}
+.top-rank .win1 .info {float: left; padding-left: 60px; text-align: left;}
+.top-rank .win1 .info .party-img {left: 15px;}
+.top-rank .win1 .bar {right: 0; border-radius: 10px 0 0 10px;}
+.top-rank .win2 {right: 0;}
+.top-rank .win2 .flag {right: -17px;}
+.top-rank .win2 .img {right: 0;}
+.top-rank .win2 .info {float: right; padding-right: 60px; text-align: right;}
+.top-rank .win2 .info .party-img {right: 15px;}
+.top-rank .win2 .bar {left: 0; border-radius: 0 10px 10px 0;}
+.top-rank .rank-state {display: block; position: absolute; top: 70px; left: 50%; width: 64px; height: 72px; margin-left: -32px; background: url('http://vote2017.imbc.com/images/m/vote/rank_state.png') no-repeat 0 0; background-size: cover;}
+.top-rank .rank-state strong {display: block; font-size: 1.357em; font-weight: bold; color: #fff; line-height: 70px; text-align: center;}
+
+/* 전국판세 */
+#nationwide {width: 100%;}
+#nationwide h4:before {background-position: -100px 50% !important;}
+.map-btn {position: absolute; top: 35px; right: 10px; width: 160px; height: 30px;}
+.map-btn:after {content: ''; clear: both; display: block;}
+.map-btn a {display: block; position: relative; float: left; width: 80px; height: 30px; margin-left: -1px; border: 1px solid #009fa5; text-align: center; color: #333; line-height: 30px; font-size: 0.857em; background: #fff;}
+.map-btn a.map-navi-1 {margin-left: 0;}
+.map-btn a.on {background: #009fa5; color: #fff; font-weight: bold; z-index: 1;}
+.candy-map {margin-bottom: 15px; margin-left: -5px;}
+.candy-map:after {content: ''; clear: both; display: block;}
+.candy-map li {float: left; width: 20%; height: auto;}
+.candy-map a {position: relative; display: block; padding: 4px; margin-left: 4px; box-sizing: content-box;}
+.candy-map a img {display: block; width: 100%;}
+.candy-map.sup a {padding-bottom: 0; border-bottom: 4px solid #0c69b4;}
+.candy-map.sup a.on {padding: 0; border: 4px solid #0c69b4;}
+.candy-map.sup a.party_2 {border-color: #C9171E !important;}
+.candy-map.sup a.party_3 {border-color: #015F3F !important;}
+.candy-map.sup a.party_4 {border-color: #00B1EB !important;}
+.candy-map.sup a.party_5 {border-color: #FFCB05 !important;}
+.candy-map.sup a.party_6, .candy-map.sup a.party_7, .candy-map.sup a.party_8, .candy-map.sup a.party_9, .candy-map.sup a.party_10, .candy-map.sup a.party_11, .candy-map.sup a.party_12, .candy-map.sup a.party_13, .candy-map.sup a.party_14 {border-color: #86725c !important;}
+.candy-map.sup a.party_15 {border-color: #666666 !important;}
+.candy-map a:after {content: ''; position: absolute; bottom: 0px; left: 0; width: 100%; height: 8px;}
+.candy-map.sup a:after {display: none;}
+#map-wrap {position: relative; width: 300px; margin: 0 auto;}
+#map-wrap .color-chip {position: absolute; bottom: -20px; right: 0; width: 50%;}
+#map-wrap .color-chip img {display: block; width: 100%;}
+#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('http://vote2017.imbc.com/images/m/vote/map_bar.png') no-repeat 40px 73px; background-size: 210px auto;}
+#area-txt > span {display: inline-block; position: absolute; top: 0; left: 0; width: 75px; font-size: 0.857em; font-weight: bold; color: #333; letter-spacing: -1px; line-height: 1.2em;}
+#area-txt em {display: inline-block;}
+#area-txt strong {display: inline-block; margin-left: 2px;}
+#area-txt .area_9, #area-txt .area_10, #area-txt .area_11, #area-txt .area_12, #area-txt .area_13, #area-txt .area_14, #area-txt .area_15, #area-txt .area_16, #area-txt .area_17 {width: auto; color: #fff;}
+#area-txt .area_9.empty, #area-txt .area_10.empty, #area-txt .area_11.empty, #area-txt .area_12.empty, #area-txt .area_13.empty, #area-txt .area_14.empty, #area-txt .area_15.empty, #area-txt .area_16.empty, #area-txt .area_17.empty {color: #333;}
+#area-txt .area_9 em, #area-txt .area_10 em, #area-txt .area_11 em, #area-txt .area_12 em, #area-txt .area_13 em, #area-txt .area_14 em, #area-txt .area_15 em, #area-txt .area_16 em, #area-txt .area_17 em, #area-txt .area_9 strong, #area-txt .area_10 strong, #area-txt .area_11 strong, #area-txt .area_12 strong, #area-txt .area_13 strong, #area-txt .area_14 strong, #area-txt .area_15 strong, #area-txt .area_16 strong, #area-txt .area_17 strong {display: block; text-align: center; margin-left: 0;}
+#area-txt.party_4 .area_9, #area-txt.party_4 .area_10, #area-txt.party_4 .area_11, #area-txt.party_4 .area_12, #area-txt.party_4 .area_13, #area-txt.party_4 .area_14, #area-txt.party_4 .area_15, #area-txt.party_4 .area_16, #area-txt.party_4 .area_17 {color: #333;}
+#area-txt.party_5 .area_9, #area-txt.party_5 .area_10, #area-txt.party_5 .area_11, #area-txt.party_5 .area_12, #area-txt.party_5 .area_13, #area-txt.party_5 .area_14, #area-txt.party_5 .area_15, #area-txt.party_5 .area_16, #area-txt.party_5 .area_17 {color: #333;}
+#area-txt .area_1 {top: 88px; left: -25px; text-align: right;}
+#area-txt .area_2 {top: 259px; left: 247px;}
+#area-txt .area_3 {top: 210px; left: 247px;}
+#area-txt .area_4 {top: 71px; left: -25px; text-align: right;}
+#area-txt .area_5 {top: 254px; left: -25px; text-align: right;}
+#area-txt .area_6 {top: 168px; left: -25px; text-align: right;}
+#area-txt .area_7 {top: 234px; left: 247px;}
+#area-txt .area_9 {top: 106px; left: 93px;}
+#area-txt .area_10 {top: 56px; left: 149px;}
+#area-txt .area_11 {top: 130px; left: 128px;}
+#area-txt .area_12 {top: 140px; left: 71px;}
+#area-txt .area_13 {top: 210px; left: 95px;}
+#area-txt .area_14 {top: 282px; left: 79px;}
+#area-txt .area_15 {top: 160px; left: 175px;}
+#area-txt .area_16 {top: 240px; left: 150px;}
+#area-txt .area_17 {top: 352px; left: 66px;}
+#area-txt .area_17 em, #area-txt .area_17 strong {line-height: 15px;}
+#svg-wrap {width: 230px; height: 388px; margin: 0 auto;}
+#svg-wrap svg {width: 100%; height: 100%;}
+
+/* 득표율 */
+#pre-vote-rank h4:before {background-position: -25px 50% !important;}
+.select-box {position: absolute; top: 33px; right: 10px; width: 70px; height: 30px; font-size: 1em; border: 1px solid #666; background: #fff; z-index: 10;}
+.candi-group {width: 100%; height: 450px; overflow: hidden;}
+.candy-list li {position: relative; width: 100%; height: 90px; overflow: hidden; border-bottom: 1px solid #f1f1f1;}
+.candy-list .rank {display: block; position: absolute; top: 0; left: 0; width: 50px; text-align: center;}
+.candy-list .rank em {display: inline-block; padding-top: 42px; font-size: 0.857em; vertical-align: top;}
+.candy-list .rank .ft_rbt {padding-top: 35px; font-size: 2.143em;}
+.candy-list .candy {display: block; position: absolute; bottom: 0; left: 50px; width: 75px; height: 75px;}
+.candy-list .info {display: block; position: relative; height: 40px; padding-left: 50px; margin: 30px 0 20px 130px;}
+.candy-list .info .party-img {position: absolute; top: 0; left: 0; width: 40px; height: 40px;}
+.candy-list .info .txt {display: inline-block; width: 100px; font-size: 0.929em; color: #333; line-height: 1.385em;}
+.candy-list .info .txt strong {display: block; font-size: 1.308em; font-weight: bold; line-height: 1.538em;}
+.candy-list .info .num {display: inline-block; position: absolute; top: 0; right: 0; font-weight: bold; font-size: 2.143em; line-height: 40px;}
+.candy-list .down {height: 60px;}
+.candy-list .down .candy, .candy-list .down .info .party {display: none;}
+.candy-list .down .rank {color: #333 !important;}
+.candy-list .down .rank em {font-size: 1.214em; padding-top: 20px; padding-left: 3px;}
+.candy-list .down .rank .ft_rbt {padding-top: 18px; font-size: 1.643em; padding-left: 0;}
+.candy-list .down .info {margin: 10px 0 10px 50px; padding-left: 10px;}
+.candy-list .down .info .party-img {display: none;}
+.candy-list .down .info .txt {display: block; width: 100%; font-size: 1.214em; line-height: 40px;}
+.candy-list .down .info .txt strong {display: inline-block; font-weight: bold; padding-left: 5px;}
+.candy-list .down .info .num {font-size: 1.643em; line-height: 40px; vertical-align: top; color: #333 !important;}
+#pre-vote-rank .btn-toggle {display: block; width: 100%; height: 35px; margin-top: 20px; text-align: center; border-radius: 5px; background: #ff5e8a;}
+#pre-vote-rank .btn-toggle span {display: inline-block; position: relative; font-size: 0.929em; color: #fff; padding-right: 20px; line-height: 35px;}
+#pre-vote-rank .btn-toggle span:after {content: ''; position: absolute; top: 0; right: 0; width: 12px; height: 100%; transform: rotate(-180deg); background: url('http://vote2017.imbc.com/images/m/vote/ico_arrow.png') no-repeat 100% 14px; background-size: 12px auto;}
+#pre-vote-rank .btn-toggle.close span:after {background-position: 100% 50%; transform: rotate(0deg);}
+
+@media only screen and (max-width: 320px) {
+    .top-rank .img {    top: 30px;     width: 120px;     height: 120px;     margin: 0 15px; }
+
+    .candy-list .candy {    left: 35px;     width: 65px;     height: 65px; }
+
+    .candy-list .info {    margin-left: 100px;     padding-left: 45px; }
+
+    .candy-list .info .num {    font-size: 1.786em; }
+
+    .candy-list .down .info .txt {    font-size: 1.071em; };
+}
+
+/* 심층 출구조사 */
+#exit-research h4:before {background-position: -125px 50% !important;}
+#exit-research .btn-wrap {text-align: center;}
+#exit-research .btn-wrap a {display: inline-block; padding: 0 10px; height: 45px; background: #ff5e8a;}
+#exit-research .btn-wrap a span {display: inline-block; position: relative; color: #fff; line-height: 45px; letter-spacing: -0.5px;}
+#exit-research .btn-wrap a.btn-exit span {padding-right: 10px; background: url('http://vote2017.imbc.com/images/m/vote/ico_arrow1.png') no-repeat 100% 50%; background-size: auto 11px;}
+#exit-research .btn-wrap a.btn-pdf {background-color: #666;}
+#exit-research .btn-wrap a.btn-pdf span {padding-right: 15px; background: url('http://vote2017.imbc.com/images/m/vote/ico_arrow2.png') no-repeat 100% 50%; background-size: 12px auto;}
+
+/* 1,2위 비교데이터 */
+#comparison h4:before {background-position: -150px 50% !important;}
+#comparison .tab {margin-bottom: 25px;}
+#comparison .tab li {float: left; width: 25%; height: 38px; border: 1px solid #ededed; border-bottom: 0 none;}
+#comparison .tab.ea2 li {width: 50%;}
+#comparison .tab li + li {border-left: 0 none;}
+#comparison .tab li a {display: block; height: 100%; border-bottom: 3px solid #888; font-size: 1em; color: #888; text-align: center; line-height: 34px; background: #fff;}
+#comparison .tab li a.on {font-weight: bold; color: #333; border-bottom-color: #ff5e8a;}
+#predata-con > .data-wrap > div {position: relative; overflow: hidden;}
+.win-wrap .fl_left {position: relative; width: 50%; text-align: left; font-size: 0;}
+.win-wrap .fl_left .info {margin-left: 5px;}
+.win-wrap .fl_right {position: relative; width: 50%; text-align: right; font-size: 0;}
+.win-wrap .fl_right .info {margin-right: 5px;}
+.win-wrap .img {display: inline-block; width: 70px; height: 70px;}
+.win-wrap .info {display: inline-block; margin-top: 3px; font-size: 14px;}
+.win-wrap .info .party-img {display: inline-block; width: 30px; height: 30px; margin-bottom: 5px;}
+.win-wrap .info .party {display: block; font-size: 1em; line-height: 1em; color: #333; letter-spacing: -0.5px;}
+.win-wrap .info .name {display: block; font-size: 1.143em; line-height: 1.2em; font-weight: bold; letter-spacing: -1px;}
+
+@media only screen and (max-width: 320px) {.win-wrap .fl_left .img {    margin-left: -5px; }
+
+    .win-wrap .fl_left .info {    margin-left: 0; }
+
+    .win-wrap .fl_right .img {    margin-right: -5px; }
+
+    .win-wrap .fl_right .info {    margin-right: 0; }
+
+    #exit-research .btn-wrap a span {    font-size: 0.857em; }
+
+    #exit-research .btn-wrap a.btn-exit span {    background-size: auto 10px; }
+
+    #exit-research .btn-wrap a.btn-pdf span {    background-size: 10px auto; };}
+.pre-graph-wrap {padding-top: 10px; font-size: 1em;}
+.pre-graph-wrap .txt {text-align: center; line-height: 20px; font-weight: bold; color: #333;}
+
+/* 지역별 예상득표율 */
+.hor .pre-graph-wrap li {margin-top: 10px;}
+.hor .pre-graph-wrap li:after {content: ''; clear: both; display: block;}
+.hor .pre-graph-wrap li > div {position: relative; float: left; width: 43.6%; height: 20px; background: #f1f1f1;}
+.hor .pre-graph-wrap li > div.txt {width: 12.8%; background: none;}
+.hor .pre-graph-wrap li:first-child {margin-top: 0 !important;}
+.hor .pre-graph-wrap li > div > .ft_rbt {position: absolute; top: 0; font-size: 14px; color: #fff; line-height: 20px; z-index: 1;}
+.hor .pre-graph-wrap .bar {position: absolute; top: 0; height: 20px;}
+.hor .pre-graph-wrap .win1 {border-radius: 10px 0 0 10px;}
+.hor .pre-graph-wrap .win2 {border-radius: 0 10px 10px 0;}
+.hor .pre-graph-wrap .win1 .bar {right: 0; border-radius: 10px 0 0 10px;}
+.hor .pre-graph-wrap .win2 .bar {left: 0; border-radius: 0 10px 10px 0;}
+.hor .pre-graph-wrap .win1 .ft_rbt {right: 7px;}
+.hor .pre-graph-wrap .win2 .ft_rbt {left: 7px;}
+.hor .pre-graph-wrap .win1 .txt-out {padding-right: 3px; color: #333 !important;}
+.hor .pre-graph-wrap .win2 .txt-out {padding-left: 3px; color: #333 !important;}
+
+/* 권역별 예상득표율 */
+.pre-vote2 .pre-graph-wrap .win1 {border-right: 1px solid #fff;}
+.pre-vote2 .pre-graph-wrap .win2 {border-left: 1px solid #fff;}
+.pre-vote2 .pre-graph-wrap li > div.txt {text-align: left;}
+.pre-vote2 .pre-graph-wrap li > div.txt.line2 {position: relative; height: 35px; line-height: 1.1em;}
+
+@media only screen and (max-width: 320px) {
+
+    .pre-vote4 .pre-graph-wrap li > div.txt,
+    .pre-vote2 .pre-graph-wrap li > div.txt {    font-size: 12px; };}
+
+/* 시간대별 예상득표율 */
+.pre-vote5 .pre-graph-wrap {position: relative;}
+.pre-vote5 .pre-graph-wrap:before {content: ''; display: block; position: absolute; left: 50%; top: -23px; margin-left: -13px; width: 26px; height: 28px; background: url('http://vote2017.imbc.com/images/m/vote/bg_prevote5.png') no-repeat; background-size: cover;}
+.research-desc {border-top: 1px solid #888; padding-top: 15px; margin-top: 20px;}
+.research-desc p {padding: 3px 0; margin-left: 12px; font-size: 0.857em; color: #333; line-height: 1.1em; text-indent: -12px;}
+.research-desc p strong {font-weight: bold;}
+
+/* 성별 예상득표율 */
+/* 개표결과 */
+.gp-wrap .flag.state1, .gp-wrap .flag.state2, .gp-wrap .flag.state3 {left: -11px; width: 72px; height: 72px; overflow: hidden; text-indent: -9999px; background-size: 72px auto;}
+.gp-wrap .flag.state1 > span, .gp-wrap .flag.state2 > span, .gp-wrap .flag.state3 > span {display: none;}
+.gp-wrap .flag.state1 {background-image: url('http://vote2017.imbc.com/images/vote/badge1.png');}
+.gp-wrap .flag.state2 {background-image: url('http://vote2017.imbc.com/images/vote/badge2.png');}
+.gp-wrap .flag.state3 {background-image: url('http://vote2017.imbc.com/images/vote/badge3.png');}
+.gp-wrap .cnt-rate {position: absolute; top: 0; left: 50%; width: 70px; margin-left: -35px; border-radius: 0 0 5px 5px; font-size: 0.714em; color: #fff; text-align: center; background: #555; z-index: 50;}
+.gp-wrap .cnt-rate .ft_rbt {font-size: 2.000em; line-height: 0.5em;}
+.gp-wrap .top-rank .rank-state {top: 120px; left: 50%; margin-left: -32px; background-image: url('http://vote2017.imbc.com/images/vote/rank_state1.png'); z-index: 10;}
+.gp-wrap .top-rank .rank-state strong {padding-top: 12px; font-size: 0.786em; line-height: 1.286em; text-shadow: 1px 1px 1px #005e74;}
+.gp-wrap .top-rank .win1 .info .txt {position: absolute; top: 50px; left: 15px;}
+.gp-wrap .top-rank .win1 .info .clr_chg {position: absolute; top: 75px; left: 15px;}
+.gp-wrap .top-rank .win2 .info .txt {position: absolute; top: 50px; right: 15px;}
+.gp-wrap .top-rank .win2 .info .clr_chg {position: absolute; top: 75px; right: 15px;}
+.gp-wrap .spacialM-rate {display: none; position: absolute; bottom: 15px; left: 50%; width: 140px; height: 63px; margin-left: -70px; border: 1px solid #e7e7e7; text-align: center; background: #fafafa;}
+.gp-wrap .spacialM-rate > a {display: block; padding: 5px 0; font-size: 0.786em; font-weight: bold; color: #333;}
+.gp-wrap .spacialM-rate > span {display: inline-block; padding-right: 3px; font-size: 1.286em; color: #ff5483; line-height: 20px;}
+.gp-wrap .spacialM-rate > span.ar {padding: 0 0 0 21px; background: url('http://vote2017.imbc.com/images/m/vote/ico_m.png') no-repeat 0 50%; background-size: auto 19px;}
+.gp-wrap .spacialM-rate > span em {font-size: 0.667em;}
+.spacialM.gp-wrap .spacialM-rate {display: block;}
+.gp-wrap .map-btn {width: 170px;}
+.gp-wrap .map-btn a {width: 50px;}
+.gp-wrap .map-btn a.map-navi-1 {width: 70px;}
+#pre-vote-rank > span {position: absolute; top: 32px; right: 85px; text-align: right; font-size: 0.786em; color: #555; line-height: 15px;}
+.candy-list .badge {position: absolute; top: 0; left: 30px; width: 35px; height: 35px; text-align: left; overflow: hidden; text-indent: -9999px; z-index: 1;}
+.candy-list .badge.state1 {background: url('http://vote2017.imbc.com/images/vote/badge_s1.png') no-repeat 0 0; background-size: 35px 35px;}
+.candy-list .badge.state2 {background: url('http://vote2017.imbc.com/images/vote/badge_s2.png') no-repeat 0 0; background-size: 35px 35px;}
+.candy-list .badge.state3 {height: 42px; background: url('http://vote2017.imbc.com/images/vote/badge_s3.png') no-repeat 0 0; background-size: 35px auto;}
+.gp-wrap .candy-list .info .num {line-height: 25px;}
+.gp-wrap .candy-list .info .num > em {display: block; text-align: right; line-height: 18px; font-size: 0.5em; color: #333 !important;}
+
+@media only screen and (max-width: 320px) {.gp-wrap .top-rank .info .clr_chg {    font-size: 1.071em;     text-align: right; }
+
+    .gp-wrap .candy-list .info .num > em {    font-size: 15px; }
+
+    .candy-list .info .txt {    letter-spacing: -1px; };}
+
+/* 심층출구조사 */
+.vote-research .color1 {background: #6179d2;}
+.vote-research .color2 {background: #ff8d31;}
+.vote-research .color3 {background: #40c0c1;}
+.vote-research .color4 {background: #a165c3;}
+.vote-research .color5 {background: #ff6b72;}
+.vote-research .color6 {background: #69ad56;}
+.vote-research .color9 {background: #777;}
+.vote-research #vote-wrap {padding: 0 10px;}
+.vote-research #vote-header {position: relative; height: 60px; padding-top: 20px;}
+.vote-research #vote-header h1 {padding-left: 35px; text-align: left; font-size: 1.429em; font-weight: bold; background: url('http://vote2017.imbc.com/images/m/ico_ribbon.png') no-repeat 0 50%; background-size: auto 17px;}
+.vote-research #vote-header .btn-close {display: block; position: absolute; top: 15px; right: 0; width: 30px; height: 30px;}
+.vote-research #vote-header .btn-close img {display: block; width: 100%;}
+.vote-research #vote-tab {position: relative; height: 30px;}
+.vote-research #vote-tab li {height: 30px;}
+.vote-research #vote-tab li a {border-width: 1px; font-size: 0.857em; line-height: 30px;}
+.vote-research #research-con {position: relative; padding: 0 0 30px; background: none;}
+.vote-research #research-con section {display: none; padding: 0; margin: 0 5px;}
+.vote-research .research-box {padding: 5px 0 30px; border-top: 1px solid #ebebeb;}
+.vote-research .research-box.first {border-top: 0 none;}
+.research-box .title {padding: 20px 0 15px;}
+.research-box .title h3 {text-indent: -20px; padding-left: 20px; font-size: 1em; font-weight: bold; color: #333; line-height: 1.286em;}
+.research-box .title strong {color: #ff5e8a; border-bottom: 1px solid #ffb9ca;}
+.research-box .title .q {border-bottom: 0 none;}
+.research-box .graph-group {padding: 0 15px;}
+.graph-group.v1 {overflow: hidden;}
+.graph-group.v1 .graph {width: 100%; height: 35px; background: #f4f4f4;}
+.graph-group.v1 .graph:after {content: ''; clear: both; display: block;}
+.graph-group.v1 .graph > span {display: block; float: left; position: relative; height: 100%;}
+.graph-group.v1 .graph > span strong {display: block; position: absolute; bottom: 0; right: 5px; font-size: 0.929em; line-height: 35px; color: #fff;}
+.graph-group.v1 .graph .line {position: absolute; top: 0; right: 0; width: 1px; height: 100%; background: #fff;}
+.graph-group.v1 .graph .color9 .line {display: none;}
+.graph-group.v1 .grp-txt {padding-top: 5px;}
+.graph-group.v1 .grp-txt > li {position: relative; margin: 5px 0;}
+.graph-group.v1 .grp-txt > li > span {display: block; font-size: 0.929em; line-height: 15px; color: #333;}
+.graph-group.v1 .grp-txt .color {position: absolute; top: 2px; left: 0; width: 13px; height: 13px; margin-left: 0; border-radius: 13px;}
+.graph-group.v1 .grp-txt .ft_rbt {position: absolute; top: 0; left: 23px; width: 40px;}
+.graph-group.v1 .grp-txt .txt {padding-left: 70px; font-size: 0.857em; font-weight: bold;}
+.graph-group.v2 .graph > li {position: relative; width: 100%; margin-bottom: 5px;}
+.graph-group.v2 .graph > li:before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 25px; background: #f4f4f4;}
+.graph-group.v2 .graph > li > span {display: block; line-height: 25px;}
+.graph-group.v2 .graph > li .gbar {position: relative; height: 25px;}
+.graph-group.v2 .graph > li .ft_rbt {position: absolute; top: 0; left: 10px; width: 40px; text-align: left; font-size: 1.071em; color: #fff;}
+.graph-group.v2 .graph > li .ft_rbt.out {color: #333;}
+.graph-group.v2 .graph > li .txt {width: 100%; padding: 3px 0; font-size: 0.857em; line-height: 1.2em; color: #333; font-weight: bold;}
+.graph-group.v3 .graph {padding-left: 70px;}
+.graph-group.v3 .graph > li {position: relative; width: 100%; height: 25px; margin-top: 12px; background: #f4f4f4;}
+.graph-group.v3 .graph > li:first-child {margin-top: 0;}
+.graph-group.v3 .graph > li > span {display: block; line-height: 25px; text-align: left;}
+.graph-group.v3 .graph > li .gbar {position: relative; height: 25px;}
+.graph-group.v3 .graph > li .ft_rbt {position: absolute; top: 0; left: 10px; width: 100%; font-size: 1.071em; color: #fff;}
+.graph-group.v3 .graph > li .ft_rbt.out {color: #333;}
+.graph-group.v3 .graph > li .txt {position: absolute; top: 0; left: -70px; width: 70px; font-size: 0.857em; color: #333; font-weight: bold;}
+.vote-research .research-wrap .research-info ul {width: 100%;}
+
+/* 당선배너 */
+.winner-wrap {display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 20px 18px 45px; background: url('http://vote2017.imbc.com/images/m/vote/bg_winner.jpg') no-repeat 50% 0; background-size: cover; z-index: 60;}
+.winner-wrap img {display: block; width: 100%; height: 100%;}
+.winner-wrap .title {position: absolute; top: 17px; left: 18px; width: 228px; height: 38px;}
+.winner-wrap .badge {display: block; position: absolute; top: 0px; right: 15px; width: 82px; height: 84px;}
+.winner-wrap .winbox {position: relative; width: 100%; height: 100%; background: url('http://vote2017.imbc.com/images/m/vote/winner.png') #fff no-repeat 50% 50%; background-size: contain;}
+.winner-wrap .btn-close {position: absolute; bottom: 14px; right: 18px; width: 38px; height: 13px; z-index: 10;}
+
+@media only screen and (max-width: 320px) {.winner-wrap .title {    top: 21px;     width: 200px;     height: 33px; }
+
+    .winner-wrap .badge {    right: 0px; };}

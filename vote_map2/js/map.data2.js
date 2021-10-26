@@ -102,17 +102,17 @@ var party_color = [
         "bgImg": "http://vote2017.imbc.com/images/vote/bg_party_1.gif"
     },
     {
-        "name": "자유한국당",
+        "name": "국민의힘",
         "code": "party_2",
-        "bg": "#C9171E",
-        "txt": "#C9171E",
+        "bg": "#ae4a4a",
+        "txt": "#ae4a4a",
         "bgImg": "http://vote2017.imbc.com/images/vote/bg_party_2.gif"
     },
     {
         "name": "국민의당",
         "code": "party_3",
-        "bg": "#015F3F",
-        "txt": "#015F3F",
+        "bg": "#c67148",
+        "txt": "#c67148",
         "bgImg": "http://vote2017.imbc.com/images/vote/bg_party_3.gif"
     },
     {
@@ -125,7 +125,7 @@ var party_color = [
     {
         "name": "정의당",
         "code": "party_5",
-        "bg": "#FFCB05",
+        "bg": "#cfa84d",
         "txt": "#333333",
         "bgImg": "http://vote2017.imbc.com/images/vote/bg_party_5.gif"
     },
@@ -166,7 +166,7 @@ mapSet = {
         var svg_arr = [];
         var group_fill = "";
         var group_per = "";
-        var code = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="324px" height="546px" viewBox="0 0 324 546" enable-background="new 0 0 399 660" xml:space="preserve">' +
+        var code = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="324px" height="546px" viewBox="0 0 320 550" enable-background="new 0 0 500 600" xml:space="preserve">' +
             '<defs>';
         for (var i = 1; i < party_cnt; i++) {
             code += '<pattern id="party_' + i + '" patternUnits="userSpaceOnUse" width="100" height="100">' +
@@ -185,9 +185,9 @@ mapSet = {
             '<polygon class="area_15" name="독도" fill="#ddd" stroke="#FFFFFF" stroke-miterlimit="10" points="293.1,132.7 300.4,132.7 302.2,140.9 299.5,148.2 294.9,148.2 292.2,142.7 291.2,137.2   "/>' +
             '</g>' +
             '</svg>';
-        if (adv_bol) {
+        /*if (adv_bol) {
             code += '<div class="color-chip"><img src="http://vote2017.imbc.com/images/vote/color_' + party_num[1] + '.gif" alt="칼라농도가이드" /></div>';
-        }
+        }*/
         $map.html(code);
     },
     txtset: function () {
