@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+.sub #vote_container {position: relative;}
+#vote-tab {position: absolute; top: 0; left: 0; width: 100%; height: 55px; overflow: hidden;}
+#vote-tab li:first-child {width: 33.4%;}
+#vote-tab.fixed {position: fixed; top: 0; left: 0; z-index: 50; background: #fff;}
+#vote-body .tab-wrap > li a.on {font-weight: bold;}
+.ft_rbt {font-family: 'Roboto';}
+.clearfix:after {content: ''; clear: both; display: block;}
+.fl_left {float: left;}
+.fl_right {float: right;}
+.title-wrap {position: relative; width: 500px; margin: 0 auto; padding-top: 20px; margin-bottom: 20px;}
+.sub #vote_container .title-wrap h3 {padding: 10px 0 0; height: 30px;}
+.title-wrap .btn-wrap {position: absolute; top: 35px; right: 0; width: 300px; height: 40px; text-align: right;}
+.title-wrap .btn-wrap a {display: inline-block; width: 40px; height: 40px; margin-left: 4px; overflow: hidden; text-align: center; text-indent: -9999px; background: url('http://vote2017.imbc.com/images/vote/btn_sns.png') no-repeat 0 0; *display: inline; *zoom: 1;}
+.title-wrap .btn-wrap a.btn-live {width: 185px;}
+.title-wrap .btn-wrap a.btn-fb {background-position: -193px 0;}
+.title-wrap .btn-wrap a.btn-tw {background-position: -241px 0;}
+
+/* txt 정당공통 */
+.party_1 .clr_chg {color: #0C69B4 !important;}
+.party_2 .clr_chg {color: #C9171E !important;}
+.party_3 .clr_chg {color: #015F3F !important;}
+.party_4 .clr_chg {color: #1693d4 !important;}
+.party_5 .clr_chg {color: #ffcb05 !important;}
+.party_6 .clr_chg, .party_7 .clr_chg, .party_8 .clr_chg, .party_9 .clr_chg, .party_10 .clr_chg, .party_11 .clr_chg, .party_12 .clr_chg, .party_13 .clr_chg, .party_14 .clr_chg {color: #86725c !important;}
+.party_15 .clr_chg {color: #666 !important;}
+
+/* bg 정당공통 */
+.top-rank .party_1 .bar, .candy-map .party_1 .ptn, .pre-graph-wrap .party_1 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_1.gif') repeat-x 0 50%;}
+.top-rank .party_2 .bar, .candy-map .party_2 .ptn, .pre-graph-wrap .party_2 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_2.gif') repeat-x 0 50%;}
+.top-rank .party_3 .bar, .candy-map .party_3 .ptn, .pre-graph-wrap .party_3 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_3.gif') repeat-x 0 50%;}
+.top-rank .party_4 .bar, .candy-map .party_4 .ptn, .pre-graph-wrap .party_4 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_4.gif') repeat-x 0 50%;}
+.top-rank .party_5 .bar, .candy-map .party_5 .ptn, .pre-graph-wrap .party_5 .bar {background: url('http://vote2017.imbc.com/images/vote/bg_party_5.gif') repeat-x 0 50%;}
+.bar:after {content: ''; position: absolute; top: 0; left: 0; background: #fff; opacity: 0.15;}
+.bar-vertical .bar:after {width: 50%; height: 100%;}
+.bar-horizontal .bar:after {width: 100%; height: 50%;}
+.low-browser #voting .fl_right .vote2017 .bar em:after, .low-browser .bar:after {display: none;}
+
+/* 종합상황판 */
+#total-situation {padding-bottom: 125px; background: #efefef;}
+#total-situation h3 {padding: 50px 0 30px;}
+.total-cont > div h4 {padding-left: 40px; margin-bottom: 20px; font-size: 24px; font-weight: bold; color: #333; letter-spacing: -0.5px; background: url('http://vote2017.imbc.com/images/vote/ico_ribbon.png') no-repeat 0 50%;}
+.total-cont > div h4 strong {color: #009fa5;}
+.select-box li a {height: 29px; border-top: 1px solid #e3e3e3; background: #fff;}
+
+/* 전국판세 */
+#total-situation .cont-2 {width: 422px; height: 742px; margin: 0 auto;}
+#nationwide {position: relative; width: 442px; height: 722px; padding: 30px 40px; background: #fff;}
+.map-btn {position: absolute; top: 30px; right: 30px; height: 32px;}
+.map-btn:after {content: ''; clear: both; display: block;}
+.map-btn a {display: block; position: relative; float: left; padding: 0 10px; height: 32px; margin-left: -1px; border: 1px solid #666; text-align: center; font-size: 13px; color: #333; line-height: 30px; background: #fff;}
+.map-btn a.map-navi-1 {margin-left: 0;}
+.map-btn a.on {border-color: #009fa5; background: #009fa5; color: #fff; z-index: 1;}
+.candy-map {width: 425px; height: 80px; margin-bottom: 15px;}
+.candy-map:after {content: ''; clear: both; display: block;}
+.candy-map a {position: relative; display: block; float: left; width: 70px; height: 70px; padding: 5px 5px 0 5px; margin-left: 6px; padding-bottom: 5px;}
+.candy-map a img {display: block; width: 70px; height: 70px;}
+.candy-map .ptn {display: block; position: absolute; top: 70px; left: 0; width: 100%; height: 10px;}
+.candy-map.sup .ptn {background: none !important;}
+.candy-map.sup a {padding-bottom: 0; border-bottom: 5px solid #0c69b4;}
+.candy-map.sup a.on {padding: 0; border: 5px solid #0c69b4;}
+.candy-map a.party_1 {margin-left: 0;}
+.candy-map a.party_2 {border-color: #C9171E !important;}
+.candy-map a.party_3 {border-color: #015F3F !important;}
+.candy-map a.party_4 {border-color: #00B1EB !important;}
+.candy-map a.party_5 {border-color: #FFCB05 !important;}
+.candy-map a.party_6, .candy-map a.party_7, .candy-map a.party_8, .candy-map a.party_9, .candy-map a.party_10, .candy-map a.party_11, .candy-map a.party_12, .candy-map a.party_13, .candy-map a.party_14 {border-color: #86725c !important;}
+.candy-map a.party_15 {border-color: #666666 !important;}
+#map-wrap {position: relative; width: 422px; height: 549px;}
+#map-wrap .color-chip {position: absolute; bottom: -45px; left: 0; width: 100%; text-align: right;}
+/*#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('http://vote2017.imbc.com/images/vote/map_bar.png') no-repeat 58px 105px;}*/
+#area-txt {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../../images/map_bar2.png') no-repeat 58px 105px;}
+#area-txt > span {display: inline-block; position: absolute; top: 0; left: 0; width: 75px; color: #333; *display: inline; *zoom: 1;}
+#area-txt em {display: inline-block; font-weight: bold; font-size: 14px; line-height: 18px; vertical-align: top; letter-spacing: -0.8px; *display: inline; *zoom: 1;}
+#area-txt strong {display: inline-block; margin-left: 5px; font-family: 'Roboto'; font-size: 16px; line-height: 18px; vertical-align: top; letter-spacing: -0.8px; *display: inline; *zoom: 1;}
+#area-txt .area_9, #area-txt .area_10, #area-txt .area_11, #area-txt .area_18, #area-txt .area_13, #area-txt .area_14, #area-txt .area_15, #area-txt .area_16, #area-txt .area_17 {width: 55px; text-align: center; color: #fff;}
+#area-txt .area_9.empty, #area-txt .area_10.empty, #area-txt .area_11.empty, #area-txt .area_12.empty, #area-txt .area_13.empty, #area-txt .area_14.empty, #area-txt .area_15.empty, #area-txt .area_16.empty, #area-txt .area_17.empty {color: #333;}
+#area-txt .area_9 strong, #area-txt .area_10 strong, #area-txt .area_11 strong, #area-txt .area_12 strong, #area-txt .area_13 strong, #area-txt .area_14 strong, #area-txt .area_15 strong, #area-txt .area_16 strong, #area-txt .area_17 strong {display: block; text-align: center; margin-left: 0;}
+#area-txt.party_4 .area_9, #area-txt.party_4 .area_10, #area-txt.party_4 .area_11, #area-txt.party_4 .area_12, #area-txt.party_4 .area_13, #area-txt.party_4 .area_14, #area-txt.party_4 .area_15, #area-txt.party_4 .area_16, #area-txt.party_4 .area_17 {color: #333;}
+#area-txt.party_5 .area_9, #area-txt.party_5 .area_10, #area-txt.party_5 .area_11, #area-txt.party_5 .area_12, #area-txt.party_5 .area_13, #area-txt.party_5 .area_14, #area-txt.party_5 .area_15, #area-txt.party_5 .area_16, #area-txt.party_5 .area_17 {color: #333;}
+#area-txt .area_1 {top: 128px; left: -20px; text-align: right;}
+#area-txt .area_2 {top: 369px; left: 356px;}
+#area-txt .area_3 {top: 298px; left: 356px;}
+#area-txt .area_4 {top: 102px; left: -20px; text-align: right;}
+#area-txt .area_5 {top: 369px; left: -20px; text-align: right;}
+#area-txt .area_6 {top: 239px; left: -20px; text-align: right;}
+#area-txt .area_7 {top: 332px; left: 356px;}
+#area-txt .area_9 {top: 150px; left: 138px;}
+#area-txt .area_10 {top: 80px; left: 225px;}
+#area-txt .area_11 {top: 188px; left: 183px;}
+#area-txt .area_12 {top: 186px; left: 15px;}
+#area-txt .area_13 {top: 294px; left: 137px;}
+#area-txt .area_14 {top: 393px; left: 106px;}
+#area-txt .area_15 {top: 225px; left: 255px;}
+#area-txt .area_16 {top: 334px; left: 220px;}
+#area-txt .area_17 {top: 501px; left: 98px;}
+#area-txt .area_18 {top: 200px; left: 120px;}
+#area-txt .area_17 em, #area-txt .area_17 strong {line-height: 15px;}
+#svg-wrap {width: 324px; margin-left: 55px;}
+.low-browser #map-wrap {background: url('http://vote2017.imbc.com/images/vote/bg_ie_map.gif') no-repeat 0 0;}
+.low-browser #area-txt {background: none;}

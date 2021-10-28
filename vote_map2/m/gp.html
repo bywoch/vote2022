@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://www.imbc.com/commons/css/base.css">
+    <link rel="stylesheet" href="http://bbchoice.imbc.com/common/css/common.css">
+    <link rel="stylesheet" href="css/vote.css">
+    <script src="http://vote2017.imbc.com/common/js/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section id="total-situation">
+        <div class="inner">
+            <div class="total-cont clearfix">
+                <!-- 전국판세 -->
+                <div class="cont-2" id="nationwide">
+                    <div class="map-btn">
+                        <a href="#" class="map-navi-1 on" onclick="javascript:cgMapData(0);">시도별1위</a>
+                        <a href="#" class="map-navi-2">득표율</a>
+                        <a href="#" class="map-navi-3" onclick="javascript:cgMapData(99);">개표율</a>
+                    </div>
+                    <div class="candy-map">
+                        <a href="#" class="party_1" onclick="javascript:cgMapData(1);"><img src="http://vote2017.imbc.com/images/vote/img_party_75x75_1.png" alt="더불어민주당 후보"><span class="ptn"></span></a>
+                        <a href="#" class="party_2" onclick="javascript:cgMapData(2);"><img src="http://vote2017.imbc.com/images/vote/img_party_75x75_2.png" alt="자유한국당 후보"><span class="ptn"></span></a>
+                        <a href="#" class="party_3" onclick="javascript:cgMapData(3);"><img src="http://vote2017.imbc.com/images/vote/img_party_75x75_3.png" alt="국민의당 후보"><span class="ptn"></span></a>
+                        <!--<a href="#" class="party_4" onclick="javascript:cgMapData(4);"><img src="http://vote2017.imbc.com/images/vote/img_party_75x75_4.png" alt="바른정당 후보"><span class="ptn"></span></a>-->
+                        <a href="#" class="party_5" onclick="javascript:cgMapData(5);"><img src="http://vote2017.imbc.com/images/vote/img_party_75x75_5.png" alt="정의당 후보"><span class="ptn"></span></a>
+                    </div>
+                    <div id="map-wrap">
+                        <div id="area-txt"></div>
+                        <div id="svg-wrap"></div>
+                    </div>
+                </div>
+                <!-- //전국판세 -->
+            </div>
+        </div>
+    </section>
+    <script>
+        var svg = [{
+            "cls": "area_1",
+            "party": "party_1",
+            "percent": "42.3",
+        }, {
+            "cls": "area_2",
+            "party": "party_1",
+            "percent": "38.7",
+        }, {
+            "cls": "area_3",
+            "party": "party_2",
+            "percent": "45.4",
+        }, {
+            "cls": "area_4",
+            "party": "party_1",
+            "percent": "41.2",
+        }, {
+            "cls": "area_5",
+            "party": "party_1",
+            "percent": "61.1",
+        }, {
+            "cls": "area_6",
+            "party": "party_1",
+            "percent": "42.9",
+        }, {
+            "cls": "area_7",
+            "party": "party_1",
+            "percent": "38.1",
+        }, {
+            "cls": "area_9",
+            "party": "party_1",
+            "percent": "42.1",
+        }, {
+            "cls": "area_10",
+            "party": "party_1",
+            "percent": "34.2",
+        }, {
+            "cls": "area_11",
+            "party": "party_1",
+            "percent": "38.6",
+        }, {
+            "cls": "area_12",
+            "party": "party_1",
+            "percent": "40.0",
+        }, {
+            "cls": "area_13",
+            "party": "party_1",
+            "percent": "64.8",
+        }, {
+            "cls": "area_14",
+            "party": "party_1",
+            "percent": "59.9",
+        }, {
+            "cls": "area_15",
+            "party": "party_2",
+            "percent": "48.6",
+        }, {
+            "cls": "area_16",
+            "party": "party_2",
+            "percent": "37.2",
+        }, {
+            "cls": "area_17",
+            "party": "party_1",
+            "percent": "45.5",
+        }, {
+            "cls": "area_18",
+            "party": "party_2",
+            "percent": "45.5",
+        }, ]
+
+        function cgMapData(giho) {
+            $.post(
+                '/m/Elect/gp_mapData', {
+                    giho: giho
+                },
+                function(response) {
+                    svg = "";
+                    svg = eval(response);
+                    mapSet.init();
+                }
+            );
+        }
+
+    </script>
+    <script src="js/map.data2.js"></script>
+
+</body>
+
+</html>
