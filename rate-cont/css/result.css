@@ -1,0 +1,55 @@
+/*선택2018 투개표 CSS*/
+a {color: inherit;}
+.orange {color: #f2321b;}
+.purple {color: #5d3bbc;}
+.blue {color: #0c91ea;}
+.party_thumin {background: #227EC8; color: #fff;}
+.party_liberty {background: #C9171E; color: #fff;}
+.party_bareun {background: #03B8BA; color: #fff;}
+.party_peace {background: #78B600; color: #fff;}
+.party_justice {background: #FFCB05; color: #000;}
+.party_no {background: #7F8189; color: #fff;}
+.party_etc {background: #AFB1BD; color: #000;}
+.party_minjung {background: #f47920; color: #fff;}
+.party_gkpp {background: #113066; color: #fff;}
+.party_kgreens {background: #62bb47; color: #fff;}
+.party_ourfuture {background: #e60063; color: #fff;}
+.party_gokr {background: #fff; color: #000;}
+.party_newpolitics {background: #0c449b; color: #fff;}
+strong {font-weight: normal; font-family: "Nanum Gothic Bold";}
+table th {font-weight: normal; font-family: "Nanum Gothic Bold";}
+h2, h3, h4, h5 {font-weight: normal; font-family: "Nanum Gothic Bold";}
+
+/*투표현황 - 지역별*/
+.result-cont .rate-cont {width: 1032px; margin: 0 auto 44px; background: url(https://vote2018.imbc.com/images/bg-city-rate.jpg) no-repeat; position: relative;}
+.result-cont .rate-cont .rate-city-graph {width: 1032px; margin-top: 10px; height: 498px;}
+.result-cont .rate-cont .rate-city-graph .vert {width: 940px; height: 432px; top: 427px; position: absolute; left: 50%; margin-left: -470px;}
+.result-cont .rate-cont .rate-city-graph .vert li {width: 36px; height: 430px; float: left; margin-right: 17px; position: relative; text-align: center;}
+.result-cont .rate-cont .rate-city-graph .vert li:last-child {margin-right: 0;}
+.result-cont .rate-cont .rate-city-graph .vert li .data {position: absolute; top: -36px; left: 7px; color: #fff; font-weight: bold; font-family: 'Arial'; font-size: 13px;}
+.result-cont .rate-cont .rate-city-graph .vert .city-name {line-height: 36px;}
+.result-cont .rate-cont .rate-city-graph .vert li .bar {display: block; position: absolute; bottom: 0; left: 0; width: 36px; /*background: url(https://vote2018.imbc.com/images/rate-city-bar.jpg) repeat-x center bottom;*/ -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; background: #000032; border-radius: 100px 100px 0 0;}
+.result-cont .rate-cont .rate-city-graph .vert li .high:before {content: ""; display: block; position: absolute; left: 0; top: -36px; width: 36px; height: 45px; background: url(https://vote2018.imbc.com/images/ico-high.png) no-repeat;}
+.result-cont .rate-cont .rate-city-graph .vert li .low:before {content: ""; display: block; position: absolute; left: 0; top: -36px; width: 36px; height: 45px; background: url(https://vote2018.imbc.com/images/ico-low.png) no-repeat;}
+.result-cont .rate-cont .rate-city-graph .vert li:first-child .bar {/*background: url(https://vote2018.imbc.com/images/rate-city-all.jpg) repeat-x center bottom;*/ background: #000032; border-radius: 100px 100px 0 0;}
+
+/*투표현황 - 시간별*/
+.result-cont .sort-time .rate-cont {width: 1032px; height: 432px; margin: 0 auto 28px; position: relative; background: none; padding-left: 20px;}
+.result-cont .sort-time .line-chart {position: relative;}
+.result-cont .sort-time .line-chart #holder {width: 1020px; height: 446px; background: url(https://vote2018.imbc.com/images/vote-bg-time-v2.jpg) no-repeat; padding-left: 46px; padding-top: 16px; overflow: hidden;}
+.result-cont .sort-time .line-chart .holder-cover {position: absolute; background: #fff; top: 12px; left: 0; height: 22px; width: 1020px;}
+.result-cont .sort-time .time-table {width: 996px; margin: 0 auto; text-align: center; margin-bottom: 50px;}
+.result-cont .sort-time .time-table td, .result-cont .sort-time .time-table th {line-height: 30px; border-top: 1px solid #dddee4; border-right: 1px solid #dddee4; color: #333333;}
+.result-cont .sort-time .time-table th {border-right: 0;}
+.result-cont .sort-time .time-table .seventh td {color: #f2321b;}
+.result-cont .sort-time .time-table .fifth th, .result-cont .sort-time .time-table .fifth td {border-bottom: 1px solid #dddee4;}
+.result-cont .sort-time .time-table td.bg {background: #f4f5f9; border-right: 0;}
+.vote-body-result .rate-past {width: 996px; margin: 0 auto; text-align: center;}
+.result-cont .rate-past table {width: 996px; margin-bottom: 40px; text-align: center;}
+.result-cont .rate-past table th {font-size: 14px; color: #21232a; line-height: 38px; border-top: 1px solid #dddee4; font-family: "Nanum Gothic Bold";}
+.result-cont .rate-past table td {line-height: 38px; border-top: 1px solid #dddee4; font-size: 12px;}
+.result-cont .rate-past table tbody {border-bottom: 1px solid #dddee4;}
+.result-cont .rate-past table .past {background: #f4f5f9;}
+.result-cont .rate-past table th span {font-weight: normal; font-family: "Nanum Gothic Bold";}
+.result-cont .rate-past table .high {padding-left: 14px; background: url(https://vote2018.imbc.com/images/ico-high-2.png) left center no-repeat;}
+.result-cont .rate-past table .low {padding-left: 14px; background: url(https://vote2018.imbc.com/images/ico-low-2.png) left center no-repeat;}
