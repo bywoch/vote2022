@@ -144,7 +144,6 @@ window.onload = function () {
             opacity: 0
         }));
 
-
         var rect = blanket[blanket.length - 1];
 
         (function (x, y, data, lbl, dot) {
@@ -171,13 +170,9 @@ window.onload = function () {
         })(x, y, data[i], labels[i], dot);
     }
     p = p.concat([x, y, x, y]);
-    //bgpp = bgpp.concat([x, y, x, y, "L", x, height - bottomgutter, "z"]);
+    
     path.attr({
         path: p
     });
-    //bgp.attr({path: bgpp});
-    //frame.toFront();
-    //label[0].toFront();
-    //label[1].toFront();
-    //blanket.toFront();
+    
 };

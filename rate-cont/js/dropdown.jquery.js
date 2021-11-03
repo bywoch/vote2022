@@ -20,7 +20,6 @@ $(function () {
             this.bindHandlers();
         }
         dropdown.bindHandlers = function () {
-
             var self = this;
             $this.on('click', function (e) {
                 var $target = $(e.target);
