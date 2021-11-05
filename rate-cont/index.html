@@ -4,111 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="http://www.imbc.com/commons/css/base-v2.css">
-    <!--<link rel="stylesheet" href="https://vote2018.imbc.com/css/vote.election.css">-->
-    <link rel="stylesheet" href="css/result.css">
-    <link rel="stylesheet" href="css/vote.ani.css">
 </head>
 
-<body class="vote-vote">
-    <section class="result-cont">
-        <!-- 지역별 그래프 시작-->
-        <div class="tab-cont sort-place">
-            <div class="rate-cont">
-                <div class="rate-city-graph">
-                    <ul class="vert">
-                        <li><span class="bar h-30"></span><span class="data">33.3</span><span
-                                class="city-name">전국</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">서울</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">부산</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">대구</span></li>
-                        <li><span class="bar h-65 high"></span><span class="data">33.3</span><span
-                                class="city-name">인천</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">광주</span></li>
-                        <li><span class="bar h-46"></span><span class="data">33.3</span><span
-                                class="city-name">대전</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">서울</span></li>
-                        <li><span class="bar h-63"></span><span class="data">33.3</span><span
-                                class="city-name">부산</span></li>
-                        <li><span class="bar h-22 low"></span><span class="data">33.3</span><span
-                                class="city-name">대구</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">인천</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">광주</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">대전</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">대구</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">인천</span></li>
-                        <li><span class="bar h-55"></span><span class="data">33.3</span><span
-                                class="city-name">광주</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">대전</span></li>
-                        <li><span class="bar h-60"></span><span class="data">33.3</span><span
-                                class="city-name">제주</span></li>
-                    </ul>
+<body>
+    <div class="vote-body-result">
+        <div class="result-cont">
+            <section>
+                <!-- 지역별 그래프 시작-->
+                <div class="tab-cont sort-place">
+                    <div class="rate-cont">
+                        <div class="rate-city-graph">
+                            <ul class="vert">
+                                <li><span class="bar h-30"></span><span class="data">33.3</span><span class="city-name">전국</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">서울</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">부산</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">대구</span></li>
+                                <li><span class="bar h-65 high"></span><span class="data">33.3</span><span class="city-name">인천</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">광주</span></li>
+                                <li><span class="bar h-46"></span><span class="data">33.3</span><span class="city-name">대전</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">서울</span></li>
+                                <li><span class="bar h-63"></span><span class="data">33.3</span><span class="city-name">부산</span></li>
+                                <li><span class="bar h-22 low"></span><span class="data">33.3</span><span class="city-name">대구</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">인천</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">광주</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">대전</span></li>
+                                <li><span class="bar h-80"></span><span class="data">33.3</span><span class="city-name">대구</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">인천</span></li>
+                                <li><span class="bar h-55"></span><span class="data">33.3</span><span class="city-name">광주</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">대전</span></li>
+                                <li><span class="bar h-60"></span><span class="data">33.3</span><span class="city-name">제주</span></li>
+                            </ul>
+                        </div>
+                        <div class="rate-past">
+                            <table>
+                                <caption>5회, 6회, 7회 지방선거 지역별 투표율</caption>
+                                <colgroup>
+                                    <col width="294">
+                                    <col width="192">
+                                    <col width="216">
+                                    <col width="*">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>지역별 투표율(%)</th>
+                                        <th>전국 투표율(%)</th>
+                                        <th><span class="high">최고 투표율(%)</span></th>
+                                        <th><span class="low">최저 투표율(%)</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>7회 지방선거<span class="purple">(현재 투표율)</span></td>
+                                        <td>66.1</td>
+                                        <td>서울 33.1</td>
+                                        <td>서울 36.1</td>
+                                    </tr>
+                                    <tr class="past">
+                                        <td>6회 지방선거<span class="purple"></span></td>
+                                        <td>56.8</td>
+                                        <td class="orange">전남 65.6</td>
+                                        <td class="blue">대구 52.3</td>
+                                    </tr>
+                                    <tr class="past">
+                                        <td>5회 지방선거<span class="purple"></span></td>
+                                        <td>54.5</td>
+                                        <td class="orange">제주 65.1</td>
+                                        <td class="blue">대구 45.9</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="rate-past">
-                    <table>
-                        <caption>5회, 6회, 7회 지방선거 지역별 투표율</caption>
-                        <colgroup>
-                            <col width="294">
-                            <col width="192">
-                            <col width="216">
-                            <col width="*">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>지역별 투표율(%)</th>
-                                <th>전국 투표율(%)</th>
-                                <th><span class="high">최고 투표율(%)</span></th>
-                                <th><span class="low">최저 투표율(%)</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>20대 대선<span class="purple">(현재 투표율)</span></td>
-                                <td>33.3</td>
-                                <td class="orange">서울 33.3</td>
-                                <td class="blue">부산 33.3</td>
-                            </tr>
-                            <tr class="past">
-                                <td>19대 대선<span class="purple"></span></td>
-                                <td>33.3</td>
-                                <td class="orange">대구 33.3</td>
-                                <td class="blue">인천 33.3</td>
-                            </tr>
-                            <tr class="past">
-                                <td>18대 대선<span class="purple"></span></td>
-                                <td>33.3</td>
-                                <td class="orange">광주 33.3</td>
-                                <td class="blue">대전 33.3</td>
-                            </tr>
-                            <tr class="past">
-                                <td>17대 대선<span class="purple"></span></td>
-                                <td>33.3</td>
-                                <td class="orange">울산 33.3</td>
-                                <td class="blue">세종 33.3</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                <!-- 지역별 그래프 끝-->
+            </section>
         </div>
-        <!-- 지역별 그래프 끝-->
-    </section>
-    <script src="https://vote2018.imbc.com/js/libs/jquery-1.11.1.min.js"></script>
-    <script src="https://vote2018.imbc.com/js/libs/raphael.min.js"></script>
-    <script src="https://vote2018.imbc.com/js/libs/popup.js"></script>
-    <script src="js//vote.line.js"></script>
-    <script src="js/dropdown.jquery.js"></script>
+    </div>
+
 </body>
 
 </html>
