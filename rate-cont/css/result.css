@@ -20,6 +20,23 @@ strong {font-weight: normal; font-family: "Nanum Gothic Bold";}
 table th {font-weight: normal; font-family: "Nanum Gothic Bold";}
 h2, h3, h4, h5 {font-weight: normal; font-family: "Nanum Gothic Bold";}
 
+/*투표현황*/
+.result-cont {width: 1200px; margin: 0 auto; position: relative;}
+section.result-cont {margin-top: 26px; border: 1px solid #dddee4; background: #fff;}
+.result-cont .rate {position: relative; border-bottom: 1px solid #dddee4; overflow: hidden;}
+.result-cont .rate .center {float: left; text-align: left; overflow: hidden;}
+.result-cont .rate .center .left {margin: 0 8px 0 26px; float: left;}
+.result-cont .rate .center .all-rate {font-size: 20px; font-family: "Nanum Gothic Bold"; color: #211; display: block; line-height: 63px;}
+.result-cont .rate .center .time {display: inline-block; font-size: 11px; color: #606060; padding-left: 10px; margin-top: 26px; letter-spacing: -0.05em;}
+.result-cont .rate .center .btn-refresh-v2 {vertical-align: middle; margin-left: 3px;}
+.result-cont .rate .center .percent {display: inline-block; float: left; padding-right: 20px; line-height: 63px; color: #5c279c; font-size: 26px; font-family: 'arial'; font-weight: bold; background: url(https://vote2018.imbc.com/images/ico-percent.png) no-repeat right 26px; background-size: 18px;}
+.result-cont .rate .flt {padding-right: 20px; float: right; height: 63px; background: #f7f7f8; line-height: 63px; text-align: right;}
+.result-cont .btn-now-status {display: inline-block; width: 94px; line-height: 36px; text-align: center; border: 1px solid #5c279c; color: #5c279c; font-size: 12px; background: #fff;}
+.result-cont .btn-now-status span {display: inline-block; padding-right: 16px; background: url(https://vote2018.imbc.com/images/btn-graph-p.jpg) right 12px no-repeat; font-family: "Nanum Gothic Bold";}
+.result-cont .rate .flt .count {display: inline-block; margin: 0 8px 0 22px; font-size: 13px; font-family: "Nanum Gothic Bold"; text-align: left;}
+.result-cont .rate .flt .count strong {font-size: 16px; line-height: 20px; padding-left: 5px;}
+.result-cont .rate .flt .count span:first-child strong {padding: 0 8px; margin-right: 4px; line-height: 20px; background: url(https://vote2018.imbc.com/images/right-bar.jpg) no-repeat right 5px;}
+
 /*투표현황 - 지역별*/
 .result-cont .rate-cont {width: 1032px; margin: 0 auto 44px; background: url(https://vote2018.imbc.com/images/bg-city-rate.jpg) no-repeat; position: relative;}
 .result-cont .rate-cont .rate-city-graph {width: 1032px; margin-top: 10px; height: 498px;}

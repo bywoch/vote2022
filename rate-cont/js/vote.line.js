@@ -82,10 +82,10 @@ window.onload = function () {
     //   r.drawGrid(leftgutter + X * .5 + .5, topgutter + .5, width - leftgutter - X, height - topgutter - bottomgutter, 11, 10, "#dddee4");//테이블 선 color, 13은 x축 5은 y축
 
     var path = r.path().attr({
-        stroke: color,
-        "stroke-width": 8,
-        "stroke-linejoin": "round"
-    }), //이음선굵기
+            stroke: color,
+            "stroke-width": 8,
+            "stroke-linejoin": "round"
+        }), //이음선굵기
         bgp = r.path().attr({
             stroke: "none",
             opacity: 0,
@@ -144,6 +144,7 @@ window.onload = function () {
             opacity: 0
         }));
 
+
         var rect = blanket[blanket.length - 1];
 
         (function (x, y, data, lbl, dot) {
@@ -170,9 +171,13 @@ window.onload = function () {
         })(x, y, data[i], labels[i], dot);
     }
     p = p.concat([x, y, x, y]);
-    
+    //bgpp = bgpp.concat([x, y, x, y, "L", x, height - bottomgutter, "z"]);
     path.attr({
         path: p
     });
-    
+    //bgp.attr({path: bgpp});
+    //frame.toFront();
+    //label[0].toFront();
+    //label[1].toFront();
+    //blanket.toFront();
 };

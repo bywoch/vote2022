@@ -1,0 +1,2704 @@
+/*선택2018 투개표 CSS*/
+a {
+    color: inherit;
+}
+
+.orange {
+    color: #f2321b;
+}
+
+.purple {
+    color: #5d3bbc;
+}
+
+.blue {
+    color: #0c91ea;
+}
+
+.party_thumin {
+    background: #227EC8;
+    color: #fff
+}
+
+.party_liberty {
+    background: #C9171E;
+    color: #fff
+}
+
+.party_bareun {
+    background: #03B8BA;
+    color: #fff
+}
+
+.party_peace {
+    background: #78B600;
+    color: #fff
+}
+
+.party_justice {
+    background: #FFCB05;
+    color: #000
+}
+
+.party_no {
+    background: #7F8189;
+    color: #fff
+}
+
+.party_etc {
+    background: #AFB1BD;
+    color: #000
+}
+
+.party_minjung {
+    background: #f47920;
+    color: #fff
+}
+
+.party_gkpp {
+    background: #113066;
+    color: #fff
+}
+
+.party_kgreens {
+    background: #62bb47;
+    color: #fff
+}
+
+.party_ourfuture {
+    background: #e60063;
+    color: #fff
+}
+
+.party_gokr {
+    background: #fff;
+    color: #000
+}
+
+.party_newpolitics {
+    background: #0c449b;
+    color: #fff
+}
+
+strong {
+    font-weight: normal;
+    font-family: "Nanum Gothic Bold"
+}
+
+table th {
+    font-weight: normal;
+    font-family: "Nanum Gothic Bold"
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+    font-family: "Nanum Gothic Bold"
+}
+
+/*상단 header*/
+.vote-header-nav .today {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 152px;
+    height: 88px;
+}
+
+/*투개표 공통 헤더*/
+.vote-body-result {
+    padding-bottom: 28px;
+    background: #f0f2f7;
+    font-family: 'nanum-gothic';
+    letter-spacing: -.05em;
+}
+
+.vote-body-result .result-nav {
+    background: #2a1d53;
+    height: 68px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vote-body-result .result-nav ul {
+    width: 1146px;
+    margin: 0 auto;
+}
+
+.vote-body-result .result-nav li {
+    float: left;
+    margin-right: 64px;
+    font-size: 15px;
+    color: #c5c5e4;
+}
+
+.vote-body-result .result-nav li a {
+    display: block;
+    padding: 26px 0 12px;
+}
+
+.vote-body-result .result-nav li.active a {
+    color: #fff;
+    border-bottom: 4px solid #fff;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .result-nav li:hover a {
+    color: #fff;
+    border-bottom: 4px solid #fff;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .result-nav .banner-live {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: -620px;
+}
+
+/*투표현황*/
+.vote-body-result .result-cont {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.vote-body-result .result-cont section {
+    margin-top: 26px;
+    border: 1px solid #dddee4;
+    background: #fff;
+}
+
+.vote-body-result .result-cont .rate {
+    position: relative;
+    border-bottom: 1px solid #dddee4;
+    overflow: hidden;
+}
+
+.vote-body-result .result-cont .rate .center {
+    float: left;
+    text-align: left;
+    overflow: hidden;
+}
+
+.vote-body-result .result-cont .rate .center .left {
+    margin: 0 8px 0 26px;
+    float: left
+}
+
+.vote-body-result .result-cont .rate .center .all-rate {
+    font-size: 20px;
+    font-family: "Nanum Gothic Bold";
+    color: #211;
+    display: block;
+    line-height: 63px
+}
+
+.vote-body-result .result-cont .rate .center .time {
+    display: inline-block;
+    font-size: 11px;
+    color: #606060;
+    padding-left: 10px;
+    margin-top: 26px;
+    letter-spacing: -0.05em
+}
+
+.vote-body-result .result-cont .rate .center .btn-refresh-v2 {
+    vertical-align: middle;
+    margin-left: 3px
+}
+
+.vote-body-result .result-cont .rate .center .percent {
+    display: inline-block;
+    float: left;
+    padding-right: 20px;
+    line-height: 63px;
+    color: #5c279c;
+    font-size: 26px;
+    font-family: 'arial';
+    font-weight: bold;
+    background: url(../images/ico-percent.png) no-repeat right 26px;
+    background-size: 18px
+}
+
+.vote-body-result .result-cont .rate .flt {
+    padding-right: 20px;
+    float: right;
+    height: 63px;
+    background: #f7f7f8;
+    line-height: 63px;
+    text-align: right;
+}
+
+.vote-body-result .result-cont .btn-now-status {
+    display: inline-block;
+    width: 94px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #5c279c;
+    color: #5c279c;
+    font-size: 12px;
+    background: #fff
+}
+
+.vote-body-result .result-cont .btn-now-status span {
+    display: inline-block;
+    padding-right: 16px;
+    background: url(../images/btn-graph-p.jpg) right 12px no-repeat;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .result-cont .rate .flt .count {
+    display: inline-block;
+    margin: 0 8px 0 22px;
+    font-size: 13px;
+    font-family: "Nanum Gothic Bold";
+    text-align: left
+}
+
+.vote-body-result .result-cont .rate .flt .count strong {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 5px
+}
+
+.vote-body-result .result-cont .rate .flt .count span:first-child strong {
+    padding: 0 8px;
+    margin-right: 4px;
+    line-height: 20px;
+    background: url(../images/right-bar.jpg) no-repeat right 5px
+}
+
+.vote-body-result .rate-tabs {
+    overflow: hidden;
+    position: absolute;
+    top: 88px;
+    left: 50%;
+    margin-left: -97px;
+    z-index: 10
+}
+
+.vote-body-result .rate-tabs li {
+    float: left;
+    width: 88px;
+    height: 42px;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.vote-body-result .rate-tabs li.on {
+    width: 106px;
+    height: 42px;
+}
+
+.vote-body-result .rate-tabs li.time {
+    background: url(../images/rate-tab1-off.png)
+}
+
+.vote-body-result .rate-tabs li.place {
+    background: url(../images/rate-tab2-off.png)
+}
+
+.vote-body-result .rate-tabs li.time.on {
+    background: url(../images/rate-tab1-on.png)
+}
+
+.vote-body-result .rate-tabs li.place.on {
+    background: url(../images/rate-tab2-on.png)
+}
+
+/*투표현황 - 지역별*/
+.vote-body-result .result-cont .rate-cont {
+    width: 1032px;
+    margin: 0 auto 44px;
+    background: url(../images/bg-city-rate.jpg) no-repeat;
+    position: relative;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph {
+    width: 1032px;
+    margin-top: 10px;
+    height: 498px
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert {
+    width: 940px;
+    height: 432px;
+    top: 427px;
+    position: absolute;
+    left: 50%;
+    margin-left: -470px;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li {
+    width: 36px;
+    height: 430px;
+    float: left;
+    margin-right: 17px;
+    position: relative;
+    text-align: center;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li:last-child {
+    margin-right: 0
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li .data {
+    position: absolute;
+    top: -36px;
+    left: 7px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Arial';
+    font-size: 13px;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert .city-name {
+    line-height: 36px
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li .bar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    background: url(../images/rate-city-bar.jpg) repeat-x center bottom;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li .high:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -36px;
+    width: 36px;
+    height: 45px;
+    background: url(../images/ico-high.png) no-repeat;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li .low:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -36px;
+    width: 36px;
+    height: 45px;
+    background: url(../images/ico-low.png) no-repeat;
+}
+
+.vote-body-result .result-cont .rate-cont .rate-city-graph .vert li:first-child .bar {
+    background: url(../images/rate-city-all.jpg) repeat-x center bottom;
+}
+
+/*투표현황 - 시간별*/
+.vote-body-result .result-cont .sort-time {
+    padding-top: 55px
+}
+
+.vote-body-result .result-cont .sort-time .rate-cont {
+    width: 1032px;
+    height: 432px;
+    margin: 0 auto 28px;
+    position: relative;
+    background: none;
+    padding-left: 20px;
+}
+
+.vote-body-result .result-cont .sort-time .line-chart {
+    position: relative;
+}
+
+.vote-body-result .result-cont .sort-time .line-chart #holder {
+    width: 1020px;
+    height: 446px;
+    background: url(../images/vote-bg-time-v2.jpg) no-repeat;
+    padding-left: 46px;
+    padding-top: 16px;
+    overflow: hidden;
+}
+
+.vote-body-result .result-cont .sort-time .line-chart .holder-cover {
+    position: absolute;
+    background: #fff;
+    top: 12px;
+    left: 0;
+    height: 22px;
+    width: 1020px
+}
+
+.vote-body-result .result-cont .sort-time .time-table {
+    width: 996px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.vote-body-result .result-cont .sort-time .time-table td,
+.vote-body-result .result-cont .sort-time .time-table th {
+    line-height: 30px;
+    border-top: 1px solid #dddee4;
+    border-right: 1px solid #dddee4;
+    color: #333333
+}
+
+.vote-body-result .result-cont .sort-time .time-table th {
+    border-right: 0;
+}
+
+.vote-body-result .result-cont .sort-time .time-table .seventh td {
+    color: #f2321b
+}
+
+.vote-body-result .result-cont .sort-time .time-table .fifth th,
+.vote-body-result .result-cont .sort-time .time-table .fifth td {
+    border-bottom: 1px solid #dddee4
+}
+
+.vote-body-result .result-cont .sort-time .time-table td.bg {
+    background: #f4f5f9;
+    border-right: 0
+}
+
+.vote-body-result .rate-past {
+    width: 996px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.vote-body-result .result-cont .rate-past table {
+    width: 996px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.vote-body-result .result-cont .rate-past table th {
+    font-size: 14px;
+    color: #21232a;
+    line-height: 38px;
+    border-top: 1px solid #dddee4;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .result-cont .rate-past table td {
+    line-height: 38px;
+    border-top: 1px solid #dddee4;
+    font-size: 12px
+}
+
+.vote-body-result .result-cont .rate-past table tbody {
+    border-bottom: 1px solid #dddee4
+}
+
+.vote-body-result .result-cont .rate-past table .past {
+    background: #f4f5f9
+}
+
+.vote-body-result .result-cont .rate-past table th span {
+    font-weight: normal;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .result-cont .rate-past table .high {
+    padding-left: 14px;
+    background: url(../images/ico-high-2.png) left center no-repeat;
+}
+
+.vote-body-result .result-cont .rate-past table .low {
+    padding-left: 14px;
+    background: url(../images/ico-low-2.png) left center no-repeat;
+}
+
+/*출구조사*/
+/*전국예측1위판세*/
+.vote-body-result .forecast .fc-top {
+    margin-top: 44px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vote-body-result .forecast .wrap-map {
+    width: 610px;
+    float: left
+}
+
+.vote-body-result .forecast .wrap-map h2 {
+    margin-bottom: 3px;
+    font-size: 22px;
+    color: #000000
+}
+
+.vote-body-result .forecast .wrap-map h2 span {
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.vote-body-result .forecast .wrap-map .time {
+    display: inline-block;
+    font-size: 11px;
+    color: #606060;
+    padding-left: 18px;
+    padding-top: 2px;
+    background: url(../images/ico-now.png) no-repeat left 1px;
+    margin-top: 3px;
+}
+
+.vote-body-result .forecast .wrap-map .parties {
+    position: absolute;
+    top: 64px;
+    left: 0
+}
+
+.vote-body-result .forecast .wrap-map .parties li {
+    margin-bottom: 12px;
+}
+
+.vote-body-result .forecast .wrap-map .parties span {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.vote-body-result .forecast .wrap-map .parties .num {
+    padding: 14px 10px;
+    font-size: 16px;
+    width: 52px;
+    text-align: center
+}
+
+.vote-body-result .forecast .wrap-map .parties .name {
+    font-size: 18px;
+    color: #000000
+}
+
+
+.vote-body-result .forecast .fc-cities {
+    width: 588px;
+    float: left;
+    background: #fff;
+    border: 1px solid #dddee4;
+}
+
+.vote-body-result .forecast .fc-cities h3 {
+    line-height: 60px;
+    font-size: 18px;
+    font-family: "Nanum Gothic Bold";
+    padding-left: 26px;
+    border-bottom: 1px solid #dddee4;
+    position: relative;
+}
+
+.vote-body-result .fc-cities .q-detail {
+    position: absolute;
+    top: 20px;
+    left: 153px;
+}
+
+.vote-body-result .popup-tooltip-interest-of-area {
+    font-size: 12px;
+    border: 1px solid #8f6bda;
+    top: 20px;
+    left: 800px
+}
+
+.vote-body-result .forecast .fc-cities .button-area-now {
+    margin: 12px 0 0 46px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter {
+    height: 73px;
+    padding: 14px 0 0 24px;
+    background: #f2f2f2
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter-item .dropdown {
+    width: 146px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter-item .dropdown .button-choose {
+    width: 146px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter-item {
+    margin-left: 5px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter .button-search {
+    width: 78px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-search-filter .button-search:after {
+    content: none;
+}
+
+.vote-body-result .forecast .candidate-search-filter-item .dropdown .list {
+    width: 146px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival {
+    box-sizing: border-box;
+    height: 412px;
+    padding: 40px 37px;
+    text-align: center;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .txt-notice {
+    padding-top: 12px;
+    border-top: 1px solid #e6e7eb;
+    margin-top: 18px;
+    padding-left: 20px;
+    background: url(../images/ico-notice.jpg) left bottom no-repeat;
+    text-align: left;
+    color: #a4a4a4;
+    font-size: 12px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival ul {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li {
+    float: left;
+    width: 146px;
+    padding: 0 18px;
+    position: relative;
+    box-sizing: content-box;
+    text-align: left;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li:first-child {
+    padding-left: 0
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li:last-child {
+    padding-right: 0
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .sort {
+    font-size: 14px;
+    color: #21232a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .info {
+    box-sizing: content-box;
+    width: 146px;
+    padding-right: 18px;
+    border-right: 1px solid #e6e7eb;
+    overflow: hidden;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li:last-child .info {
+    border-right: 0
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .img {
+    display: inline-block;
+    height: 207px;
+    padding-top: 13px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .img img {
+    width: 146px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .badge {
+    position: absolute;
+    top: 32px;
+    z-index: 10
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap {
+    width: 73px;
+    overflow: hidden;
+    float: left;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap .img {
+    width: 73px;
+    height: 208px;
+    position: relative;
+    overflow: hidden
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap .img img {
+    position: absolute;
+    left: 50%;
+    margin-left: -73px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap .jd {
+    top: 175px;
+    left: 50%;
+    margin-left: -73px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap .candi-name {
+    width: 73px;
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival .rival.img-wrap .candi-num {
+    width: 73px;
+}
+
+.vote-body-result .result-cont .img .jd {
+    width: 146px;
+    height: 33px;
+    position: absolute;
+    top: 175px;
+    left: 0;
+    z-index: 10
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_thumin {
+    background: #227EC8 url(../images/party_thumin.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_liberty {
+    background: #C9171E url(../images/party_liberty.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_bareun {
+    background: #03B8BA url(../images/party_bareun.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_peace {
+    background: #78B600 url(../images/party_peace.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_justice {
+    background: #FFCB05 url(../images/party_justice.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_minjung {
+    background: #f47920 url(../images/party_minjung.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_gkpp {
+    background: #113066 url(../images/party_gkpp.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_kgreens {
+    background: #62bb47 url(../images/party_kgreens.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_ourfuture {
+    background: #e60063 url(../images/party_ourfuture.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_gokr {
+    background: #fff url(../images/party_gokr.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_newpolitics {
+    background: #0c449b url(../images/party_newpolitics.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_etc {
+    background: #AFB1BD url(../images/party_etc.jpg) center no-repeat
+}
+
+.vote-body-result .result-cont .candidate-rival .jd.party_no {
+    background: #7F8189 url(../images/party_no.jpg) center no-repeat
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .candi-name {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 18px;
+    font-family: "Nanum Gothic Bold";
+    color: #222;
+    text-align: center;
+    font-family: "Nanum Gothic Bold";
+    line-height: 30px
+}
+
+.vote-body-result .forecast .fc-cities .candidate-rival li .candi-num {
+    width: 100%;
+    font-size: 14px;
+    color: #606060;
+    text-align: center;
+}
+
+/*출구조사*/
+/*선거별 순위*/
+.vote-body-result .forecast .wrap-rank h2 {
+    line-height: 62px;
+    font-size: 22px;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .forecast .wrap-rank h2 span {
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .forecast .wrap-rank .rank {
+    background: #fff
+}
+
+.vote-body-result .forecast .wrap-rank .tabs {
+    overflow: hidden;
+}
+
+.vote-body-result .forecast .wrap-rank .tabs li {
+    width: 400px;
+    float: left;
+    box-sizing: border-box;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    line-height: 54px;
+    font-size: 16px;
+    font-family: "Nanum Gothic Bold";
+    color: #333333;
+    text-align: center;
+    border-bottom: 2px solid #5e3bbd;
+    cursor: pointer;
+}
+
+.vote-body-result .forecast .wrap-rank .tabs li:last-child {
+    border-right: 1px solid #d6d6d6
+}
+
+.vote-body-result .forecast .wrap-rank .tabs li.active {
+    color: #fff;
+    background: #5e3bbd;
+    border: 1px solid #5e3bbd;
+    border-bottom: 2px solid #5e3bbd;
+}
+
+.vote-body-result .forecast .wrap-rank .rank-cont {
+    padding: 20px 26px;
+    border: 1px solid #dddee4;
+    border-top: 0;
+    overflow: hidden;
+}
+
+.vote-body-result .forecast .wrap-rank .rank-cont .rank-inner {
+    overflow: hidden
+}
+
+.vote-body-result .wrap-rank .rank-cont .rank-inner > ul > li {
+    height: 461px;
+    float: left;
+    position: relative;
+    width: 365px;
+    margin: 0 25px 20px 0;
+    padding: 0 23px 23px;
+    border: 1px solid #dddee4
+}
+
+.vote-body-result .wrap-rank .rank-cont .rank-inner > ul > li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.vote-body-result .wrap-rank .rank-cont h3 {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000000
+}
+
+.vote-body-result .wrap-rank .rank-cont .candidate-rival {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 24px;
+    position: relative;
+}
+
+.vote-body-result .wrap-rank .rank-cont .gap {
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    width: 80px;
+    margin-left: -40px;
+    text-align: center;
+    font-family: "Nanum Gothic Bold";
+    font-size: 12px
+}
+
+.vote-body-result .wrap-rank .rank-cont .gap span {
+    font-family:
+        "Nanum Gothic";
+    font-size: 11px
+}
+
+.vote-body-result .wrap-rank .rank-cont .badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10
+}
+
+.vote-body-result .wrap-rank .rank-cont .badge01 {
+    position: absolute;
+    left: 23px;
+    z-index: 10;
+    top: 51px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .badge02 {
+    position: absolute;
+    top: 250px;
+    left: 161px;
+    z-index: 10
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-l {
+    float: left;
+    width: 120px;
+    position: relative;
+    margin-bottom: 8px
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-r {
+    float: right;
+    width: 120px;
+    position: relative;
+    margin-bottom: 8px
+}
+
+.vote-body-result .wrap-rank .rank-cont .img {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 159px;
+    overflow: hidden;
+    background: url(../images/img-candi-default.jpg) no-repeat
+}
+
+.vote-body-result .wrap-rank .rank-cont .img .jd {
+    width: 77px;
+    height: 33px;
+    top: 128px;
+    left: 0
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-r .img .jd {
+    position: absolute;
+    top: 128px;
+    left: 43px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .img img {
+    width: 120px
+}
+
+.vote-body-result .wrap-rank .rank-cont .wrap-rate .candi-name {
+    font-size: 18px;
+    color: #21232a;
+    font-family: "Nanum Gothic Bold";
+    display: inline-block;
+    margin-bottom: 8px
+}
+
+.vote-body-result .wrap-rank .rank-cont .wrap-rate .candi-num {
+    color: #606060;
+    font-size: 14px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .wrap-rate .data-rate {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-family: 'arial';
+    font-weight: bold;
+    padding-right: 19px;
+    background: url(../images/percent.png) right 6px no-repeat;
+    line-height: 24px;
+    color: #21232a
+}
+
+.vote-body-result .wrap-rank .rank-cont .wrap-rate .data-number {
+    color: #606060
+}
+
+.vote-body-result .wrap-rank .rank-cont .wrap-rate .data-number span {
+    color: #333;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph {
+    width: 50px;
+    height: 160px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-l .graph {
+    position: absolute;
+    right: -64px;
+    bottom: -81px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-r .graph {
+    position: absolute;
+    left: -34px;
+    bottom: -81px;
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert {
+    position: relative;
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li {
+    position: relative;
+    width: 20px;
+    height: 160px;
+    float: left
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li:first-child {
+    margin-right: 9px
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar {
+    display: block;
+    background: #435e9c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-r .graph .vert .bar {
+    background: #774fd1
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_thumin {
+    border: 1px solid #227ec8;
+    background: #227EC8
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_liberty {
+    border: 1px solid #c9171e;
+    background: #C9171E
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_bareun {
+    border: 1px solid #03b8bb;
+    background: #03B8BA
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_peace {
+    border: 1px solid #78b600;
+    background: #78B600
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_justice {
+    border: 1px solid #ffcb05;
+    background: #FFCB05
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_minjung {
+    border: 1px solid #f47920;
+    background: #f47920
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_gkpp {
+    border: 1px solid #113066;
+    background: #113066
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_kgreens {
+    border: 1px solid #62bb47;
+    background: #62bb47
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_ourfuture {
+    border: 1px solid #e60063;
+    background: #e60063
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_gokr {
+    border: 1px solid #ef383d;
+    background: #ef383d
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_newpolitics {
+    border: 1px solid #0c449b;
+    background: #0c449b
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_etc {
+    border: 1px solid #888;
+    background: #AFB1BD
+}
+
+.vote-body-result .wrap-rank .rank-cont .graph .vert li .bar.party_no {
+    border: 1px solid #888;
+    background: #7F8189
+}
+
+.vote-body-result .wrap-rank .rank-cont .else {
+    width: 316px;
+    line-height: 37px;
+    border: 0;
+    border-bottom: 1px solid #dddee4;
+    margin: 0;
+    padding: 0;
+    color: #21232a;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-rank .rank-cont .rival-r + .else {
+    border-top: 1px solid #dddee4;
+}
+
+.vote-body-result .wrap-rank .rank-cont .else .candi-num {
+    color: #606060
+}
+
+.vote-body-result .wrap-rank .rank-cont .else .else-left {
+    float: left;
+    width: 185px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.vote-body-result .wrap-rank .rank-cont .else .else-left .jd,
+.vote-body-result .wrap-rank .rank-cont .else .else-left .candi-name {
+    font-family: "Nanum Gothic Bold";
+    font-size: 13px
+}
+
+.vote-body-result .wrap-rank .rank-cont .else .else-right {
+    float: right;
+    font-size: 12px;
+    color: #333333;
+}
+
+.vote-body-result .result-cont .rate-interest {
+    position: relative;
+}
+
+.vote-body-result .result-cont .rate-interest h3 {
+    padding: 0 26px;
+    font-size: 18px;
+    font-family: "Nanum Gothic Bold";
+    color: #000;
+    line-height: 63px;
+    border-bottom: 1px solid #dddee4;
+    position: relative;
+}
+
+.vote-body-result .rate-interest .q-detail {
+    position: absolute;
+    top: 22px;
+    left: 164px;
+}
+
+.vote-body-result .popup-area-of-interest .button-close {
+    width: 14px;
+    height: 14px;
+    text-indent: -9999px;
+    overflow: hidden;
+    top: 20px;
+    right: 18px
+}
+
+.vote-body-result .popup-area-of-interest .button-close:before {
+    width: 14px;
+    height: 14px;
+    background: url(../images/interest-x.png);
+}
+
+.vote-body-result .btn-interest {
+    position: absolute;
+    right: 26px;
+    top: 26px
+}
+
+.vote-body-result .popup-area-of-interest {
+    top: -1px;
+    border: 1px solid #8f6bda;
+    width: 586px;
+    right: 0
+}
+
+.vote-body-result .popup-area-of-interest .popup-header {
+    line-height: 55px;
+    height: 56px;
+    background: url(../images/interest-top.jpg);
+    font-size: 14px;
+    color: #ffffff
+}
+
+.vote-body-result .popup-area-of-interest .button-save {
+    margin-left: 30px
+}
+
+.vote-body-result .popup-area-of-interest .dropdown {
+    margin-right: 8px
+}
+
+.vote-body-result .result-cont .rate-city {
+    padding: 16px 102px;
+    position: relative;
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter .button-search {
+    margin-left: 15px;
+}
+
+.vote-body-result .result-cont .rate-interest .popup-area-of-interest {
+    top: 64px;
+    right: 26px
+}
+
+.vote-body-result .result-cont .rate-interest .popup-tooltip-interest-of-area {
+    left: 190px;
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter {
+    padding: 22px 0 0 240px
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter .inter {
+    display: inline-block;
+    font-size: 16px;
+    color: #000000;
+    padding-left: 22px;
+    line-height: 46px;
+    font-family: "Nanum Gothic Bold";
+    background: url(../images/icon-my-area-of-interest.png) left 14px no-repeat;
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter-item {
+    margin-left: 18px
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter-item .dropdown {
+    width: 297px;
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter-item .dropdown .button-choose {
+    width: 297px
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter-item .dropdown .list {
+    width: 297px
+}
+
+.vote-body-result .result-cont .rate-city .candidate-search-filter .button-area-now {
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    text-indent: -9999px;
+    background: url(../images/btn-here.png) no-repeat;
+    width: 100px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.vote-body-result .result-cont .rate-city .show-rate {
+    padding: 44px 0 58px;
+    text-align: center;
+    font-size: 28px
+}
+
+.vote-body-result .result-cont .rate-table {
+    margin-bottom: 30px
+}
+
+.vote-body-result .result-cont .rate-table th {
+    line-height: 37px;
+    border-bottom: 1px solid #dddee4;
+    text-align: center;
+    font-size: 13px;
+    color: #333333;
+    border-top: 1px solid #dddee4
+}
+
+.vote-body-result .result-cont .rate-table td {
+    height: 50px;
+    vertical-align: middle;
+    color: #606060;
+    font-size: 13px;
+    border-bottom: 1px solid #dddee4;
+    text-align: center;
+}
+
+.vote-body-result .result-cont .rate-table td.first {
+    text-align: center;
+    font-family: "Nanum Gothic Bold";
+    color: #21232a;
+}
+
+.vote-body-result .result-cont .rate-table td.now span {
+    background: #623ba8;
+    color: #fff;
+    padding: 2px 5px 3px 4px;
+}
+
+.vote-body-result .result-cont .notice {
+    background: #f6f6f6;
+    padding: 30px 33px;
+    font-size: 14px;
+    color: #606060
+}
+
+.vote-body-result .result-cont .notice ul {
+    width: 1040px;
+    overflow: hidden;
+}
+
+.vote-body-result .result-cont .notice li {
+    float: left;
+    width: 520px;
+    line-height: 28px;
+}
+
+.vote-body-result .result-cont .notice li .tit {
+    display: inline-block;
+    height: 29px;
+    padding-right: 10px;
+    color: #623aa8;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .result-cont .notice li.long {
+    width: 700px
+}
+
+/*개표현황*/
+.vote-body-result .wrap-open h3 {
+    margin: 22px 0 18px;
+    font-size: 22px;
+    color: #000;
+}
+
+.vote-body-result .wrap-open h3 span {
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .wrap-refresh {
+    position: absolute;
+    top: 2px;
+    left: 110px
+}
+
+.vote-body-result .wrap-open .wrap-refresh .time {
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+.vote-body-result .wrap-open .wrap-refresh .btn-refresh {
+    vertical-align: bottom;
+    margin-left: 5px
+}
+
+.vote-body-result .wrap-open .tabs {
+    overflow: hidden;
+    background: #fff
+}
+
+.vote-body-result .wrap-open .tabs li {
+    width: 400px;
+    float: left;
+    box-sizing: border-box;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    line-height: 54px;
+    font-size: 16px;
+    font-family: "Nanum Gothic Bold";
+    color: #333333;
+    text-align: center;
+    border-bottom: 2px solid #5e3bbd;
+    cursor: pointer;
+}
+
+.vote-body-result .wrap-open .tabs li:last-child {
+    border-right: 1px solid #d6d6d6
+}
+
+.vote-body-result .wrap-open .tabs li.active {
+    color: #fff;
+    background: #5e3bbd;
+    border: 1px solid #5e3bbd;
+    border-bottom: 2px solid #5e3bbd;
+}
+
+/*개표현황 - 이시각 1위*/
+.vote-body-result .wrap-open .now-first-cont {
+    padding: 22px 26px;
+    border: 1px solid #dddee4;
+    background: #fff;
+    border-top: 0;
+    color: #000;
+}
+
+.vote-body-result .wrap-open .carousel-item {
+    width: 1200px;
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li {
+    width: 13px;
+    height: 22px;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li:before {
+    background: none
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li:first-child {
+    position: absolute;
+    margin-left: -630px;
+    background: url(../images/btn-open-left-off.png) no-repeat;
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li:nth-child(2) {
+    margin-left: 620px;
+    background: url(../images/btn-open-right-off.png) no-repeat
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li:first-child:hover {
+    background: url(../images/btn-open-left-on.png) no-repeat
+}
+
+.vote-body-result .wrap-open .now-first-cont .carousel-control li:nth-child(2):hover {
+    background: url(../images/btn-open-right-on.png) no-repeat
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo .now-rate {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    display: inline-block;
+}
+
+.vote-body-result .wrap-open .hubo .now-rate.ing {
+    width: 52px;
+    height: 28px;
+    padding: 14px 0 0 4px;
+    background: url(../images/open-rate-v2.jpg) center top no-repeat;
+    font-size: 12px;
+    color: #623aa8
+}
+
+.vote-body-result .wrap-open .hubo .now-rate.finish {
+    width: 74px;
+    height: 22px;
+    background: url(../images/open-finish.jpg) no-repeat;
+    text-indent: -9999px;
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo > li {
+    width: 370px;
+    min-height: 296px;
+    margin-right: 18px;
+    margin-bottom: 8px;
+    float: left;
+    border: 1px solid #dddee4;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo > li .tit {
+    font-size: 16px;
+    line-height: 63px;
+    border-bottom: 1px solid #dddee4;
+    text-align: center
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo > li .vs {
+    padding-top: 32px;
+    overflow: hidden;
+    width: 400px;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo > li .cont-none {
+    width: 368px;
+    position: absolute;
+    top: 64px;
+    height: 230px;
+    padding: 90px 0 96px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #21232a;
+    background: #fff;
+    z-index: 10
+}
+
+.vote-body-result .wrap-open .now-first-cont .hubo > li .cont-none-jukjung {
+    width: 368px;
+    position: absolute;
+    top: 64px;
+    height: 297px;
+    padding: 110px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #21232a;
+    background: #fff;
+    z-index: 10;
+}
+
+.vote-body-result .wrap-open .vs .rivals {
+    box-sizing: content-box;
+    position: relative;
+    width: 98px;
+    padding: 0 56px;
+    float: left;
+    text-align: center;
+    background: url(../images/vs-v2.jpg) 102px 43px no-repeat;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .vs .rivals:last-child {
+    padding-left: 6px;
+    background: none
+}
+
+.vote-body-result .wrap-open .vs .rivals:first-child {
+    background: url(../images/vs-v2.jpg) 177px 43px no-repeat
+}
+
+.vote-body-result .wrap-open .vs.type2 .rivals {
+    padding: 0 22px 0 0
+}
+
+.vote-body-result .wrap-open .vs.type2 .rivals:first-child {
+    padding-left: 15px;
+    background: url(../images/vs-v2.jpg) 117px 43px no-repeat
+}
+
+.vote-body-result .wrap-open .vs .rivals .top {
+    height: 180px;
+    position: relative;
+    margin-bottom: 18px
+}
+
+.vote-body-result .wrap-open .rivals .donut {
+    position: absolute;
+    top: 0;
+    background: url(../images/bg-circle.png) no-repeat
+}
+
+.vote-body-result .wrap-open .rivals .wrap-rate {
+    padding-top: 100px
+}
+
+.vote-body-result .wrap-open .vs .candi-name {
+    font-size: 18px;
+    color: #21232a;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .vs .candi-num {
+    color: #606060;
+    font-size: 14px;
+}
+
+.vote-body-result .wrap-open .vs .data-rate {
+    display: inline-block;
+    font-size: 22px;
+    font-family: 'arial';
+    font-weight: bold;
+    padding-right: 19px;
+    background: url(../images/percent.png) right 6px no-repeat;
+    color: #21232a
+}
+
+.vote-body-result .wrap-open .vs .data-number {
+    color: #606060
+}
+
+.vote-body-result .wrap-open .vs .data-number span {
+    color: #333;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-open .vs .badge {
+    margin-top: 3px
+}
+
+.vote-body-result .wrap-open .vs .badge.badge2 {
+    border: 1px solid #227ec8;
+    color: #227ec8
+}
+
+.vote-body-result .wrap-open .vs .badge.winner {
+    width: 42px;
+    height: 42px;
+    background: url(../images/winner_badge_s.png) no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 54px;
+    left: 65px;
+    border: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .rivals .img {
+    position: absolute;
+    top: 10.5px;
+    left: 11px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .rivals .img img {
+    width: 76px;
+}
+
+.vote-body-result .wrap-open .rivals .jukjung {
+    position: relative;
+}
+
+.vote-body-result .wrap-open .rivals .jukjung span {
+    display: block;
+    left: 50%;
+    margin-left: -60px;
+    padding-left: 57px;
+    width: 220px;
+    height: 67px;
+    background: url(../images/bg-jukjung.png) center center;
+    color: #fff;
+    line-height: 75px;
+    font-family: 'arial';
+    font-weight: bold;
+    font-size: 23px;
+    font-style: italic;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open h3 .s {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 14px;
+    color: #21232a;
+    font-weight: normal;
+}
+
+.vote-body-result .wrap-open .now-info {
+    height: 111px;
+    padding: 34px 40px;
+    background: url(../images/bg-open-tit.jpg) no-repeat;
+    color: #fff;
+    position: relative;
+}
+
+.vote-body-result .wrap-open .now-info-l {
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .now-info-l p {
+    width: 100px;
+    float: left;
+    font-size: 18px;
+    color: #bfacf2;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .now-info-l .time {
+    display: inline-block;
+    font-size: 11px;
+    padding-left: 18px;
+    padding-top: 2px;
+    background: url(../images/ico-now-w.png) no-repeat left 1px;
+    margin-top: 3px;
+    position: absolute;
+    top: 62px;
+    left: 42px
+}
+
+.vote-body-result .wrap-open .now-info-l .percent {
+    display: inline-block;
+    float: left;
+    padding-right: 24px;
+    line-height: 50px;
+    letter-spacing: -.05em;
+    font-size: 62px;
+    font-family: 'arial';
+    font-weight: bold;
+    background: url(../images/ico-percent-w.png) no-repeat right bottom;
+}
+
+.vote-body-result .wrap-open .now-info-r {
+    font-size: 12px;
+    color: #bfacf2;
+    overflow: hidden;
+    padding: 8px 0 0 15px;
+    position: absolute;
+    top: 36px;
+    left: 290px;
+}
+
+.vote-body-result .wrap-open .now-info-r li {
+    float: left;
+    color: #bfacf2;
+    font-size: 13px;
+    display: inline-block;
+    margin-right: 3px;
+    padding-right: 10px;
+    margin-right: 8px;
+    background: url(../images/bar-bora.jpg) right center no-repeat;
+}
+
+.vote-body-result .wrap-open .now-info-r li:last-child {
+    background: none
+}
+
+.vote-body-result .wrap-open .now-info-r li .tit {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.vote-body-result .wrap-open .now-info-r li .num-now {
+    color: #f2321b;
+    font-family: "Nanum Gothic Bold";
+    font-size: 16px
+}
+
+.vote-body-result .wrap-open .now-info-r li .num-all {
+    color: #fff;
+    font-family: "Nanum Gothic Bold";
+    font-size: 16px
+}
+
+.vote-body-result .wrap-open .now-info .btn-now-status {
+    width: 112px;
+    line-height: 36px;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    right: 26px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    background: none
+}
+
+.vote-body-result .wrap-open .now-info .btn-now-status span {
+    display: inline-block;
+    padding-right: 16px;
+    background: url(../images/btn-graph.png) right 12px no-repeat;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .now-map {
+    padding: 25px 25px 30px;
+    border: 1px solid #dddee4;
+    border-top: none;
+    background: #eeeaf7;
+    overflow: hidden;
+    position: relative;
+}
+
+.vote-body-result .wrap-open .now-map h4 {
+    font-size: 18px;
+    font-family: "Nanum Gothic Bold";
+    line-height: 30px;
+    color: #000;
+}
+
+.vote-body-result .wrap-open .now-map h4 .border {
+    border-top: 2px solid #000;
+    display: inline-block;
+}
+
+.vote-body-result .wrap-open .now-map h4 span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.vote-body-result .wrap-open .now-map .wrap-button {
+    position: absolute;
+    top: 23px;
+    right: 8px;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .now-map .wrap-button li {
+    float: left;
+    padding-right: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.vote-body-result .wrap-open .now-map .button-tooltip {
+    background: url(../images/icon-my-area-of-interest-on.png) left center no-repeat;
+    padding-left: 19px;
+    font-size: 14px;
+    font-family: "Nanum Gothic Bold";
+    color: #5c279c;
+}
+
+.candidate-search-filter-item.select-sido {
+    width: 134px;
+    position: absolute;
+    top: 65px;
+    left: 26px;
+    margin: 0;
+    z-index: 200
+}
+
+.candidate-search-filter-item.select-sido .dropdown {
+    width: 134px;
+}
+
+.candidate-search-filter-item.select-sido .dropdown .button-choose {
+    width: 134px;
+}
+
+.candidate-search-filter-item.select-sido .dropdown .list {
+    width: 134px;
+}
+
+.candidate-search-filter-item.select-sido .dropdown .list ul {
+    width: 134px;
+}
+
+/*개표현황 - 지도*/
+.vote-body-result .wrap-open .now-map .vote-map {
+    width: 586px;
+    float: left;
+    margin-top: 20px;
+    padding-left: 2px;
+}
+
+.vote-body-result .wrap-open .vote-area-items {
+    font-size: 11px;
+    color: #000;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .vote-area-items .btn-default {
+    display: inline-block;
+    padding: 0 4px;
+    line-height: 18px;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-open .vote-area-items .btn-default:hover {
+    text-align: center;
+    background: #6a2fb2;
+    color: #fff;
+    font-weight: normal;
+}
+
+.vote-body-result .wrap-open .vote-area-items-all .btn-default:hover {
+    background: url(../images/map-korea.png) no-repeat
+}
+
+.vote-body-result .wrap-open .area-gu-items .area-gu {
+    display: inline-block;
+    padding: 0 3px;
+    line-height: 18px;
+}
+
+.vote-body-result .wrap-open .area-gu-items .area-gu:hover {
+    text-align: center;
+    background: #6a2fb2;
+    color: #fff;
+    font-weight: normal;
+}
+
+.vote-body-result .wrap-open .now-map .vote-map .party-color {
+    width: 440px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.vote-body-result .wrap-open .now-map .vote-map .party-color li {
+    width: 110px;
+    float: left;
+    line-height: 18px;
+    margin-bottom: 12px;
+    font-size: 14px
+}
+
+.vote-body-result .wrap-open .now-map .vote-map .party-color .square {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.vote-body-result .wrap-open .vote-area-items-all .vote-area-items-body {
+    display: none;
+}
+
+.vote-body-result .wrap-open .vote-area-dong h4 {
+    margin-bottom: 20px;
+}
+
+.vote-body-result .wrap-open .vote-area-dong h4 .border {
+    display: inline-block;
+    ㅣborder-top: 2px solid #000
+}
+
+.vote-body-result .wrap-open .area-dong-body {
+    overflow: hidden;
+    margin-bottom: 33px
+}
+
+.vote-body-result .wrap-open .area-dong-body li button {
+    float: left;
+    width: 85px;
+    margin: 0 8px 4px 0;
+    border: 1px solid #9a9a9a;
+    font-size: 12px;
+    color: #333333;
+    line-height: 31px;
+    text-align: center;
+    background: #fff;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-open .area-dong-body li button.active {
+    color: #5c279c;
+    font-size: 12px;
+    font-family: "Nanum Gothic Bold";
+    border: 1px solid #5c279c
+}
+
+/*개표현황 - 적중2018*/
+.vote-body-result .wrap-open .banner-2018 {
+    display: block;
+    margin: 16px 0
+}
+
+.vote-body-result .wrap-layer {
+    position: absolute;
+    top: 190px;
+    z-index: 6000;
+    background: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+}
+
+.vote-body-result .wrap-layer .layer-cont {
+    position: relative;
+    width: 652px;
+    height: 727px;
+    margin: 20px auto;
+}
+
+.vote-body-result .wrap-layer .layer-cont .banner {
+    display: block;
+    position: relative;
+}
+
+.vote-body-result .wrap-layer .box-input {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: #dfcece;
+    font-size: 14px
+}
+
+.vote-body-result .wrap-layer .txt {
+    margin-left: 8px;
+    line-height: 20px;
+    vertical-align: top
+}
+
+.vote-body-result .wrap-layer input[type="checkbox"] {
+    display: none;
+}
+
+.vote-body-result .wrap-layer input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/btn-chk-off.png) no-repeat
+}
+
+.vote-body-result .wrap-layer input[type="checkbox"]:checked + label {
+    background: url(../images/btn-chk-on.png) no-repeat;
+}
+
+.vote-body-result .wrap-layer .popup-close {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    background: url(../images/popup-close.png) no-repeat;
+    width: 44px;
+    height: 20px;
+    display: block;
+    border: 0;
+    text-indent: -9999px
+}
+
+
+/*개표현황 - select / graph */
+.vote-body-result .wrap-open .now-map .vote-select {
+    width: 562px;
+    float: right
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .select-place {
+    padding: 0 18px 0 25px;
+    background: url(../images/open-gra-bg.jpg) repeat-y;
+    font-size: 18px;
+    color: #fff;
+    line-height: 62px;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .select-place span {
+    display: inline-block;
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .select-place span.data-place {
+    float: left;
+    background: url(../images/ico-location.png) left center no-repeat;
+    padding-left: 20px
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .select-place span.data-rate {
+    float: right;
+    font-size: 14px;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .candidate-search-filter {
+    padding: 18px 0 0 24px;
+    height: 82px
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .candidate-search-filter-item .dropdown {
+    width: 286px;
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .candidate-search-filter-item .dropdown .button-choose {
+    width: 286px;
+    border: 1px solid #9a9a9a
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .candidate-search-filter-item .dropdown .list {
+    width: 286px
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .candidate-search-filter .button-search-w {
+    width: 100px;
+    height: 45px;
+    background: url(../images/btn-search-w.jpg) no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-left: 40px
+}
+
+.vote-body-result .wrap-open .now-map .vote-select .popup-area-of-interest {
+    width: 562px
+}
+
+.vote-body-result .wrap-open .popup-area-of-interest .button-close {
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    overflow: hidden;
+    top: 20px;
+    right: 18px
+}
+
+.vote-body-result .wrap-open .popup-area-of-interest .button-close:before {
+    width: 40px;
+    height: 40px;
+    background: url(../images/button-close-popup.png);
+}
+
+.vote-body-result .wrap-open .popup-area-of-interest .my-location {
+    padding: 23px 0 40px 22px;
+    margin-left: 22px;
+    font-size: 16px;
+    font-family: "Nanum Gothic Bold";
+    background: url(../images/icon-my-area-of-interest.png) left 24px no-repeat
+}
+
+.vote-body-result .wrap-open .now-map .rank-cont {
+    overflow: hidden;
+    background: #fff
+}
+
+.vote-body-result .wrap-open .now-map .cont-none {
+    width: 364px;
+    height: 462px;
+    background: #f5f5f5;
+    padding-top: 85px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #21232a;
+    text-align: center;
+    margin: 0 auto 35px;
+    border: 1px solid #dddee4
+}
+
+.vote-body-result .wrap-open .now-map .rank-inner > ul > li {
+    margin: 0 auto 30px 98px;
+    position: relative;
+    height: auto
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rate {
+    margin-bottom: 3px;
+}
+
+.vote-body-result .wrap-open .now-map h3 {
+    margin: 0;
+}
+
+.vote-body-result .wrap-open .badge {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    min-width: 34px;
+    padding: 0 3px;
+    height: 24px;
+    border: 1px solid #5c279c;
+    background: #fff;
+    color: #5c279c;
+    line-height: 22px
+}
+
+.vote-body-result .wrap-open .badge.winner {
+    background: #ffe43e;
+    color: #000;
+    border: 1px solid #fdcf30
+}
+
+.vote-body-result .wrap-open .badge.badge1 {
+    background: #fff;
+    color: #af1c22;
+    border: 1px solid #af1c22
+}
+
+.vote-body-result .wrap-open .badge.badge2 {
+    background: #fff;
+    color: #227ec8;
+    border: 1px solid #227ec8
+}
+
+.vote-body-result .wrap-open .now-map .rival-l,
+.vote-body-result .wrap-open .now-map .rival-r {
+    position: relative;
+}
+
+.vote-body-result .wrap-open .now-map .rival-r .badge {
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    border: 0
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank .rank-cont .rival-l .graph {
+    bottom: -63px;
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank .rank-cont .rival-r .graph {
+    bottom: -63px;
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank-tit {
+    padding: 24px 0 15px;
+    background: #fff;
+    text-align: center;
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank-tit .sort {
+    font-size: 20px;
+    font-family: "Nanum Gothic Bold";
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank-tit .place {
+    color: #606060;
+    font-size: 14px;
+    line-height: 30px
+}
+
+.vote-body-result .wrap-open .now-map .wrap-rank-tit .place .place-rate {
+    color: #5d3bbc;
+    padding-left: 6px;
+    background: url(../images/right-bar.jpg) left 2px no-repeat;
+    margin-left: 6px;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-open .now-map .else {
+    position: relative;
+}
+
+.vote-body-result .wrap-open .now-map .else .else-center {
+    position: absolute;
+    left: 50%;
+    width: 38px;
+    text-align: center;
+    margin-left: -2px
+}
+
+.vote-body-result .wrap-open .now-map .else .else-right {
+    color: #6a2fb2
+}
+
+.vote-body-result .wrap-open .now-map .vote-area-items-all a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url(../images/map-korea.png) no-repeat;
+    position: absolute;
+    top: 140px;
+    left: 26px;
+    text-indent: -9999px;
+    overflow: hidden;
+    z-index: 100
+}
+
+/*당선자*/
+
+.vote-body-result .wrap-winner .nav-winner {
+    width: 1200px;
+    margin: 24px auto 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-winner .nav-winner ul {
+    overflow: hidden;
+    border-bottom: 2px solid #5e3bbd;
+}
+
+.vote-body-result .wrap-winner .nav-winner li {
+    width: 133px;
+    float: left;
+    box-sizing: border-box;
+    border-top: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    line-height: 54px;
+    font-size: 16px;
+    font-family: "Nanum Gothic Bold";
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+}
+
+.vote-body-result .wrap-winner .nav-winner li.active {
+    color: #fff;
+    background: #5e3bbd;
+    border: 1px solid #5e3bbd;
+    border-bottom: 0
+}
+
+.vote-body-result .wrap-winner .nav-winner li:first-child {
+    width: 134px;
+}
+
+.vote-body-result .wrap-winner .nav-winner li:last-child {
+    width: 135px;
+    border-right: 1px solid #d6d6d6
+}
+
+.vote-body-result .wrap-winner .winner-jd {
+    width: 1200px;
+    background: url(../images/bg-w-jd.jpg) no-repeat;
+    padding: 14px 0
+}
+
+.vote-body-result .wrap-winner .winner-jd .alert {
+    padding-top: 32px;
+    background: url(../images/winner-alert-bg.jpg) no-repeat;
+    width: 1148px;
+    height: 80px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: "Nanum Gothic Bold";
+    color: #21232a;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.vote-body-result .wrap-winner .winner-jd .alert span {
+    font-family: "Nanum Gothic Bold";
+    color: #6a2fb2;
+}
+
+.vote-body-result .wrap-winner .winner-jd .circle-jd {
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.vote-body-result .wrap-winner .winner-jd .circle-jd h4 {
+    margin: 24px 0;
+    text-align: center;
+    font-family: "Nanum Gothic Bold";
+    font-size: 20px;
+    color: #fff;
+}
+
+.vote-body-result .wrap-winner .winner-jd .circle-jd h4 span {
+    font-size: 16px;
+    display: inline-block;
+    padding-left: 36px;
+    margin-left: 8px;
+    background: url(../images/ico-ppl.png) left center no-repeat;
+    vertical-align: top
+}
+
+.vote-body-result .wrap-winner .wrap-circle {
+    text-align: center;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-winner .wrap-circle ul {
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block
+}
+
+.vote-body-result .wrap-winner .wrap-circle li {
+    width: 116px;
+    float: left;
+    position: relative;
+    margin: 0 20px;
+    color: #21232a;
+}
+
+.vote-body-result .wrap-winner .wrap-circle .donut {
+    width: 117px;
+    height: 117px;
+    position: absolute;
+    top: 0;
+    background: url(../images/bg-circle-winner.png) 0 center no-repeat
+}
+
+.vote-body-result .wrap-winner .wrap-circle span {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.vote-body-result .wrap-winner .wrap-circle .data-count {
+    top: 47px;
+    font-family: "Nanum Gothic Bold";
+    font-size: 20px;
+}
+
+.vote-body-result .wrap-winner .wrap-circle .data-rate {
+    top: 65px;
+    font-size: 12px;
+}
+
+.vote-body-result .wrap-winner .wrap-circle .name-jd {
+    margin-top: 125px;
+    text-align: center;
+}
+
+.vote-body-result .wrap-winner .winner-list {
+    padding: 26px;
+    border: 1px solid #dddee4;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    border-top: 0
+}
+
+.vote-body-result .wrap-winner .winner-list ul {
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-winner .winner-list h4 {
+    line-height: 66px;
+    font-family: "Nanum Gothic Bold";
+    font-size: 24px;
+    border: 5px solid #d4d4d9;
+    text-align: center;
+    background: #fff
+}
+
+.vote-body-result .wrap-winner .winner-list h5 {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: #1a1a1a;
+    line-height: 65px;
+    background: url(../images/winner-h5-bar.jpg) bottom center no-repeat;
+}
+
+.vote-body-result .wrap-winner .winner-list ul > li {
+    width: 250px;
+    height: 595px;
+    margin: 15px 43px 0 0;
+    float: left;
+    position: relative;
+}
+
+.vote-body-result .wrap-winner .winner-list ul > li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.vote-body-result .wrap-winner .winner-list .img {
+    display: block;
+    width: 249px;
+    height: 316px;
+    overflow: hidden;
+    text-align: center
+}
+
+.vote-body-result .wrap-winner .winner-list .img img {
+    width: 100%;
+}
+
+.vote-body-result .wrap-winner .winner-list .badge.winner {
+    position: absolute;
+    top: 340px;
+    right: -10px;
+    width: 89px;
+    height: 90px;
+    background: url(../images/winner_badge.png) no-repeat;
+    font-size: 0
+}
+
+.vote-body-result .wrap-winner .winner-list .badge.winner.v2 {
+    background: url(../images/winner_badge_v2.jpg) no-repeat;
+    right: -2px;
+    top: 341px
+}
+
+.vote-body-result .wrap-winner .winner-list .info {
+    width: 249px;
+    height: 72px;
+    background: #fff;
+    text-align: center;
+    border-left: 1px solid #dddee4;
+    border-right: 1px solid #dddee4;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-winner .winner-list .info span {
+    line-height: 32px
+}
+
+.vote-body-result .wrap-winner .winner-list .info .candi-name {
+    font-size: 18px;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-winner .winner-list .info .candi-num {
+    color: #606060;
+    font-size: 14px;
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data {
+    padding: 10px 16px 10px 17px;
+    width: 249px;
+    border-left: 1px solid #dddee4;
+    border-right: 1px solid #dddee4;
+    border-bottom: 1px solid #dddee4;
+    font-size: 14px
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data .center {
+    display: block;
+    text-align: center
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data span {
+    display: inline-block;
+    line-height: 37px;
+    font-family: "Nanum Gothic Bold";
+    color: #333333
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data p {
+    border-bottom: 1px solid #dddee4
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data p:last-child {
+    border-bottom: none
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data .tit {
+    width: 68px;
+    padding-left: 22px;
+    margin-left: 4px
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data .tit.rates {
+    background: url(../images/w-rate.jpg) left center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data .tit.number {
+    background: url(../images/w-count.jpg) left center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .winner-data .tit.place {
+    background: url(../images/w-pin.jpg) left center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .jd {
+    height: 30px;
+    margin: 10px 0 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.vote-body-result .wrap-winner .winner-list .party_thumin {
+    background: url(../images/win-party1.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_liberty {
+    background: url(../images/win-party2.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_bareun {
+    background: url(../images/win-party3.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_peace {
+    background: url(../images/win-party4.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_justice {
+    background: url(../images/win-party5.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_minjung {
+    background: url(../images/win-party6.png) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_gkpp {
+    background: url(../images/win-party7.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_kgreens {
+    background: url(../images/win-party8.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_ourfuture {
+    background: url(../images/win-party9.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_gokr {
+    background: url(../images/win-party10.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_newpolitics {
+    background: url(../images/win-party11.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_no {
+    background: url(../images/win-party-no.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .winner-list .party_etc {
+    background: url(../images/win-party-etc.jpg) center center no-repeat
+}
+
+.vote-body-result .wrap-winner .side-area-of-interest {
+    top: 188px;
+    right: 24px;
+    width: 270px;
+    background: #f2f2f2;
+    height: 455px;
+    z-index: 50
+}
+
+.vote-body-result .wrap-winner .side-area-of-interest li {
+    width: 208px;
+    margin-left: 10px
+}
+
+.vote-body-result .wrap-winner .side-area-of-interest a {
+    font-weight: normal;
+    color: #5a5a5a
+}
+
+.vote-body-result .wrap-winner .side-area-of-interest a:hover {
+    color: #623aa8;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-winner .popup-tooltip-interest-of-area {
+    left: -70px;
+    top: 66px;
+}
+
+.vote-body-result .wrap-winner .popup-tooltip-interest-of-area li {
+    width: auto;
+}
+
+.vote-body-result .wrap-winner .default {
+    height: 126px;
+    padding-top: 40px;
+    line-height: 23px;
+    font-size: 14px;
+    background: url(../images/search-default-v2.png) no-repeat;
+    text-align: center;
+    color: #21232a;
+}
+
+.vote-body-result .wrap-winner .default span {
+    text-decoration: underline;
+    font-family: "Nanum Gothic Bold"
+}
+
+.vote-body-result .wrap-winner .search-default .side-area-of-interest {
+    top: 26px
+}
+
+.vote-body-result .wrap-winner .candidate-search-filter {
+    border-right: 1px solid #dddee4;
+    border-left: 1px solid #dddee4
+}
+
+.vote-body-result .wrap-winner .btn-winner {
+    margin-left: 25px;
+    width: 130px;
+    height: 45px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background: #623aa8
+}
+
+.vote-body-result .wrap-winner .winner-edu .info span {
+    line-height: 26px
+}
+
+.vote-body-result .wrap-winner .winner-edu .candi-name {
+    display: block;
+    margin-top: 10px
+}
