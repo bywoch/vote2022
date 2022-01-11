@@ -2,29 +2,24 @@ var candidate_chart;
 var canditimeStampArray = [];
 var candidateSeriesData2Way1 = [];
 var candidateColor = {
-    심상정: "#f7cc46",
-    안철수: "#ce5f2c",
-    윤석열: "#d93a35",
     이재명: "#1e4d9b",
-    //없음: "#aaa",
-    //기타: "#7742cc",
+    윤석열: "#d93a35",
+    안철수: "#ce5f2c",
+    심상정: "#f7cc46",
 };
-var candiPlot = [
-    {
-        value: 1633827599000,
-        zIndex: 1,
-        label: {
-            text: "민주당 후보 선출"
-        }
-    },
-    {
-        value: 1636094263000,
-        zIndex: 1,
-        label: {
-            text: "국민의힘 후보 선출"
-        }
-    },
-];
+var candiPlot = [{
+    value: 1633827599000,
+    zIndex: 1,
+    label: {
+        text: "민주당 후보 선출"
+    }
+}, {
+    value: 1636094263000,
+    zIndex: 1,
+    label: {
+        text: "국민의힘 후보 선출"
+    }
+},];
 var lastCandidateDate = "";
 
 function to_date(date_str) {
@@ -49,11 +44,8 @@ function canditimeStampDayMatching() {
 
 function candi2Way1() {
     var candidateName2Way1 = ["이재명", "윤석열", "안철수", "심상정"];
-
     $.each(candidateName2Way1, function (i, cate) {
-
         var legendIsShow = true;
-
         candidateSeriesData2Way1.push({
             name: cate,
             data: [],
@@ -67,7 +59,6 @@ function candi2Way1() {
                 lineColor: candidateColor[cate],
             },
         });
-
         candidateSeriesData2Way1.push({
             name: cate,
             type: "arearange",
@@ -82,36 +73,14 @@ function candi2Way1() {
                 enabled: false,
             },
         });
-
-        candidateSeriesData2Way1.push({
-            name: cate,
-            data: [],
-            type: "scatter",
-            visible: legendIsShow,
-            enableMouseTracking: false,
-            linkedTo: ":previous",
-            opacity: 0.2,
-            color: candidateColor[cate],
-        });
-
     });
-
     $.each(candidateApproveData2Way1, function (j, d) {
         $.each(candidateName2Way1, function (i, data) {
-            //   console.log(d);
             if (d[data + "_mean"] != "" && d[data + "_mean"]) {
-                candidateSeriesData2Way1[i * 3].data.push([
-            to_date(d.date),
-            d[data + "_mean"],
-            ]);
-                candidateSeriesData2Way1[i * 3 + 1].data.push([
-            to_date(d.date),
-            d[data + "_lower"],
-            d[data + "_upper"],
-            ]);
+                candidateSeriesData2Way1[i * 2].data.push([to_date(d.date), d[data + "_mean"],]);
+                candidateSeriesData2Way1[i * 2 + 1].data.push([to_date(d.date), d[data + "_lower"], d[data + "_upper"],]);
             }
         });
-
         if (j === -1) {
             lastCandidateDate = to_date(candidateSeriesData2Way1[j].date);
         }
@@ -119,7 +88,6 @@ function candi2Way1() {
 }
 
 function makeCandiWayChart(seriesData) {
-
     candidate_chart = Highcharts.chart("candidate-container", {
         title: {
             text: "",
@@ -158,29 +126,6 @@ function makeCandiWayChart(seriesData) {
                     enabled: false,
                 },
             },
-            scatter: {
-                marker: {
-                    radius: 3,
-                    states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: "rgb(100,100,100)",
-                        },
-                    },
-                },
-                states: {
-                    hover: {
-                        marker: {
-                            enabled: false,
-                        },
-                    },
-                },
-
-                tooltip: {
-                    headerFormat: "<b>{point.y}</b><br>",
-                    pointFormat: "{point.x} cm, {point.y} kg",
-                },
-            },
         },
         tooltip: {
             crosshairs: true,
@@ -194,29 +139,11 @@ function makeCandiWayChart(seriesData) {
             formatter: function () {
                 // The first returned item is the header, subsequent items are the
                 // points
-                return [
-            "<div class='hth'><b>" +
-                canditimeStampArray[this.x].month +
-                "월 " +
-                canditimeStampArray[this.x].week +
-                "주</b></div>",
-            ].concat(
+                return ["<div class='hth'><b>" + canditimeStampArray[this.x].month + "월 " + canditimeStampArray[this.x].week + "주</b></div>",].concat(
                     this.points ?
-                    this.points.map(function (point) {
-                        return (
-                            "<div class='ht candi' style='width:150px; border-color:" +
-                            point.series.color +
-                            "'><span><img src = 'http://poll-mbc.co.kr/img/person/" +
-                            point.series.name +
-                            ".png' class='tooltip-img'><span>" +
-                            point.series.name +
-                            "</span></span><b style='color:" +
-                            point.series.color +
-                            "'>" +
-                            point.y +
-                            "%</b></div>"
-                        );
-                    }) : []
+                        this.points.map(function (point) {
+                            return ("<div class='ht candi' style='width:150px; border-color:" + point.series.color + "'><span><img src = 'http://poll-mbc.co.kr/img/person/" + point.series.name + ".png' class='tooltip-img'><span>" + point.series.name + "</span></span><b style='color:" + point.series.color + "'>" + point.y + "%</b></div>");
+                        }) : []
                 );
             },
             style: {
@@ -232,30 +159,22 @@ function makeCandiWayChart(seriesData) {
         },
         series: seriesData,
     });
-
     if ($(this).attr("type") == "all") {
         candidate_chart.xAxis[0].update({
-                min: null,
-                max: lastCandidateDate + 584000000
-            },
-            true
-        );
+            min: null,
+            max: lastCandidateDate + 584000000
+        }, true);
     } else if ($(this).attr("type") == "recent") {
         candidate_chart.xAxis[0].update({
-                min: lastCandidateDate - 31536000000,
-                max: lastCandidateDate + 584000000,
-            },
-            true
-        );
+            min: lastCandidateDate - 31536000000,
+            max: lastCandidateDate + 584000000,
+        }, true);
     } else {
         candidate_chart.xAxis[0].update({
-                min: lastCandidateDate - 31536000000,
-                max: 1647424861000
-            },
-            true
-        );
+            min: lastCandidateDate - 31536000000,
+            max: 1647424861000
+        }, true);
     }
-
     Highcharts.Pointer.prototype.reset = function () {
         return undefined;
     };
