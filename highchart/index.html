@@ -13,6 +13,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <link rel="stylesheet" href="http://poll-mbc.co.kr/css/style.css">
+    <link rel="stylesheet" href="http://poll-mbc.co.kr/css/box.css">
 </head>
 
 <body>
@@ -25,6 +26,17 @@
         }
 
     </style>
+    <div style="display: flex; justify-content: space-between;margin-bottom:12px;">
+        <div class="toggle-container party-chart">
+            <div class="toggle-item now text-shadow" type="all">전체</div>
+            <div class="toggle-item end text-shadow" type="recent">
+                최근 1년
+            </div>
+            <div class="toggle-item end text-shadow active" type="toend">
+                대선까지
+            </div>
+        </div>
+    </div>
     <div id="candidate-container" class="candidate-container"></div>
 </body>
 <script src="http://poll-mbc.co.kr/data/candidate_approve_data.js"></script>
