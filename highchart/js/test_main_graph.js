@@ -94,7 +94,6 @@ function candi2Way1() {
 }
 
 function makeCandiWayChart(seriesData) {
-
     candidate_chart = Highcharts.chart("candidate-container", {
         title: {
             text: "",
@@ -144,9 +143,12 @@ function makeCandiWayChart(seriesData) {
             padding: 0,
             borderRadius: 5,
             formatter: function () {
-                return ["<div class='hth'><b>" + canditimeStampArray[this.x].month + "월 " + canditimeStampArray[this.x].week + "주</b></div>", ].concat(this.points ? this.points.map(function (point) {
-                    return ("<div class='ht candi' style='width:150px; border-color:" + point.series.color + "'><span><img src = 'http://poll-mbc.co.kr/img/person/" + point.series.name + ".png' class='tooltip-img'><span>" + point.series.name + "</span></span><b style='color:" + point.series.color + "'>" + point.y + "%</b></div>");
-                }) : []);
+                return ["<div class='hth'><b>" + canditimeStampArray[this.x].month + "월 " + canditimeStampArray[this.x].week + "주</b></div>", ].concat(
+                    this.points ?
+                    this.points.map(function (point) {
+                        return ("<div class='ht candi' style='width:150px; border-color:" + point.series.color + "'><span><img src='http://poll-mbc.co.kr/img/person/" + point.series.name + ".png' class='tooltip-img'><span>" + point.series.name + "</span></span><b style='color:" + point.series.color + "'>" + point.y + "%</b></div>");
+                    }) : []
+                );
             },
             style: {
                 fontSize: "14px",
@@ -163,47 +165,11 @@ function makeCandiWayChart(seriesData) {
     });
 
     candidate_chart.xAxis[0].update({
-        //min: lastCandidateDate - 31536000000,
-        min: null,
+        min: lastCandidateDate - 31536000000,
         max: 1647424861000
     }, true);
 
     Highcharts.Pointer.prototype.reset = function () {
         return undefined;
     };
-
-    $(".party-chart .toggle-item").on("click", function () {
-        $(".party-chart .toggle-item").removeClass("active");
-        nowtype = $(this).attr("type");
-        $(this).addClass("active");
-        //현재시간
-        const start = Date.now();
-        if ($(this).attr("type") == "all") {
-            //전체
-            candidate_chart.xAxis[0].update({
-                min: 1609459200000,
-                max: 1647424861000,
-            }, true);
-        } else if ($(this).attr("type") == "recent") {
-            //최근 1년
-            candidate_chart.xAxis[0].update({
-                min: 1609459200000,
-                max: start,
-            }, true);
-        } else {
-            //대선까지
-            candidate_chart.xAxis[0].update({
-                min: null,
-                max: 1647424861000
-            }, true);
-        }
-
-        /*Date.UTC(2021, 0, 20);
-
-        var timestamp = 1607110465663
-        var date = new Date(timestamp);
-        console.log(date.getTime());
-        console.log(date);*/
-
-    });
 }
