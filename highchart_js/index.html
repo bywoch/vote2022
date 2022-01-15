@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    
+    <link rel="stylesheet" href="http://poll-mbc.co.kr/css/style.css">
+    <link rel="stylesheet" href="http://poll-mbc.co.kr/css/box.css">
+    <link rel="stylesheet" href="http://poll-mbc.co.kr/css/common.css">
+    <link rel="stylesheet" href="http://poll-mbc.co.kr/css/media.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main-outer">
+        <div class="content-outer" style="width: 1118px; margin: 0 auto; flex: none;">
+            <div class="mdl-grid" style="padding-top: 30px">
+                <div class="mdl-cell mdl-cell--9-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                    <div class="title-container" style="position: relative">
+                        <div class="title text-shadow">
+                            <i class="material-icons" style="margin-right: 10px">poll</i>
+                            2020 대통령 선거
+                        </div>
+                        <a href="candidate_detail.html">
+                            <div class="border-box small detail-view text-shadow">
+                                <i class="material-icons">text_snippet</i>자세히 보기
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-box none-border" style="padding-top:12px;">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+                            <div class="toggle-container candi-party-chart">
+                                <div class="toggle-item end text-shadow active jmsy " type="jmsy">
+                                    이재명 vs. 윤석열
+                                </div>
+                                <div class="toggle-item end text-shadow candiall dimmed" type="candiall">
+                                    다자구도
+                                </div>
+                                <div class="toggle-item end text-shadow jmjp dimmed" type="jmjp">
+                                    이재명 vs. 홍준표
+                                </div>
+                            </div>
+                            <div class="toggle-container party-chart">
+                                <div class="toggle-item now text-shadow" type="all">전체</div>
+                                <div class="toggle-item end text-shadow" type="recent">
+                                    최근 1년
+                                </div>
+                                <div class="toggle-item end text-shadow active" type="toend">
+                                    대선까지
+                                </div>
+                            </div>
+                        </div>
+                        <div id="candidate-container"></div>
+                        <div class="space-between-container text-shadow">
+                            <div class="flc">
+                                <a class="seoul info-btn flc" href="#candidate-info" rel="modal:open">
+                                    <i class="material-icons text">info</i>
+                                    <span style="margin-left: 5px; margin-right: 20px">도움말</span>
+                                </a>
+
+                                <a class="seoul info-btn flc" href="#candidate-quote" rel="modal:open">
+                                    <i class="material-icons">format_quote</i>
+                                    <span style="margin-left: 5px">인용</span>
+                                </a>
+                            </div>
+                            <img src="http://poll-mbc.co.kr/img/trust.jpg" style="height: 40px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- 데이터  -->
+<script src="data/president_data.js"></script>
+<script src="data/president_scatter_data.js"></script>
+<script src="data/party_mini_data.js"></script>
+<script src="data/president_candidate_data.js"></script>
+<script src="data/candidate_approve_data.js"></script>
+<script src="data/candidate_scatter_data.js"></script>
+<script src="data/party_approve_data.js"></script>
+<script src="data/candidate_approve_two_1.js"></script>
+<script src="data/candidate_scatter_two_1.js"></script>
+<script src="data/candidate_approve_two_2.js"></script>
+<script src="data/candidate_scatter_two_2.js"></script>
+
+<!-- 스크립트 -->
+<script src="js/data.js"></script>
+<script src="js/president_chart.js"></script>
+<script src="js/party_approve_graph.js"></script>
+<script src="js/candidate_chart.js"></script>
+<script src="js/candidate/candidate_main_graph.js"></script>
+<script src="js/index.js"></script>
+    
+<!--<script>
+    $(document).ready(function(i, d) {
+        // makeMainArticle();
+        $(".more-menu").on("click", function() {
+            $(".menu-box").fadeIn();
+        });
+        $(".more-menu-close").on("click", function() {
+            $(".menu-box").fadeOut();
+        });
+
+        seoulQuote("2way1");
+        busanQuote();
+        candidateQuote("candiall");
+        presidentQuote();
+        partyQuote();
+    });
+
+</script>-->
+
+</html>
