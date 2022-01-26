@@ -38,23 +38,6 @@ function setCandidateMiniChart() {
             data: [],
             lineWidth: 2,
         });
-
-        /*★$(".mini-graph.c" + i).css(
-            "background-image",
-            "url(http://poll-mbc.co.kr/img/person/" + d + ".png)"
-        );
-        $(".mini-graph.c" + i + " .name").html(d);
-        $(".mini-graph.c" + i + " .percent").html("0");
-        $(".mini-graph.c" + i + " .percent.counter").attr(
-            "data-count",
-            unsortedData[i].value
-        );
-        console.log(unsortedData[i].value)
-        $(".mini-graph.c" + i + " .name").css(
-            "color",
-            partyColor[personInfo[d].party]
-        );*/
-        
     });
 
     $.each(candidateApproveData2Way1, function (i, d) {
@@ -64,6 +47,7 @@ function setCandidateMiniChart() {
             }
         });
     });
+    
     $.each(chartArray, function (i, d) {
         makeCandidateChart(i, chartSeries[i]);
     });
@@ -161,18 +145,7 @@ function makeCandidateChart(index, data) {
             },
         }
     );
-
-    /*
-The purpose of this demo is to demonstrate how multiple charts on the same page
-can be linked through DOM and Highcharts events and API methods. It takes a
-standard Highcharts config with a small variation for each data set, and a
-mouse/touch event handler to bind the charts together.
-*/
-
-    /**
-     * In order to synchronize tooltips and crosshairs, override the
-     * built-in events with handlers defined on the parent element.
-     */
+    
   ["mousemove", "touchmove", "touchstart"].forEach(function (eventType) {
         document
             .getElementById("charts-container")
@@ -194,28 +167,17 @@ mouse/touch event handler to bind the charts together.
                 }
             });
     });
-
-    /**
-     * Override the reset function, we don't need to hide the tooltips and
-     * crosshairs.
-     */
     Highcharts.Pointer.prototype.reset = function () {
         return undefined;
     };
-
-    /**
-     * Highlight a point by showing tooltip, setting hover state and draw crosshair
-     */
+    
     Highcharts.Point.prototype.highlight = function (event) {
         event = this.series.chart.pointer.normalize(event);
         this.onMouseOver(); // Show the hover marker
         this.series.chart.tooltip.refresh(this); // Show the tooltip
         this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
     };
-
-    /**
-     * Synchronize zooming through the setExtremes event handler.
-     */
+    
     function syncExtremes(e) {
         var thisChart = this.chart;
 

@@ -39,84 +39,69 @@ $(document).ready(function () {
     setCandidateLineChart();
 });
 
+// 문서 로딩 완료 시 실행되는 함수
 $(window).on("load", function () {
+    // 모든 .counter 요소에 대해 반복문 실행
     $(".counter").each(function () {
-        var $this = $(this),
-            countTo = $this.attr("data-count");
+        // 현재 요소(jQuery 객체)를 $this 변수에 저장
+        var $this = $(this);
 
+        // 해당 요소의 data-count 속성 값을 가져옴 (애니메이션의 최종 값)
+        var countTo = $this.attr("data-count");
+
+        // jQuery의 animate 함수를 이용하여 숫자를 증가시키는 애니메이션 수행
         $({
-            countNum: $this.text()
+            countNum: $this.text() // 현재 표시된 숫자를 시작 값으로 설정
         }).animate({
-                countNum: countTo,
+            countNum: countTo // 최종 숫자로 설정하여 애니메이션 수행
+        },
+        {
+            duration: 1500, // 애니메이션의 지속 시간 (밀리초 단위)
+            easing: "linear", // 애니메이션의 가속도 함수 설정
+            step: function () {
+                // 애니메이션 중 각 단계마다 호출되는 함수
+                // 현재 애니메이션의 값인 this.countNum을 내림하여 요소에 표시
+                $this.text(Math.floor(this.countNum));
             },
-
-            {
-                duration: 1500,
-                easing: "linear",
-                step: function () {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function () {
-                    $this.text(this.countNum);
-                    //alert('finished');
-                },
-            }
-        );
+            complete: function () {
+                // 애니메이션이 완료된 후 호출되는 함수
+                // 최종 값으로 요소에 표시하여 애니메이션 완료
+                $this.text(this.countNum);
+                //alert('finished');
+            },
+        });
     });
 });
 
+
+// 현재 대통령 지지율과 전 주 대통령 지지율을 계산하고, 지지율 변화 간격을 계산하는 함수
 function setPresidentApprove() {
     // 전 주 대통령 지지율
-    prev_president_approve =
-        president_data[president_data.length - 2]["positive_mean"];
+    prev_president_approve = president_data[president_data.length - 2]["positive_mean"];
     var prev_president_date = president_data[president_data.length - 2]["date"];
     
     // 현재 대통령 지지율
-    president_approve =
-        president_data[president_data.length - 1]["positive_mean"];
+    president_approve = president_data[president_data.length - 1]["positive_mean"];
     var president_date = president_data[president_data.length - 1]["date"];
     
-    /*★$(".now-percent_date").html("11월 3주");*/
-    // $(".now-percent_date").html(president_date + " 기준 ");
-    /*★$(".president-percent").html(
-        president_approve + "<small style='font-size:18px;'>  %</small>"
-    );*/
-    /*★$(".prev-percent_date").html(prev_president_date + " 기준 ");*/
-    // $(".prev-president-percent").html(
-    //   prev_president_approve + "<small> %p</small>"
-    // );
-    
-    var interval =
-        Math.round((president_approve - prev_president_approve) * 10) / 10;
-    /*★if (interval > 0) {
-        $(".updown-percent").html(
-            "+ " +
-            interval +
-            "<small style='font-size:24px; letter-spacing:0;margin-left:10px;'> %p</small>"
-        );
-        $(".updown-percent").css("color", "#3347e2");
-    } else {
-        $(".updown-percent").html(
-            "- " +
-            Math.abs(interval) +
-            "<small style='font-size:24px;letter-spacing:0;margin-left:10px;'> %p</small>"
-        );
-        $(".updown-percent").css("color", "#e23d3d");
-    }*/
-    
+    // 지지율 변화 간격 계산 (소수점 한 자리까지 반올림)
+    var interval = Math.round((president_approve - prev_president_approve) * 10) / 10;
 }
 
+// 주어진 범위 내에서 랜덤 정수를 반환하는 함수
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+    return Math.floor(Math.random() * (max - min)) + min; // 최댓값은 제외, 최솟값은 포함
 }
 
+// 타임스탬프를 날짜 형식으로 변환하는 함수
 function timeStampToDate(data) {
     var date = new Date(data);
-    var year = date.getFullYear().toString().slice(-2);
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
-    var day = ("0" + date.getDate()).slice(-2);
+    var year = date.getFullYear().toString().slice(-2); // 연도에서 뒤 두 자리만 추출
+    var month = ("0" + (date.getMonth() + 1)).slice(-2); // 월을 0부터 시작하므로 1을 더하고 두 자리로 만듦
+    var day = ("0" + date.getDate()).slice(-2); // 일을 두 자리로 만듦
 
+    // 형식에 맞게 연도, 월, 일을 결합하여 반환
     return year + "년 " + month + "월 " + day + "일";
 }
