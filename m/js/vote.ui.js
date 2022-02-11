@@ -88,5 +88,111 @@ const dropdownInstance = new Dropdown(dropdownElement, {
     index: 2
 });
 
+class Dropdown {
+    constructor(element, options) {
+        if (!element) {
+            return false;
+        }
 
+        // 저장된 요소와 옵션 설정
+        this.element = element;
+        this.$this = $(element);
+        this.$options = options || {};
+        this.$buttonChoose = this.$this.find('.button-choose');
+        this.$list = this.$this.find('.list');
+        this.$listItems = this.$list.find('button');
+        this.$textChoose = this.$options.text || '';
+        this.$index = this.$options.index || 1;
+
+        // 초기화 함수 호출
+        this.init();
+    }
+
+    init() {
+        // 선택된 텍스트 설정
+        if (this.$textChoose !== '') {
+            this.setSelectedText(this.$buttonChoose, this.$textChoose);
+        }
+        // 이벤트 핸들러 바인딩
+        this.bindHandlers();
+    }
+
+    bindHandlers() {
+        // 클릭 이벤트 핸들러
+        this.$this.on('click', (e) => {
+            const $target = $(e.target);
+            if ($target && $target.context.nodeName === 'BUTTON' && $target.hasClass('button-choose')) {
+                this.toggleListExpanded();
+            } else if ($target && $target.context.nodeName === 'BUTTON' && $target.hasClass('button-item')) {
+                this.$buttonChoose.text($target.text());
+                this.unExpanded();
+            }
+        });
+    }
+
+    setSelectedText(element, text) {
+        // 요소에 텍스트 설정
+        element.text(text);
+    }
+
+    toggleListExpanded() {
+        if (this.$listItems.length < 1) {
+            return;
+        }
+        // 리스트 확장/축소 토글
+        if (this.$list.hasClass('attached')) {
+            this.unExpanded();
+        } else {
+            this.expanded();
+        }
+    }
+
+    expanded() {
+        if (!this.$list.hasClass('attached')) {
+            // 리스트 확장 시 요소 클래스 및 속성 변경
+            this.$buttonChoose.addClass('expanded');
+            this.$list.addClass('attached');
+            this.$list.attr('aria-hidden', 'false');
+        }
+    }
+
+    unExpanded() {
+        if (this.$list.hasClass('attached')) {
+            // 리스트 축소 시 요소 클래스 및 속성 변경
+            this.$buttonChoose.removeClass('expanded');
+            this.$list.removeClass('attached');
+            this.$list.attr('aria-hidden', 'true');
+        }
+    }
+}
+
+// jQuery 플러그인으로 등록
+$.fn.Dropdown = function (options) {
+    return this.each(function () {
+        if (undefined == $(this).data('Dropdown')) {
+            const plugin = new Dropdown(this, options);
+            $(this).data('Dropdown', plugin);
+        }
+    });
+};
+
+// 숫자에 콤마 추가하는 함수
+function counterup(x) {
+    const value = $(x).text();
+    $({ val: 0 }).animate({ val: value }, {
+        duration: 1000,
+        step: function () {
+            const num = numberWithCommas(this.val.toFixed(1));
+            $(x).text(num);
+        },
+        complete: function () {
+            const num = numberWithCommas(this.val.toFixed(1));
+            $(x).text(num);
+        }
+    });
+
+    function numberWithCommas(value) {
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+}
 
