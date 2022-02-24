@@ -212,21 +212,23 @@ document.addEventListener('DOMContentLoaded', () => {
     pollDateItems.forEach(item => {
         // 탭 클릭 이벤트 핸들러 등록
         item.addEventListener('click', function () {
-            this.classList.add('on'); // 클릭된 탭 활성화 표시
-
+            this.classList.add('on'); // 클릭된 탭에 활성화 클래스 'on' 추가하여 시각적 효과 적용
+        
             // 다른 탭 비활성화 처리
             const siblings = Array.from(this.parentElement.children).filter(sibling => sibling !== this);
             siblings.forEach(sibling => {
-                sibling.classList.remove('on');
+                sibling.classList.remove('on'); // 다른 탭의 활성화 클래스 'on' 제거하여 비활성화 상태 표시
             });
-
+        
             // 현재 클릭한 탭의 인덱스 추출
             const index = Array.from(this.parentElement.parentElement.children).indexOf(this.parentElement.parentElement);
-
+        
             // 해당 탭의 내용 보여주기
             resultCont.forEach((cont, contIndex) => {
+                // contIndex와 index 비교하여 현재 탭과 일치하면 내용 표시, 그렇지 않으면 숨김
                 cont.style.display = contIndex === index ? 'block' : 'none';
             });
         });
+        
     });
 });
