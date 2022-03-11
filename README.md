@@ -13,3 +13,6 @@
 - 일정
     - 12월 17일 내부 오픈 : 본사 내부 콘텐츠 업로드 및 테스트
     - 2022년 1월 1일(토) 홍보 사이트 오픈
+
+
+URL : <a href="https://imnews.imbc.com/issue/vote2022/elect/open/" target="_blank">https://imnews.imbc.com/issue/vote2022/elect/open/</a>
