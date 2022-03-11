@@ -15,4 +15,4 @@
     - 2022년 1월 1일(토) 홍보 사이트 오픈
 
 
-URL : <a href="https://imnews.imbc.com/issue/vote2022/elect/open/" target="_blank">https://imnews.imbc.com/issue/vote2022/elect/open/</a>
+URL : [https://imnews.imbc.com/issue/vote2022/elect/open/](https://imnews.imbc.com/issue/vote2022/elect/open/)
